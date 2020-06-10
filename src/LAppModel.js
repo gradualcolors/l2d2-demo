@@ -213,7 +213,7 @@ LAppModel.prototype.preloadMotionGroup = function(name)
 		var fileName = file.split("/").pop();
 		var opt = document.createElement("option");
 		opt.text = fileName;
-		opt.value = fileName;
+		opt.value = i;
 		document.getElementById("select_motion").appendChild(opt);
         
     }
