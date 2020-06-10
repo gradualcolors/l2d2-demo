@@ -53,7 +53,7 @@ function initModelSelection()
 
     this.live2DMgr.reloadFlg = true;
     this.live2DMgr.count++;
-    var path = "https://"+window.location.host +"/assets/natsume/config.model.json";
+    var path = window.location.href +"/assets/natsume/config.model.json";
     var modelJson = { };
     //this.live2DMgr.changeModel(this.gl, document.getElementById("select_model").value);
 
