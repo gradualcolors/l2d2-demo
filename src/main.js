@@ -59,11 +59,8 @@ function initModelSelection()
 
     //modelJson = this.modelJsonTmp.createJSON();
 
-    var pm = Live2DFramework.getPlatformManager();
-    pm.loadBytes(path, function (buf) {
-        var str = String.fromCharCode.apply(null, new Uint8Array(buf));
-        modelJson = JSON.parse(str);
-		callback();
+    this.modelSetting.loadModelArray(modelSettingPath, function(){
+		modelJson = this.modelSetting.json;
 		this.live2DMgr.changeModel(this.gl, modelJson);
     });
 
