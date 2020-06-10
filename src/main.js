@@ -59,7 +59,7 @@ function initModelSelection()
 
     //modelJson = this.modelJsonTmp.createJSON();
 
-    this.modelSetting.loadModelArray(modelSettingPath, function(){
+    this.modelSetting.loadModelSetting(path, function(){
 		modelJson = this.modelSetting.json;
 		this.live2DMgr.changeModel(this.gl, modelJson);
     });
