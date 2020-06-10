@@ -23,7 +23,7 @@ LAppModel.prototype.load = function(gl, modelSettingPath, callback)
 
     //this.modelHomeDir = modelSettingPath.substring(0, modelSettingPath.lastIndexOf("/") + 1); 
 
-    this.modelHomeDir = "/";
+    this.modelHomeDir = window.location.href;
 
     this.modelSetting = new ModelSettingJson();
     
@@ -212,8 +212,8 @@ LAppModel.prototype.preloadMotionGroup = function(name)
         });
 		
 		var opt = document.createElement("option");
-		opt.text = i;
-		opt.value = i;
+		opt.text = name;
+		opt.value = name;
 		document.getElementById("select_motion").appendChild(opt);
         
     }

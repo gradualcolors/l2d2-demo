@@ -211,7 +211,7 @@ function draw()
             
             if (!this.isModelShown && i == this.live2DMgr.numModels()-1) {
                 this.isModelShown = !this.isModelShown;
-                document.getElementById("select_model").removeAttribute("disabled");
+                //document.getElementById("select_model").removeAttribute("disabled");
             }
         }
     }
