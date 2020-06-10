@@ -374,7 +374,31 @@ LAppModel.prototype.startMotion = function(name, no, priority)
     else if (!this.mainMotionManager.reserveMotion(priority))
     {
         if (LAppDefine.DEBUG_LOG)
-            console.log("Motion is running.")
+        {    console.log("Motion is running.")
+		
+			var idleMotions = ["idling_1.mtn",
+								"idling_1_2.mtn",
+								"idling_2.mtn",
+								"idling_3.mtn",
+								"idling_3_1.mtn",
+								"idling_4.mtn",
+								"idling_l1.mtn",
+								"idling_l2.mtn",
+								"idling_l3.mtn",
+								"idling_l4.mtn",
+								"idling_l5.mtn",
+								"idling_l6.mtn",
+								"idling_l7.mtn",
+								"idling_r1.mtn",
+								"idling_r2.mtn",
+								"idling_r3.mtn",
+								"idling_r4.mtn",
+								"idling_r5.mtn",
+								"idling_r6.mtn",
+								"idling_r7.mtn"];
+			var rng = idleMotions[Math.floor(Math.random() * items.length)]					
+			document.getElementById("select_motion").value = rng;
+		}
         return;
     }
 
