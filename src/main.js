@@ -48,8 +48,6 @@ function initModelSelection()
         document.getElementById("select_model").appendChild(opt);c
     }*/
 
-	this.modelSetting = null;
-
     document.getElementById("char1").setAttribute("value","Natsume");
     this.isModelShown = false;
 
@@ -61,18 +59,18 @@ function initModelSelection()
 
     //modelJson = this.modelJsonTmp.createJSON();
 
-  /*  this.modelSetting = new ModelSettingJson();
-	
-	this.modelSetting.loadModelSetting(path, function(){
-		
-        modelJson = this.modelSetting.json;
+    var pm = Live2DFramework.getPlatformManager();
+    pm.loadBytes(path, function (buf) {
+        var str = String.fromCharCode.apply(null, new Uint8Array(buf));
+        modelJson = JSON.parse(str);
+		callback();
+		this.live2DMgr.changeModel(this.gl, modelJson);
+    });
+
+    /*$.getJSON(path, function (data) {
+        modelJson = data;
     });*/
-	
-	$.getJSON(path, function(json){
-	modelJson = json;
-	});
-	
-    this.live2DMgr.changeModel(this.gl, modelJson);
+    
 }
 
 function chg_model()
