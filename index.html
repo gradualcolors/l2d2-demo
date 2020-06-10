@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>MagiReco Live2D Viewer</title>
+    <title>Enstars Live2D Demo</title>
     </meta>
 
     <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
@@ -131,8 +131,8 @@
 
             <p style="display:inline-block"> Upload texture file: </p>
             <input style="display:inline-block" type="file" id="texElem" accept="image/png" onchange="handleTexture(this.files)">
-            <p style="display:inline-block"> Expression: </p>
-            <select style="display:inline-block" id="select_expression" onchange="chg_expr()"> </select>
+            <p style="display:none;"> Expression: </p>
+            <select style="display:none;" id="select_expression" onchange="chg_expr()"> </select>
 
             <p style="display:inline-block"> Motion: </p>
             <select style="display:inline-block" id="select_motion"> </select>
@@ -147,7 +147,7 @@
                 </canvas>
             </div>
 
-            <div id="myconsole" style="color:#000">---- Log ----</div>
+        <div id="myconsole" style="color:#000;display:none;">---- Log ----</div>
 
 
             <!-- Live2D Library -->

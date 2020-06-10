@@ -396,7 +396,7 @@ LAppModel.prototype.startMotion = function(name, no, priority)
 								"idling_r5.mtn",
 								"idling_r6.mtn",
 								"idling_r7.mtn"];
-			var rng = idleMotions[Math.floor(Math.random() * items.length)]					
+			var rng = idleMotions[Math.floor(Math.random() * idleMotions.length)]					
 			document.getElementById("select_motion").value = rng;
 		}
         return;
