@@ -56,11 +56,12 @@ function initModelSelection()
     var path = window.location.href +"assets/natsume/config.model.json";
     var modelJson = { };
 
-this.modelSetting = new ModelSettingJson();
+//this.modelSetting = new ModelSettingJson();
     
-    var thisRef = this;
-    this.modelSetting.loadModelSetting(path, function(){
-		modelJson = thisRef.json;
+    var pm = Live2DFramework.getPlatformManager();
+    pm.loadBytes(path, function(buf) {
+        var str = String.fromCharCode.apply(null,new Uint8Array(buf));
+		modelJson = JSON.parse(str);
 		this.live2DMgr.changeModel(this.gl, modelJson);
     });
 
