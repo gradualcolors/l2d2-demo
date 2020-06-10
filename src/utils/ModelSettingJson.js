@@ -22,15 +22,23 @@ function ModelSettingJson()
 }
 
 
+ModelSettingJson.prototype.loadModelArray = function(arr, callback)
+{    
+    var thisRef = this;
+    thisRef.json = arr;
+    callback();
+};
+
+
 ModelSettingJson.prototype.loadModelSetting = function(path, callback)
 {    
     var thisRef = this;
-    /*var pm = Live2DFramework.getPlatformManager();
+    var pm = Live2DFramework.getPlatformManager();
     pm.loadBytes(path, function(buf) {
         var str = String.fromCharCode.apply(null,new Uint8Array(buf));
         thisRef.json = JSON.parse(str);
         callback();
-    });*/
+    });
 
     thisRef.json = path;
     callback();

@@ -29,7 +29,10 @@ LAppModel.prototype.load = function(gl, modelSettingPath, callback)
     
     var thisRef = this;
     
-    this.modelSetting.loadModelSetting(modelSettingPath, function(){
+	this.modelSetting.loadModelArray(modelSettingPath, function(){
+
+	
+    //this.modelSetting.loadModelSetting(modelSettingPath, function(){
         
         //var path = thisRef.modelHomeDir + thisRef.modelSetting.getModelFile();
         var path = thisRef.modelSetting.getModelFile();

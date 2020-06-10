@@ -48,6 +48,8 @@ function initModelSelection()
         document.getElementById("select_model").appendChild(opt);c
     }*/
 
+	this.modelSetting = null;
+
     document.getElementById("char1").setAttribute("value","Natsume");
     this.isModelShown = false;
 
@@ -59,15 +61,12 @@ function initModelSelection()
 
     //modelJson = this.modelJsonTmp.createJSON();
 
-    var pm = Live2DFramework.getPlatformManager();
-    pm.loadBytes(path, function (buf) {
-        var str = String.fromCharCode.apply(null, new Uint8Array(buf));
-        modelJson = JSON.parse(str);
+    this.modelSetting = new ModelSettingJson();
+	
+	this.modelSetting.loadModelSetting(path, function(){
+		
+        modelJson = this.modelSetting.json;
     });
-
-    /*$.getJSON(path, function (data) {
-        modelJson = data;
-    });*/
     this.live2DMgr.changeModel(this.gl, modelJson);
 }
 
