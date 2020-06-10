@@ -154,7 +154,7 @@
 					
 		]
 	},
-	"physics":"",
-	"pose":"",
-	"hitarea":""
+	"physics":null,
+	"pose":null,
+	"hitarea":null
 }

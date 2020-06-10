@@ -210,10 +210,10 @@ LAppModel.prototype.preloadMotionGroup = function(name)
             motion.setFadeIn(thisRef.modelSetting.getMotionFadeIn(name, i));
             motion.setFadeOut(thisRef.modelSetting.getMotionFadeOut(name, i));
         });
-		
+		var fileName = file.split("/").pop();
 		var opt = document.createElement("option");
-		opt.text = name;
-		opt.value = name;
+		opt.text = fileName;
+		opt.value = fileName;
 		document.getElementById("select_motion").appendChild(opt);
         
     }
