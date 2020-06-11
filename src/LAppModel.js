@@ -397,7 +397,6 @@ LAppModel.prototype.startMotion = function(name, no, priority)
 								"idling_r6.mtn",
 								"idling_r7.mtn"];
 			var rng = idleMotions[Math.floor(Math.random() * idleMotions.length)]*/
-			
 			document.getElementById("select_motion").selectedIndex = -1;
 		}
         return;
@@ -411,7 +410,7 @@ LAppModel.prototype.startMotion = function(name, no, priority)
         this.loadMotion(null, this.modelHomeDir + motionName, function(mtn) {
             motion = mtn;
             
-            
+            document.getElementById("select_motion").selectedIndex = -1;
             thisRef.setFadeInFadeOut(name, no, priority, motion);
             
         });
@@ -420,7 +419,7 @@ LAppModel.prototype.startMotion = function(name, no, priority)
     {
         motion = this.motions[name];
         
-        
+        document.getElementById("select_motion").selectedIndex = -1;
         thisRef.setFadeInFadeOut(name, no, priority, motion);
     }
 }
