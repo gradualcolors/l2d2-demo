@@ -362,8 +362,8 @@ LAppModel.prototype.startMotion = function(name, no, priority)
     
     if (motionName == null || motionName == "")
     {
-        if (LAppDefine.DEBUG_LOG)
-            console.error("Failed to motion.");
+        //if (LAppDefine.DEBUG_LOG)
+            //console.error("Failed to motion.");
         return;
     }
 
@@ -376,7 +376,7 @@ LAppModel.prototype.startMotion = function(name, no, priority)
         if (LAppDefine.DEBUG_LOG)
         {    console.log("Motion is running.")
 		
-			var idleMotions = ["idling_1.mtn",
+		/*	var idleMotions = ["idling_1.mtn",
 								"idling_1_2.mtn",
 								"idling_2.mtn",
 								"idling_3.mtn",
@@ -396,8 +396,9 @@ LAppModel.prototype.startMotion = function(name, no, priority)
 								"idling_r5.mtn",
 								"idling_r6.mtn",
 								"idling_r7.mtn"];
-			var rng = idleMotions[Math.floor(Math.random() * idleMotions.length)]					
-			document.getElementById("select_motion").value = rng;
+			var rng = idleMotions[Math.floor(Math.random() * idleMotions.length)]*/
+			
+			document.getElementById("select_motion").selectedIndex = -1;
 		}
         return;
     }
