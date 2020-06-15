@@ -20,45 +20,50 @@
         <script src="lib/index.js" type="text/javascript"></script>
         <title>Enstars Live2D Demo</title>
         <style>
-            body { margin: 0; }
+            body { 
+			font-size:11px;
+			margin: 0; 
+			width:100%;}
 			#page{
-				width:100%;
-				margin: auto 100;
+				width:1278px;
+				margin: auto;
+				margin-top:35px;
 			}
-            #top {
-                position: fixed;
-                right: 0; bottom: 0;
-                font-size: 5em;
-                z-index: 10;
-                border: none;
-                background: none;
-                line-height: .5em;
-                cursor: pointer;
-            }
+
 			
-					#main{
+			#main{
 			margin:auto;
-			height: 720px;
-			width:1278px;
+			height: 676px;
+			width:1200px;
 			background-image: url(assets/image/bg_2_3.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
+			position: relative;
 			
 		}
 		
 		.charBox{
-		width:250px;
+		width:225px;
 		padding:5px;
 		border:1px solid #000;
 		border-radius:12px;
+		position:absolute;
+		background:white;
+		opacity:0.4;
+		transition: 0.3s;
+		z-index:99;
+		}
+		
+		.charBox:hover{
+		opacity:0.85;
 		}
 		
 		#charSpace1{
-		float:left;
+		left:0;
 		}
 		
 		#charSpace2{
-		float:right;
+		right:0;
 		}
        #canvas {
             /*
@@ -84,9 +89,15 @@
 
     </head>
     <body>
-	<center><h1>Enstars Live2D Viewer</h1></center>
+
 	<div id="page">
-        <div id="charSpace1" class="charBox">
+		<center><h1>Enstars Live2D Viewer</h1></center>
+       
+	
+					
+			<div id="main">
+			
+			 <div id="charSpace1" class="charBox">
             <p>  <select id="char1">
                 <option value="" selected disabled hidden> Select Character A</option>
                 <option value="Tetora">Tetora Nagumo</option>
@@ -215,9 +226,7 @@
             </div>
 			  </div>
 </div>		
-	
-					
-			<div id="main">
+			
 			<div id ="model_display">
             <div class="canvasClass">
                 <canvas id="canvas" width="450">
@@ -226,12 +235,12 @@
 			</div>
 			</div>
 			
-
+<div style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><strong>Log:</strong>
+			<ul id="log"></ul>
+			</div>
 
 </div>
-			<div style="width:50%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><strong>Log:</strong>
-			<div id="log"></div>
-			</div>
+			
 			
 		<script src="js/EnstBoyData.js" type="text/javascript"></script>
 		<script src="js/modelJsonTemp.js" type="text/javascript"></script>

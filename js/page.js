@@ -36,7 +36,7 @@ function get(url, callback) {
 
 $(document).ready(function() {
     //init(parseInt($("#width").val()), parseInt($("#height").val()));
-	init(1278, 720);
+	init(1200, 676);
 
 
         let sm = $("#function > #g1 > select.motion");
@@ -47,12 +47,12 @@ $(document).ready(function() {
 		$("span#active_charA").html(charName1);
 		if(charName1 == "")
 		{
-			$("#log").append("<p style=\"color:red;\">You must select Character A's name!</p>");
+			$("#log").append("<li style=\"color:red;\">You must select Character A's name!</li>");
 			return;
 		}
 		else if(modelElem[0].files.length == "0" || texElem[0].files.length == "0")
 		{
-			$("#log").append("<p style=\"color:red;\">You are missing files!</p>");
+			$("#log").append("<li style=\"color:red;\">You are missing files!</li>");
 			return;
 		}
 		
@@ -65,12 +65,12 @@ $(document).ready(function() {
 					var texRef = stage.children[0].modelDefine.textures;
 					window.URL.revokeObjectURL(mocRef);
 					window.URL.revokeObjectURL(texRef);
-					$("#log").append("<p>Changed Character A to " + charName1 + "</p>");
+					$("#log").append("<li>Changed Character A to " + charName1 + "</li>");
 				}
 				else
 				{
 					$("button#modela").html("Change Character A");
-					$("#log").append("<p>Added " + charName1 + ".</p>");
+					$("#log").append("<li>Added " + charName1 + ".</li>");
 				}
 			{while (firstChild = stage.children.shift()) { firstChild.destroy(); }}			
 			$("button#modelb").attr("disabled", false);
@@ -84,7 +84,7 @@ $(document).ready(function() {
 				window.URL.revokeObjectURL(texRef);				
 				firstChild = stage.children[0]; firstChild.destroy(); 
 		
-					$("#log").append("<p>Changed Character A to " + charName1 + "</p>");
+					$("#log").append("<li>Changed Character A to " + charName1 + "</li>");
 			}
 			
 			charJson1 = modelJsonCreate(charName1, modelElem, texElem);
@@ -113,12 +113,12 @@ $(document).ready(function() {
 		$("span#active_charB").html(charName2);
 		if(charName2 == "")
 		{
-			$("#log").append("<p style=\"color:red;\">You must select Character B's name!</p>");
+			$("#log").append("<li style=\"color:red;\">You must select Character B's name!</li>");
 			return;
 		}
 		else if(modelElem2[0].files.length == "0" || texElem2[0].files.length == "0")
 		{
-			$("#log").append("<p style=\"color:red;\">You are missing files!</p>");
+			$("#log").append("<li style=\"color:red;\">You are missing files!</li>");
 			return;
 		}		
 		
@@ -144,7 +144,7 @@ $(document).ready(function() {
 				stage.children[1].adjustTranslate(0.5, 0);
 				$("button#modelb").html("Change Character B");
 				$("button#removeb").show();
-					$("#log").append("<p>Changed Character B to " + charName2 + "</p>");
+					$("#log").append("<li>Changed Character B to " + charName2 + "</li>");
 			});
 			}
 			else{
@@ -160,7 +160,7 @@ $(document).ready(function() {
 				stage.children[1].adjustTranslate(0.5, 0);
 				$("button#modelb").html("Change Character B");
 				$("button#removeb").show();
-					$("#log").append("<p>Added " + charName2 + ".</p>");
+					$("#log").append("<li>Added " + charName2 + ".</li>");
 			});
 			}
 				
@@ -178,7 +178,7 @@ $(document).ready(function() {
                 sm2.val("");
 				$("button#removeb").hide();
 				$("button#modelb").html("Add Character B");
-				$("#log").append("<p>Removed Character B.</p>");
+				$("#log").append("<li>Removed Character B.</li>");
 			});
 
 
