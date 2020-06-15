@@ -1,4 +1,5 @@
 {
+"version":"Sample 1.0.0",
 	"name":"natsume",
 	"model":"assets/natsume/model.moc",
 	"textures":
@@ -8,6 +9,11 @@
 		  "expressions": [
 	  {"name":"", "file": ""}
 	  ],
+	  	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
 	"motions":{
 		"motion":[
 			{"name":"akubi_1","file":"assets/motions/akubi_1.mtn"},

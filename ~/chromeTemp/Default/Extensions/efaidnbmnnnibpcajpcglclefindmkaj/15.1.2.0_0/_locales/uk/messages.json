@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Відкрити в Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Заповнити і підписати у Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Додати до наявного PDF…"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Показувати для всіх PDF"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Додати ціль посилання до наявного PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Додати веб-сторінку до наявного PDF-файлу..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Ця версія Chrome не підтримує Adobe Acrobat. Мінімальна версія: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Клацніть посилання, аби відкрити PDF-файл в Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Стиснути PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Перетворити на PDF…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Перетворити поточну веб-сторінку на файл Adobe PDF"
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Зараз розширення Acrobat Reader вимкнено. Зверніться до свого системного адміністратора"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Відкрити PDF-файл в Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Перетворити ціль посилання на файл Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Перетворити веб-сторінку на файл Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Копіювати в Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Перетворити на PDF-файл"
+   },
+   "web2pdfDestinationText": {
+      "message": "Тека призначення:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Готово"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Заповнити та підписати"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Функція перетворення поточної веб-сторінки на документ Adobe PDF (лише для Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Не вдається зберегти файл, оскільки він використовується іншим процесом."
+   },
+   "web2pdfFilename": {
+      "message": "Ім'я файлу:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Заповнити і підписати"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Експорт у PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_ua"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Перейти до Acrobat у режимі онлайн"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Помилка обробки веб-сторінки."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Вміст HTML завеликий для обробки."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Розширення Adobe Acrobat рекомендує інструменти для роботи з PDF-файлами, які допоможуть вам виконати завдання. Наші рекомендації ґрунтуються на ваших пошукових запитах. Обробка даних для надання рекомендацій виконується на вашому пристрої, тож пошукові запити не надсилаються до Adobe. Перейдіть до \u003Cspan class = \"tooltip-content-settings\">налаштувань\u003C/span>, щоб вимкнути цю функцію."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Завантаження…"
+   },
+   "web2pdfMissingMac": {
+      "message": "Розширення Adobe Acrobat для Chrome ще не доступне для Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "У вашому сховищі Acrobat DC немає жодної теки."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Ви не маєте прав доступу для запису вибраних файлів."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Відкрити в Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Завантажити Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Відкрити в Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Відкрити PDF в Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Дозволити Adobe Acrobat для Chrome надсилати анонімну інформацію про використання до Adobe для вдосконалення наших продуктів."
+   },
+   "web2pdfOptions": {
+      "message": "Параметри"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Параметри Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Не вдалося відкрити PDF"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Не вдалося відкрити"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF відкрито"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Відкривання PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Параметри..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Про Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "вже існує.\n Замінити?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Надіслати та відстежити"
+   },
+   "web2pdfSave": {
+      "message": "Зберегти"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Зберегти копію"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Показувати з результатами пошуку Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Показати \"Відкрити в Acrobat\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Завжди показувати \"Відкрити в Acrobat\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Перетворення скасовано"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Успішно перетворено"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Завантаження для перетворення..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Завантаження PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Помилка перетв-ня"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Триває перетворення..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Невідома помилка"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Очікування перетворення..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Не вдається знайти підтримувану версію Acrobat. Установіть \u003Ca target='_blank' href='https://acrobat.adobe.com/ua/en/free-trial-download.html?trackingid=29NMCS7T&mv=other'>безкоштовну пробну версію на 7 днів\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "без назви"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Створити PDF у мережі"
+   }
+}

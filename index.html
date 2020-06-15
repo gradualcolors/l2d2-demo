@@ -1,85 +1,93 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Enstars Live2D Demo</title>
-    </meta>
-
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
-    </meta>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <style>
-
-        html, body {
-            oveflow: hidden;
-            height: 100%;
-        }
-
-        body {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        #glcanvas {
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="referrer" content="never" />
+        <meta name="robots" content="none" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <title>Enstars Live2D Demo</title>
+        <style>
+            body { margin: 0; }
+			#page{
+				width:100%;
+				margin: auto 100;
+			}
+            #top {
+                position: fixed;
+                right: 0; bottom: 0;
+                font-size: 5em;
+                z-index: 10;
+                border: none;
+                background: none;
+                line-height: .5em;
+                cursor: pointer;
+            }
+			
+					#main{
+			margin:auto;
+			height: 720px;
+			width:1278px;
+			background-image: url(assets/image/bg_2_3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			
+		}
+		
+		.charBox{
+		width:250px;
+		padding:5px;
+		border:1px solid #000;
+		border-radius:12px;
+		}
+		
+		#charSpace1{
+		float:left;
+		}
+		
+		#charSpace2{
+		float:right;
+		}
+       #canvas {
             /*
                 position: absolute;
-                top: 50%;
+                bottom: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 */
             background-size: 150%;
             background-position: 50% 50%;
-            background-image: url(assets/image/back_class_normal.png);
+            position: relative;
         }
-
-        button {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            color: #ffffff;
-            padding: 10px 20px;
-            -moz-border-radius: 30px;
-            -webkit-border-radius: 30px;
-            border-radius: 30px;
-            -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 1px rgba(255,255,255,0.7);
-            -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 1px rgba(255,255,255,0.7);
-            box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 1px rgba(255,255,255,0.7);
-            text-shadow: 0px -1px 0px rgba(0,0,0,0.4), 0px 1px 0px rgba(255,255,255,0.3);
-        }
-
-            button.active {
-                background: linear-gradient( to bottom, #3498db, #2980b9);
-                background: -moz-linear-gradient( top, #3498db 0%, #2980b9);
-                background: -webkit-gradient( linear, left top, left bottom, from(#3498db), to(#2980b9));
-                border: 1px solid #2980b9;
-            }
-
-            button.inactive {
-                background: linear-gradient( to bottom, #e74c3c, #c0392b);
-                background: -moz-linear-gradient( top, #e74c3c 0%, #c0392b);
-                background: -webkit-gradient( linear, left top, left bottom, from(#e74c3c), to(#c0392b));
-                border: 1px solid #c0392b;
-            }
-    </style>
-
-</head>
-
-    <body onload="main()">
-        
-        <div>
-            <!--<p style="display:inline-block">
-        <button id="btnChange" class="active" style="display:none">Change Model</button>
-    </p>-->
-            <!----  <p  style="display:inline-block"> Model: </p>
-    <select style="display:inline-block" id="select_model" onchange="chg_model()"> </select>
-    <p  style="display:inline-block"> Expression: </p>
-    <select style="display:inline-block" id="select_expression" onchange="chg_expr()"> </select>
-    <p  style="display:inline-block"> Motion: </p>
-    <select style="display:inline-block" id="select_motion"> </select>
-    </div> -->
-            <p style="display:inline-block">Select Character: </p>
-            <select style="display:inline-block" id="char1">
-                <option value="" selected disabled hidden> Select a Character</option>
+		
+		.canvasClass {
+			display:inline-block;
+		}
+		
+		#model_display {
+			margin:auto;
+			text-align: center;
+		}
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/live2d.min.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/netUtils.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/Live2DFramework.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.8/pixi.min.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.4/pixi.min.js"></script> -->
+        <script src="lib/glMatrix-common.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/glMatrix-mat4.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/MatrixStack.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/ModelSettingJson.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/LAppModel.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+        <script src="lib/index.js" type="28964d5c210aff12983c621e-text/javascript"></script>
+    </head>
+    <body>
+	<center><h1>Enstars Live2D Viewer</h1></center>
+	<div id="page">
+        <div id="charSpace1" class="charBox">
+            <p>  <select id="char1">
+                <option value="" selected disabled hidden> Select Character A</option>
                 <option value="Tetora">Tetora Nagumo</option>
                 <option value="Hajime">Hajime Shino</option>
                 <option value="Tomoya">Tomoya Mashiro</option>
@@ -124,48 +132,109 @@
                 <option value="Jin">Jin Sagami</option>
                 <option value="Akiomi">Akiomi Kunugi</option>
                 <option value="Seiya">Seiya Hidaka</option>
-            </select>
+            </select></p>
+            <p> Upload model file<br/>
+            <input type="file" id="modelElem" accept=".moc,.moc3"></p>
 
-            <p style="display:inline-block"> Upload model file: </p>
-            <input style="display:inline-block" type="file" id="modelElem" accept=".moc,.moc3" onchange="handleModel(this.files)">
-
-            <p style="display:inline-block"> Upload texture file: </p>
-            <input style="display:inline-block" type="file" id="texElem" accept="image/png" onchange="handleTexture(this.files)">
-            <p style="display:none;"> Expression: </p>
-            <select style="display:none;" id="select_expression" onchange="chg_expr()"> </select>
-
-            <p style="display:inline-block"> Motion: </p>
-            <select style="display:inline-block" id="select_motion"> </select>
-
-            <a href="#" onclick="chg_model()" id="jsonLink">Create JSON</a>
-            <div id="textLog">
-                <p>No files selected!</p>
+            <p>Upload texture file:<br/>
+            <input type="file" id="texElem" accept="image/png"></p>			
+			<p><button id="modela">Add Character A</button></p>
+		<div id="function">
+		<p>Character: <span id="active_charA"></span></p>
+            <div id="g1">
+                Character A Motion:&nbsp;
+                <select class="motion"></select>
+                <button class="motion">replay</button>
             </div>
-            <div>
-                <canvas id="glcanvas" width="680" height="940"
-                        style="border:dashed 1px #CCC">
+
+        </div>
+        </div>
+		
+			<div id="charSpace2" class="charBox">
+			  <p><select id="char2">
+                <option value="" selected disabled hidden> Select Character B</option>
+                <option value="Tetora">Tetora Nagumo</option>
+                <option value="Hajime">Hajime Shino</option>
+                <option value="Tomoya">Tomoya Mashiro</option>
+                <option value="Hinata">Hinata Aoi</option>
+                <option value="Midori">Midori Takamine</option>
+                <option value="Tori">Tori Himemiya</option>
+                <option value="Shinobu">Shinobu Sengoku</option>
+                <option value="Yuta">Yuta Aoi</option>
+                <option value="Mitsuru">Mitsuru Tenma</option>
+                <option value="Tsukasa">Tsukasa Suou</option>
+                <option value="Sora">Sora Harukawa</option>
+                <option value="Subaru">Subaru Akehoshi</option>
+                <option value="Hokuto">Hokuto Hidaka</option>
+                <option value="Makoto">Makoto Yuuki</option>
+                <option value="Souma">Souma Kanzaki</option>
+                <option value="Adonis">Adonis Otogari</option>
+                <option value="Koga">Koga Ogami</option>
+                <option value="Ritsu">Ritsu Sakuma</option>
+                <option value="Mao">Mao Isara</option>
+                <option value="Yuzuru">Yuzuru Fushimi</option>
+                <option value="Arashi">Arashi Narukami</option>
+                <option value="Mika">Mika Kagehira</option>
+                <option value="Natsume">Natsume Sakasaki</option>
+                <option value="Keito">Keito Hasumi</option>
+                <option value="Eichi">Eichi Tenshouin</option>
+                <option value="Kaoru">Kaoru Hakaze</option>
+                <option value="Izumi">Izumi Sena</option>
+                <option value="Chiaki">Chiaki Morisawa</option>
+                <option value="Kuro">Kuro Kiryu</option>
+                <option value="Wataru">Wataru Hibiki</option>
+                <option value="Kanata">Kanata Shinkai</option>
+                <option value="Rei">Rei Sakuma</option>
+                <option value="Nazuna">Nazuna Nito</option>
+                <option value="Leo">Leo Tsukinaga</option>
+                <option value="Shu">Shu Itsuki</option>
+                <option value="Tsumugi">Tsumugi Aoba</option>
+                <option value="Madara">Madara Mikejima</option>
+                <option value="Nagisa">Nagisa Ran</option>
+                <option value="Hiyori">Hiyori Tomoe</option>
+                <option value="Ibara">Ibara Saegusa</option>
+                <option value="Jun">Jun Sazanami</option>
+                <option value="Jin">Jin Sagami</option>
+                <option value="Akiomi">Akiomi Kunugi</option>
+                <option value="Seiya">Seiya Hidaka</option>
+            </select></p>
+			<p> Upload model file:<br/>
+            <input type="file" id="modelElem2" accept=".moc,.moc3"></p>
+            <p> Upload texture file: <br/>
+            <input type="file" id="texElem2" accept="image/png"></p>
+			<p><button id="modelb" disabled>Add Character B</button>
+			<button id="removeb" style="display:none;">Remove Character B</button></p>
+		<div id="function2">
+		<p>Character: <span id="active_charB"></span></p>
+
+				<div id="g2">
+                Character B Motion:&nbsp;
+                <select class="motion"></select>
+                <button class="motion">replay</button>
+            </div>
+			  </div>
+</div>		
+	
+					
+			<div id="main">
+			<div id ="model_display">
+            <div class="canvasClass">
+                <canvas id="canvas" width="450">
                 </canvas>
             </div>
-
-        <div id="myconsole" style="color:#000;display:none;">---- Log ----</div>
-
-
-            <!-- Live2D Library -->
-            <script src="js/live2d.min.js"></script>
-
-            <!-- Live2D Framework -->
-            <script src="js/Live2DFramework.js"></script>
-
-            <!-- User's Script -->
-            <script src="src/utils/MatrixStack.js"></script>
-            <script src="src/utils/ModelSettingJson.js"></script>
-            <script src="src/PlatformManager.js"></script>
-            <script src="src/LAppDefine.js"></script>
-            <script src="src/LAppModel.js"></script>
-            <script src="src/LAppLive2DManager.js"></script>
-            <script src="src/modelJsonTemp.js"></script>
-            <script src="src/main.js"></script>
+			</div>
+			</div>
+			
 
 
-</body>
+</div>
+			<div style="width:50%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><strong>Log:</strong>
+			<div id="log"></div>
+			</div>
+			
+		<script src="js/EnstBoyData.js" type="text/javascript"></script>
+		<script src="js/modelJsonTemp.js" type="text/javascript"></script>
+        <script src="js/live2d.js" type="text/javascript"></script>
+        <script src="js/page.js" type="text/javascript"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="28964d5c210aff12983c621e-|49" defer=""></script></body>
 </html>

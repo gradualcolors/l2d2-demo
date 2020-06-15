@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/popupUI.css" type="text/css" rel="stylesheet"/>
+        <script src="./libs/jquery-3.1.1.min.js"></script>
+        <script src="./content-util.js"></script>
+        <script src="./analytics.js"></script>
+        <script src="./frameUI.js"></script>
+        <script src="./settings.js"></script>
+    </head>
+<body>
+<div class="acrobatMainDiv persistent">
+    <div class="actions">
+        <div class="do-acrobat-icon"></div>
+        <input type="button" class="acro-option pdf hidden do_acrobat translate" id="stripTextOpenAcrobat" value="Open in Acrobat"/>
+        <input type="button" class="close-dialog"/>
+    </div>
+    <div class="progress-area hidden">
+        <div class="convert-status hidden">
+            <div class="convert-status-icon"></div>
+            <div class="convert-status-title"></div>
+        </div>
+        <div class="in-process hidden">
+            <div class="do-acrobat-icon"></div>
+            <div class="convert"></div>
+        </div>
+    </div>      
+ </div>
+</body>
+</html>
+

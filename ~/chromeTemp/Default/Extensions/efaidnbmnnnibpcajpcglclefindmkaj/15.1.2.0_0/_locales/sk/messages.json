@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Otvoriť v aplikácii Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Vyplniť a podpísať v aplikácii Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Pridať do exist. PDF..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Zobraziť súbory PDF automaticky"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Pridať cieľ odkazu do existujúceho súboru PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Pridať webovú stránku do existujúceho súboru PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Táto verzia prehliadača Chrome nepodporuje aplikáciu Adobe Acrobat. Minimálna verzia je: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Ak chcete súbor PDF otvoriť v aplikácii Acrobat, kliknite na prepojenie uvedené nižšie."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Skomprimovať PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Previesť web. str. na PDF…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Previesť zobrazenú webovú stránku na súbor Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Rozšírenie Acrobat Reader je momentálne zakázané. Obráťte sa na svojho správcu IT"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Otvoriť súbor PDF v aplikácii Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Previesť cieľ odkazu do formátu Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Previesť webovú stránku do formátu Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopíruje sa do aplikácie Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Previesť do PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Cieľový priečinok:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Hotovo"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Vyplniť a podpísať"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Previesť zobrazenú webovú stránku na súbor Adobe PDF (len systém Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Súbor nie je možné uložiť, pretože ho používa iný proces."
+   },
+   "web2pdfFilename": {
+      "message": "Názov súboru:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Vyplniť a podpísať"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Exportovať súbor PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_sk"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Prejsť na online verziu aplikácie Acrobat"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Chyba pri spracovaní webovej stránky."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Obsah HTML je príliš veľký na spracovanie."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Modul Adobe Acrobat vám ponúka pomoc pri plnení vašej úlohy vo forme nástrojov PDF. Naše odporúčanie vychádza z výsledkov vášho vyhľadávania a uskutočnilo sa na vašom zariadení; výsledky vyhľadávania nie sú odoslané spoločnosti Adobe. Ak chcete túto funkciu vypnúť, prejdite na \u003Cspan class = \"tooltip-content-settings\">settings\u003C/span>."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Načítavam..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat pre prehliadač Chrome zatiaľ nie je k dispozícii pre systém Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "V úložisku aplikácie Acrobat DC nemáte žiadne priečinky."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Nemáte povolenia na zápis do vybratého súboru."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Otvoriť v aplikácii Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Prevziať vo formáte Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Otvoriť v aplikácii Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Otvoriť PDF v Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Povoliť aplikácii Adobe Acrobat pre prehliadač Chrome odosielanie anonymných informácií o používaní produktu na účel jeho zlepšenia."
+   },
+   "web2pdfOptions": {
+      "message": "Možnosti"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Možnosti aplikácie Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Súbor PDF sa neotvoril"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Súbor sa nepodarilo otvoriť"
+   },
+   "web2pdfPDFOpened": {
+      "message": "Súbor PDF otvorený"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Otvára sa súbor PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Predvoľby..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Informácie o aplikácii Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "už existuje.\n Chcete ho nahradiť?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Odoslať a sledovať"
+   },
+   "web2pdfSave": {
+      "message": "Uložiť"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Uložiť kópiu"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Zobraziť s výsledkami vyhľadávania Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Zobraziť „Otvoriť v aplikácii Acrobat“"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Vždy zobraziť „Otvoriť v aplikácii Acrobat“"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Konverzia zrušená"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Konverzia úspešná"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Preberá sa obsah pre konverziu..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Preberá sa súbor PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Konverzia zlyhala"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Prebieha konverzia..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Neznáme zlyhanie"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Čaká sa na konverziu..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Nenašla sa podporovaná verzia aplikácie Acrobat. Nainštalujte si \u003Ca target='_blank' href='https://acrobat.adobe.com/sk/en/free-trial-download.html?trackingid=29NMCS7T&mv=other'>bezplatnú 7-dňovú skúšobnú verziu\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "bez názvu"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Vytvoriť dokument PDF online"
+   }
+}

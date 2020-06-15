@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/core.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/common.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/progress.css" type="text/css" rel="stylesheet"/>
+        <script src="./libs/jquery-3.1.1.min.js"></script>
+        <script src="./content-util.js"></script>
+        <script src="./analytics.js"></script>
+        <script src="./progress.js"></script>
+        <script src="./settings.js"></script>
+    </head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="progress"></div>
+        <span class="header-text translate" id="web2pdfCopyText">web2pdfCopyText</span>
+    </div>
+    <div id="message" class="hidden"></div>
+    <pre id="error" class="hidden"></pre>
+
+    <div class="content">
+        <div class="left-content">
+            <div class="icon fileicon hidden"></div>
+            <div class="filelabel hidden"></div>
+        </div>
+
+        <div class="right-content">
+            <div class="rename-header sub-header translate" id="web2pdfFilename">Filename:</div>
+            <input type="text" class="filename hidden"/>
+            <div class="folders hidden">
+                <div class="folders-header sub-header translate" id="web2pdfDestinationText">Destination folder:</div>
+                <div class="folder">
+                    <div class="folder-display">
+                        <div class="folder-icon"></div>
+                        <div class="folder-name"></div>
+                    </div>
+                </div>
+                <div class="nofolders-message hidden translate" id="web2pdfNoFoldersText">You have no folders in your Acrobat DC storage.</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+        <input type="button" value="Done" class="control-button done hidden translate" id="web2pdfDoneButtonText"/>
+    </div>
+</div>
+</body>
+</html>
+

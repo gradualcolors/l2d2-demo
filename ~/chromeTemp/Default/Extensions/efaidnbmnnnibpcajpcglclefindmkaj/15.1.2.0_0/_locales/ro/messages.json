@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Deschidere în Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Completare și semnare în Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Ad. la PDF existent…"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Arată automat pentru PDF-uri"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Adăugare ţintă legătură la un PDF existent"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Adăugare pagină web la un PDF existent..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Această versiune de Chrome nu acceptă Adobe Acrobat. Versiunea minimă este: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Faceţi clic pe legătura de mai jos pentru a deschide PDF-ul în Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Comprimare PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Conv. pag. web în PDF…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Conversie pagină web curentă într-un fişier Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "În prezent, extensia Acrobat Reader este dezactivată. Contactați administratorul dvs. IT"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Deschidere PDF în Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Conversie ţintă legătură în Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Conversie pagină web în Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Se copiază în Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Conversie în format PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Dosar destinaţie:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Finalizat"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Completare şi semnare"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Conversie pagină web curentă într-un fișier Adobe PDF (doar Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Fişierul nu poate fi salvat deoarece este folosit de alt proces."
+   },
+   "web2pdfFilename": {
+      "message": "Nume fişier:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Completare și semnare"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Export PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_ro"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Accesați Acrobat online"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Eroare la procesarea paginii web."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Conţinutul HTML este prea mare pentru a fi procesat."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Extensia Adobe Acrobat recomandă utilizarea instrumentelor PDF pentru a vă ajuta să vă realizați sarcinile. Recomandarea noastră se bazează pe căutările dvs. și apare pe dispozitiv; căutările nu sunt trimise la Adobe. Accesați \u003Cspan class = \"tooltip-content-settings\">setările\u003C/span> pentru a dezactiva această funcție."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Se încarcă..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat pentru Chrome nu este încă disponibil pentru Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Nu aveţi dosare în spaţiul de stocare Acrobat DC."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Nu aveţi permisiuni de scriere pentru fişierul selectat."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Deschidere în Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Descărcare Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Deschidere în Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Des. PDF în Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Permiteţi extensiei Adobe Acrobat pentru Chrome să trimită informaţii de utilizare anonime la Adobe pentru îmbunătăţirea produselor."
+   },
+   "web2pdfOptions": {
+      "message": "Opţiuni"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Opţiuni Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Eroare la deschiderea PDF-ului"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Deschiderea fișierului a eșuat"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF deschis"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Se deschide PDF-ul"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Preferinţe..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Despre Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "există deja.\nDoriţi să înlocuiţi?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Trimitere şi monitorizare"
+   },
+   "web2pdfSave": {
+      "message": "Salvare"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Salvare copie"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Afișați cu rezultatele căutării Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Afișare \"Deschidere în Acrobat\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Afișare permanentă \"Deschidere în Acrobat\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Conversie anulată"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Conversie reuşită"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Se descarcă pentru conversie..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Descărcare PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Conversie nereuşită"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Conversie în curs..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Eroare necunoscută"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Se aşteaptă conversia..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Nu a putut fi găsită o versiune acceptată de Acrobat. Instalaţi o \u003Ca target='_blank' href='https://acrobat.adobe.com/ro/en/free-trial-download.html?trackingid=29NMCS7T&mv=other'>versiune de probă gratuită de 7 de zile\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "fără titlu"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Creare PDF Online"
+   }
+}

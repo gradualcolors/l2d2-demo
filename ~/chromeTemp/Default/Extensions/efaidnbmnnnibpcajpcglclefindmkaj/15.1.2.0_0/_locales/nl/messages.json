@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Openen in Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Invullen en ondertekenen in Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Toevoegen aan PDF..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Automatisch weergeven voor PDF's"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Doel van koppeling toevoegen aan bestaande PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Webpagina toevoegen aan bestaande PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Deze versie van Chrome biedt geen ondersteuning voor Adobe Acrobat. Minimale versie is: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Klik op de onderstaande koppeling om de PDF te openen in Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "PDF comprimeren"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Webpagina naar PDF..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Huidige webpagina converteren naar een Adobe PDF-bestand "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "De Acrobat Reader-extensie is momenteel uitgeschakeld. Neem contact op met uw IT-beheerder."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "PDF openen in Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Doel van koppeling converteren naar Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Webpagina converteren naar Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopiëren naar Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Converteren naar PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Doelmap:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Gereed"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Invullen en ondertekenen"
+   },
+   "web2pdfExtnDescription": {
+      "message": "De huidige webpagina converteren naar een Adobe PDF-bestand (alleen Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Het bestand kan niet worden opgeslagen, omdat het door een ander proces wordt gebruikt."
+   },
+   "web2pdfFilename": {
+      "message": "Bestandsnaam:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Invullen en ondertekenen"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "PDF exporteren"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_nl"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Naar Acrobat online"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Fout tijdens verwerken van webpagina."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML-inhoud is te groot om te verwerken."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Bij gebruik van de Adobe Acrobat-extensie worden PDF-gereedschappen aangeraden voor het uitvoeren van taken. Onze aanbevelingen zijn gebaseerd op uw zoekopdrachten en op uitgevoerde taken op uw apparaat. Zoekopdrachten worden niet naar Adobe verzonden. Ga naar de \u003Cspan class = \"tooltip-content-settings\">instellingen\u003C/span> om deze functie uit te schakelen."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Laden..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat voor Chrome is nog niet beschikbaar voor de Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "U hebt geen mappen in uw Acrobat DC-opslag."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "U hebt geen schrijfmachtiging voor het geselecteerde bestand."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Openen in Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Adobe PDF downloaden"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Openen in Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "PDF openen in Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Toestaan dat Adobe Acrobat Chrome anonieme gebruiksgegevens naar Adobe verzendt voor productverbeteringdoeleinden."
+   },
+   "web2pdfOptions": {
+      "message": "Opties"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Opties voor Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Kan PDF niet openen"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Kan niet openen"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF geopend"
+   },
+   "web2pdfPDFOpening": {
+      "message": "PDF openen"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Voorkeuren..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Info over Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "bestaat al.\n Wilt u dit vervangen?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Verzenden en bijhouden"
+   },
+   "web2pdfSave": {
+      "message": "Opslaan"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Een kopie opslaan"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Weergeven met Google-zoekresultaten"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "\"Openen in Acrobat\" tonen"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "\"Openen in Acrobat\" altijd tonen"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Conversie geannuleerd"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Conversie voltooid"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Downloaden voor conversie..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "PDF downloaden"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Conversie mislukt"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Conversie wordt uitgevoerd..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Onbekende fout"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Wachten op conversie..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Er is geen ondersteunde versie van Acrobat gevonden. Installeer een \u003Ca target='_blank' href='https://acrobat.adobe.com/nl/nl/free-trial-download.html?trackingid=29NMCS7T&mv=other'>gratis proefversie van 7 dagen\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "naamloos"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "PDF online maken"
+   }
+}

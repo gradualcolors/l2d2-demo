@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "在 Acrobat 中打开"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Acrobat 中的“填写和签名”"
+   },
+   "web2pdfAddButtonText": {
+      "message": "添加到现有的 PDF..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "自动显示于 PDF"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "将链接目标追加到现有的 PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "将网页添加到现有的 PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "此 Chrome 版本不支持 Adobe Acrobat。最低版本为: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "单击下面的链接以在 Acrobat 中打开 PDF。"
+   },
+   "web2pdfCompressPDFText": {
+      "message": "压缩 PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "将网页转换为 PDF..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "将当前网页转换为 Adobe PDF 文件"
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Acrobat Reader 扩展当前处于禁用状态。请联系您的 IT 管理员。"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "在 Acrobat Reader 中打开 PDF"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "将链接目标转换为 Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "将网页转换为 Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "正在复制到 Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "转换为 PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "目标文件夹："
+   },
+   "web2pdfDoneButtonText": {
+      "message": "完成"
+   },
+   "web2pdfExportButtonText": {
+      "message": "填写并签名"
+   },
+   "web2pdfExtnDescription": {
+      "message": "将当前网页转换为 Adobe PDF 文件（仅限 Windows）"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "文件无法保存，因为正在被另一进程使用。"
+   },
+   "web2pdfFilename": {
+      "message": "文件名："
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "填写和签名"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "导出 PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_cn"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "转到 Acrobat 在线版"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "处理网页时出错。"
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML 内容过大，无法处理。"
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat 扩展会推荐 PDF 工具来帮助您完成任务。我们的推荐是基于您的搜索以及设备上的某些活动；您的搜索内容不会发送到 Adobe。您可以前往\u003Cspan class = \"tooltip-content-settings\">设置\u003C/span>以禁用此功能。"
+   },
+   "web2pdfLoaderTitle": {
+      "message": "正在加载..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat for Chrome 尚不适用于 Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "您的 Acrobat DC 存储中没有文件夹。"
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "您对选定的文件没有写入权限。"
+   },
+   "web2pdfOpenButtonText": {
+      "message": "在 Acrobat 中打开"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "下载 Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "在 Acrobat Reader 中打开"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "在 Acrobat 中打开 PDF"
+   },
+   "web2pdfOptOut": {
+      "message": "允许 Adobe Acrobat for Chrome 将匿名使用情况信息发送给 Adobe 以用作产品改进目的。"
+   },
+   "web2pdfOptions": {
+      "message": "选项"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobat 选项"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "未能打开 PDF"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "无法打开"
+   },
+   "web2pdfPDFOpened": {
+      "message": "已打开 PDF"
+   },
+   "web2pdfPDFOpening": {
+      "message": "正在打开 PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "首选项..."
+   },
+   "web2pdfPrivacy": {
+      "message": "关于 Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "已存在。\n要替换它吗？"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "发送并追踪"
+   },
+   "web2pdfSave": {
+      "message": "保存"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "保存副本"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "显示 Google 搜索结果"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "显示“在 Acrobat 中打开”"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "始终显示“在 Acrobat 中打开”"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "转换已取消"
+   },
+   "web2pdfStatusComplete": {
+      "message": "转换成功"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "正在下载以进行转换..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "正在下载 PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "转换失败"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "正在转换..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "未知的故障"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "正在等待转换..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "无法找到支持的 Acrobat 版本。请安装\u003Ca target='_blank' href='https://acrobat.adobe.com/cn/zh-Hans/free-trial-download.html?trackingid=29NMCS7T&mv=other'>免费的 7 天试用版\u003C/a>。"
+   },
+   "web2pdfUntitledFileName": {
+      "message": "未命名"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "在线创建 PDF"
+   }
+}

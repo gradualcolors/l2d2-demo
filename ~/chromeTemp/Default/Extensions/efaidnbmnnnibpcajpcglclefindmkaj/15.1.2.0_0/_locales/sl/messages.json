@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Odpri v Acrobatu"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Izpolni in podpiši v Acrobatu"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Dodaj v obstoječi PDF …"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Pokaži samodejno za PDF-je"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Cilj povezave dodaj v obstoječo datoteko PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Dodaj spletno stran v obstoječo datoteko PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Ta različica brskalnika Chrome ne podpira Adobe Acrobata. Najstarejša podprta različica je: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Kliknite spodnjo povezavo, da odprete PDF v Acrobatu."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Stisni PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Pretvori stran v PDF …"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Pretvori trenutno spletno stran v datoteko Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Razširitev Acrobat Readerja je trenutno onemogočena. Obrnite se na skrbnika informacijskih tehnologij."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Odpri PDF v programu Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Cilj povezave pretvori v datoteko Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Pretvori spletno stran v Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopiranje v Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Pretvori v PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Ciljna mapa:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Dokončano"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Izpolni in podpiši"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Pretvori trenutno spletno stran v datoteko Adobe PDF (samo za Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Datoteke ni mogoče shraniti, ker je v uporabi v drugem postopku."
+   },
+   "web2pdfFilename": {
+      "message": "Ime datoteke:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Izpolni in podpiši"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Izvozi PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_si"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Pojdi v spletni Acrobat"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Pri obdelavi spletne strani je prišlo do napake."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Vsebina HTML je prevelika za obdelavo."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Razširitev Adobe Acrobat priporoča orodja za dokumente PDF, ki vam pomagajo pri izvajanju opravila. Naše priporočilo temelji na tem, kaj iščete in kaj se zgodi v napravi; iskanja se ne pošljejo družbi Adobe. Če želite onemogočiti to funkcijo, pojdite na \u003Cspan class = \"tooltip-content-settings\">settings\u003C/span>."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Nalaganje..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat za Chrome še ni na voljo za računalnike Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "V shrambi programa Acrobat DC nimate nobenih map."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Nimate dovoljenja za pisanje v izbrano datoteko."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Odpri v Acrobatu"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Prenesi Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Odpri v programu Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Odpri PDF v Acrobatu"
+   },
+   "web2pdfOptOut": {
+      "message": "Dovoli razširitvi Adobe Acrobat za Chrome, da Adobeju pošilja anonimne informacije o uporabi za pomoč pri izboljševanju izdelka."
+   },
+   "web2pdfOptions": {
+      "message": "Možnosti"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Možnosti za Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "PDF-ja ni bilo mogoče odpreti"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Odpiranje ni uspelo"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF je odprt"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Odpiranje PDF-ja"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Nastavitve..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Vizitka programa Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "že obstaja.\n Ali ga želite zamenjati?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Pošlji in sledi"
+   },
+   "web2pdfSave": {
+      "message": "Shrani"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Shrani kopijo"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Pokaži z rezultati iskanja v Googlu."
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Prikaži \"Odpri v Acrobatu\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Vedno prikaži \"Odpri v Acrobatu\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Pretvorba je preklicana"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Pretvorba je uspela"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Prenos za pretvorbo ..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Prenašanje PDF-ja"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Neusp. pretvorba"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Pretvorba v teku ..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Neznana napaka"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Čakanje na pretvorbo ..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Podprte različice Acrobata ni bilo mogoče najti. Namestite \u003Ca target='_blank' href='https://acrobat.adobe.com/si/en/free-trial-download.html?trackingid=29NMCS7T&mv=other'>7-dnevno preskusno različico\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "neimenovano"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Ustvari spletni PDF"
+   }
+}

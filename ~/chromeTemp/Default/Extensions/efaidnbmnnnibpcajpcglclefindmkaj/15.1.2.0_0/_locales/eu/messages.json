@@ -1,0 +1,212 @@
+{
+    "web2pdfExtnName": {
+        "message": "Adobe Acrobat"
+    },
+    "web2pdfExtnDescription": {
+        "message": "Bihurtu uneko web-orria Adobe PDF fitxategi (Windows soilik)"
+    },
+    "web2pdfConvertButtonToolTip": {
+        "message": "Bihurtu uneko web-orria Adobe PDF fitxategi "
+    },
+	 "web2pdfConvertButtonToolTipReader": {
+      "message": "Ireki PDFa Acrobat Reader-en "
+   },
+    "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Une honetan desgaituta dago Acrobat Reader luzapena. Jarri harremanetan IKT administratzailearekin."
+   },
+    "web2pdfOpenButtonText": {
+        "message": "Ireki Acrobat-en"
+    },
+	"web2pdfOpenButtonTextReader": {
+      "message": "Ireki Acrobat Reader-en"
+   },
+    "web2pdfOpenButtonTextOlder": {
+        "message": "Deskargatu Adobe PDF"
+    },
+    "web2pdfSaveButtonText": {
+        "message": "Gorde kopia bat"
+    },
+    "web2pdfFillSignAcrobatButtonText": {
+        "message": "Bete eta sinatu"
+    },
+    "web2pdfFillSignButtonText": {
+        "message": "Esportatu PDFa"
+    },
+    "web2pdfExportButtonText": {
+        "message": "Bete eta sinatu"
+    },
+    "web2pdfSEndButtonText": {
+        "message": "Bidali eta jarraitu"
+    },
+    "web2pdfConvertButtonText": {
+        "message": "Bihurtu web-orria PDF..."
+    },
+    "web2pdfAddButtonText": {
+        "message": "Gehitu lehendik dagoen PDFan..."
+    },
+    "web2pdfVisitButtonText": {
+        "message": "Sortu PDF bat linean"
+    },
+    "web2pdfOpenInDCButtonText": {
+        "message": "Ireki PDFa Acrobat-en"
+    },
+    "web2pdfPreferencesButtonText": {
+        "message": "Hobespenak..."
+    },
+    "web2pdfCopyText": {
+        "message": "Acrobat-en kopiatzen"
+    },
+    "web2pdfFilename": {
+        "message": "Fitxategiaren izena:"
+    },
+    "web2pdfDestinationText": {
+        "message": "Helburuko karpeta:"
+    },
+    "web2pdfNoFoldersText": {
+        "message": "Ez duzu karpetarik Acrobat DC biltegian."
+    },
+    "web2pdfDoneButtonText": {
+        "message": "Eginda"
+    },
+    "web2pdfConvertPageContextMenu": {
+        "message": "Bihurtu web-orria Adobe PDF..."
+    },
+    "web2pdfAppendPageContextMenu": {
+        "message": "Gehitu web-orria lehendik dagoen PDFan..."
+    },
+    "web2pdfConvertLinkContextMenu": {
+        "message": "Bihurtu estekaren helburua Adobe PDF"
+    },
+    "web2pdfAppendLinkContextMenu": {
+        "message": "Erantsi estekaren helburua lehendik dagoen PDFan"
+    },
+    "web2pdfUntitledFileName": {
+        "message": "izengabea"
+    },
+    "web2pdfStatusWaiting": {
+        "message": "Bihurtzeko zain..."
+    },
+    "web2pdfStatusDownloading": {
+        "message": "Deskargatzen bihurtzeko..."
+    },
+    "web2pdfStatusInProgress": {
+        "message": "Bihurketa abian dago..."
+    },
+    "web2pdfStatusCancelled": {
+        "message": "Bihurketa bertan behera utzi da"
+    },
+    "web2pdfStatusComplete": {
+        "message": "Bihurketa behar bezala egin da"
+    },
+    "web2pdfClickToOpen": {
+        "message": "Egin klik jarraian duzun estekan PDFa Acrobat-en irekitzeko."
+    },
+    "web2pdfStatusFailure": {
+        "message": "Bihurketak huts egin du"
+    },
+    "web2pdfUnsupportedAcrobatVersion": {
+        "message": "Ezin izan da aurkitu Acrobat-en bertsio bateragarririk. Instalatu <a target='_blank' href='https://acrobat.adobe.com/es/es/free-trial-download.html?trackingid=29NMCS7T&mv=other'>7 eguneko doako probaldia</a>."
+    },
+    "web2pdfStatusUnknownFailure": {
+        "message": "Hutsegite ezezaguna"
+    },
+    "web2pdfFileLockedError": {
+        "message": "Ezin da fitxategia gorde, beste prozesu batean erabiltzen ari delako."
+    },
+    "web2pdfReplaceWarning": {
+        "message": "badago lehendik.\n Ordeztu nahi duzu?"
+    },
+    "web2pdfNoWritePermissionOnSelectedFile": {
+        "message": "Ez duzu idazteko baimenik hautatutako fitxategian."
+    },
+    "web2pdfHTMLTooLarge": {
+        "message": "HTML edukia handiegia da prozesatzeko."
+    },
+    "web2pdfHTMLJSError": {
+        "message": "Errore bat gertatu da web-orria prozesatzean."
+    },
+    "web2pdfOptionsTitle": {
+        "message": "Adobe Acrobat-en aukerak"
+    },
+    "web2pdfMissingMac": {
+        "message": "Chrome-rako Adobe Acrobat oraindik ez dago erabilgarri Mac gailuetarako"
+    },
+    "web2pdfOptOut": {
+        "message": "Onartu Chrome-rako Adobe Acrobat-i erabilerari buruzko informazio anonimoa Adobe-ri bidaltzea, produktua hobetu ahal izateko."
+    },
+    "web2pdfOptions": {
+        "message": "Aukerak"
+    },
+    "web2pdfSave": {
+        "message": "Gorde"
+    },
+    "web2pdfStatusDownloadingPDF": {
+        "message": "PDFa deskargatzen"
+    },
+    "web2pdfPDFOpening": {
+        "message": "PDFa irekitzen"
+    },
+    "web2pdfPDFOpenFailed": {
+        "message": "Ezin izan da PDFa ireki"
+    },
+    "web2pdfPDFOpenFailedv2": {
+        "message": "Ezin izan da ireki"
+    },
+    "web2pdfPDFOpened": {
+        "message": "PDF irekita"
+    },
+    "web2pdfAlwaysShow": {
+        "message": "Erakutsi automatikoki PDF fitxategietarako"
+    },
+
+    "web2pdfShowPersistentOpen": {
+        "message": "Erakutsi \"Ireki Acrobat-en\""
+    },
+
+    "web2pdfShowPersistentOpenAlways": {
+        "message": "Erakutsi beti \"Ireki Acrobat-en\""
+    },
+	
+	"web2pdfFrictionlessUrl":{
+        "message": "https://www.adobe.com/go/fl_chromeext_es"
+    },
+
+    "web2pdfPrivacy": {
+        "message": "Adobe Acrobat-i buruz"
+    },
+    "web2pdfTitle": {
+        "message": "Adobe Acrobat"
+    },
+    "web2pdfBadVersion": {
+        "message": "Chrome bertsio honek ez du onartzen Adobe Acrobat. Gutxienez $version$ bertsioa izan behar du.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "stripTextOpenAcrobat": {
+        "message": "Ireki Acrobat-en"
+    },
+    "stripTextOpenFillnSign": {
+        "message": "Bete eta sinatu Acrobat-en"
+    },
+ 	"web2pdfCreatePDFText": {
+        "message": "Bihurtu PDF"
+    },
+    "web2pdfCompressPDFText" : {
+        "message": "Konprimitu PDFa"
+    },
+    "web2pdfShowPDFTools": {
+        "message": "Erakutsi Google-ko bilaketa-emaitzekin"
+    },
+    "web2pdfGoToAOnlineButtonText": {
+        "message": "Joan Acrobat online zerbitzura"
+    },
+    "web2pdfInfoHoverPopup": {
+        "message": "Adobe Acrobat luzapenak PDF tresnak gomendatzen ditu zure ataza burutzen laguntzeko. Gure gomendioa egin duzun bilaketan eta gailuan gertatzen denean oinarritzen da; bilaketak ez zaizkio Adobe-ri bidaltzen. Joan <span class = \"tooltip-content-settings\">settings</span>-ra eginbide hau desgaitzeko."
+    },
+    "web2pdfLoaderTitle": {
+        "message": "Kargatzen…"
+    }
+}

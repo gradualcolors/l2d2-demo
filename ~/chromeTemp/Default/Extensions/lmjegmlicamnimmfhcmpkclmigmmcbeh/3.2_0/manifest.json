@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "description": "Open Drive files directly from your browser in compatible applications installed on your computer.",
+   "externally_connectable": {
+      "matches": [ "*://*.google.com/*" ]
+   },
+   "icons": {
+      "16": "images/drive-sync16.png",
+      "256": "images/drive-sync256.png",
+      "64": "images/drive-sync64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo6ls4QXUUamoPAlpgJvnpfy2H/54Zsl5mMSrs1zWaIcVqyGRTvzE9d7ekAfJXoPTplwddWd5Kz0QODFPLTxgl+R9wKhrLgeJi6V4Mx8pzDXgxujlQsiHZjikvWEFhMeXssh+W+AbYt9HJnxnYTg3VD2vXc5hO4eApJ8GGIJijMqVSR4YkwttJhxMwuGWyc1WU/b2OsuCsTBOq52HsWZZoZ0iuN51Iu7kBREYMc/QD6p/YFt9WEWzJwC2/G8JoTL+KD9V++tEsMqBOivNfcLAIp04BViC9plYmcNjtYJ9aCGwIQmNKeUHKRado9nHloeKm8m7GZp+JNQNEJDcaiFzewIDAQAB",
+   "manifest_version": 2,
+   "name": "Application Launcher for Drive (by Google)",
+   "permissions": [ "nativeMessaging" ],
+   "short_name": "Google Drive App Launcher",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2"
+}

@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "lib/libs/require-2.1.15.js", "main.js", "lib/settings.js", "lib/ch-context-menu.js" ]
+   },
+   "browser_action": {
+      "default_icon": "data/images/acrobat_dc_appicon_20x19_translucent.png",
+      "default_title": "__MSG_web2pdfConvertButtonToolTip__"
+   },
+   "content_scripts": [ {
+      "js": [ "data/js/libs/jquery-3.1.1.min.js", "data/js/ch-content-script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_web2pdfExtnDescription__",
+   "externally_connectable": {
+      "ids": [ "bngnhmnppadfcmpggglniifohlkmddfc" ]
+   },
+   "icons": {
+      "128": "data/images/acrobat_dc_appicon_128.png",
+      "16": "data/images/acrobat_dc_appicon_16.png",
+      "48": "data/images/acrobat_dc_appicon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZBtDwJUnqCebbFbTP819W+x0Tk9Com3yrxaCi/D0t/1FPWBuOvyyiQtFr/FmloZu/2ml8LFYNGNE6gQSSIgGXZceAFCRxzj+EXSI37kNIPISrdKznCTdkA6oSKUpFEVOcoD959DQFqeNbliB9MV+ZrZST+DOVxApdMSJzsCczIwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "41.0",
+   "name": "__MSG_web2pdfExtnName__",
+   "options_page": "data/js/options.html",
+   "permissions": [ "contextMenus", "http://*/*", "https://*/*", "tabs", "downloads", "nativeMessaging" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "15.1.2.0",
+   "web_accessible_resources": [ "data/js/frame.html", "data/js/frameUI.html", "data/js/extn-utils.html" ]
+}

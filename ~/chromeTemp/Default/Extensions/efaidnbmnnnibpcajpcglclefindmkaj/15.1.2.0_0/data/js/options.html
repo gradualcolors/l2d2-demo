@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+-->
+<html>
+    <head>
+    <title id="web2pdfOptionsTitle" class="translate"></title>
+    <link href="../css/core.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/common.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/options.css" type="text/css" rel="stylesheet"/>
+    <script src="./libs/jquery-3.1.1.min.js"></script>
+    <script src="./content-util.js"></script>
+    <script src="./analytics.js"></script>
+    <script src="./settings.js"></script>
+    <script src="./options.js"></script>
+    </head>
+<body>
+
+<div class="container">
+    <div class="header translate" id="web2pdfOptions">Options</div>
+    <div id="message" class="success hidden"></div>
+    <div id="web2pdfMissingMac" class="header hidden translate" ></div>
+    <div id="bad-version" class="header hidden"></div>
+</div>
+    <div class="content">
+        <div class="option choose-env">
+            <div class="label">Environment:</div>
+            <select id="environment">
+                <option value="local-dev">Local Dev</option>
+                <option value="dev">Dev</option>
+                <option value="test">Test</option>
+                <option value="stage">Stage</option>
+                <option value="prod" selected="selected">Production</option>
+            </select>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" class="analytics" name="analytics" value="analytics_on" checked></input>
+            <label class="label translate" id="web2pdfOptOut" for="analytics"></label>
+            <a href="https://helpx.adobe.com/acrobat/kb/acrobat-pro-aip-for-chrome.html" class="translate label learn-more" id="web2pdfPrivacy"></a>
+        </div>
+
+        <div class="option">
+            <div class="html2pdfoption label hidden">
+                <input type="checkbox" id="html2pdf" value="html2pdf">Turn on HTML to PDF</input>
+            </div>
+        </div>
+
+        <div class="option save">
+            <button id="web2pdfSave" class="control-button no_change translate"></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

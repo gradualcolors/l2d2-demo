@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Åpne i Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Fyll ut og signer i Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Legg til i eksisterende PDF-fil"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Vis automatisk for PDF-filer"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Tilføy koblingsmål til en eksisterende PDF-fil"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Legg til nettside i eksisterende PDF-fil..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Denne versjonen av Chrome støtter ikke Adobe Acrobat.  Minimumsversjon er: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Klikk koblingen nedenfor for å åpne PDF-filen i Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Komprimer PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Konverter nettside til PDF-fil"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Konverter gjeldende nettside til en Adobe PDF-fil "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Acrobat Reader-tillegget er deaktivert nå. Kontakt IT-administratoren."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Åpne PDF-filen i Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Konverter koblingsmål til en Adobe PDF-fil"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Konverter nettside til Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopierer til Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Konverter til PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Målmappe:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Fullført"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Fyll ut og signer"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Konverter gjeldende nettside til en Adobe PDF-fil (bare Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Kan ikke lagre filen fordi den er i bruk av en annen prosess."
+   },
+   "web2pdfFilename": {
+      "message": "Filnavn:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Fyll ut og signer"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Eksporter PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_no"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Gå til Acrobat på nettet"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Det oppstod en feil under behandling av nettsiden."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Kan ikke behandle HTML-innholdet fordi det er for stort."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat-utvidelse anbefaler PDF-verktøy for å hjelpe deg med å utføre oppgaven. Anbefalingene våre er basert på det du søkte etter, og skjer på enheten din. Søk blir ikke sendt til Adobe. Gå til \u003Cspan class = \"tooltip-content-settings\">innstillinger\u003C/span> for å deaktivere denne funksjonen."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Laster ..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat for Chrome er ennå ikke tilgjengelig for Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Du har ingen mapper i Acrobat DC-lageret."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Du har ikke skrivetillatelse for den valgte filen."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Åpne i Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Last ned Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Åpne i Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Åpne PDF-filen i Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Tillat at Adobe Acrobat for Chrome sender anonym bruksinformasjon til Adobe slik at Adobe kan forbedre produktet."
+   },
+   "web2pdfOptions": {
+      "message": "Alternativer"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Alternativer for Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Kan ikke åpne PDF-fil"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Kunne ikke åpne"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF-fil åpnet"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Åpner PDF-fil"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Innstillinger..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Om Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "finnes allerede.\nVil du erstatte den?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Send og spor"
+   },
+   "web2pdfSave": {
+      "message": "Lagre"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Lagre en kopi"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Vis med Google-søkeresultater"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Vis “Åpne i Acrobat”"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Vis alltid “Åpne i Acrobat”"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Konverteringen ble avbrutt"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Konvertering fullført"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Laster ned for konvertering ..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Laster ned PDF-fil"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Konverteringsfeil"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Konverterer ..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Ukjent feil"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Venter på å konvertere ..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Finner ikke en versjon av Acrobat som støttes. Installer en \u003Ca target='_blank' href='https://acrobat.adobe.com/no/no/free-trial-download.html?trackingid=29NMCS7T&mv=other'>gratis 7-dagers prøveversjon\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "uten tittel"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Opprett PDF på nettet"
+   }
+}

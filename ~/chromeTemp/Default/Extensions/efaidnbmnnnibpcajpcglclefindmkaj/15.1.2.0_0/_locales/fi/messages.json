@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Avaa Acrobatissa"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Täytä ja allekirjoita Acrobatissa"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Lisää aiempaan PDF:ään..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Näytä automaattisesti PDF-tiedostoja varten"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Liitä linkin kohde aiemmin luotuun PDF-tiedostoon"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Lisää verkkosivu olemassa olevaan PDF-tiedostoon..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Tämä Chromen versio ei tue Adobe Acrobatia. Vähimmäisversio on $version$.",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Avaa PDF-tiedosto Acrobatissa napsauttamalla alla olevaa linkkiä."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Pakkaa PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Muunna sivu PDF:ksi..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Muunna nykyinen verkkosivu Adobe PDF -tiedostoksi "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Acrobat Reader -laajennus on tällä hetkellä poistettu käytöstä. Ota yhteyttä järjestelmänvalvojaan."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Avaa PDF-tiedosto Acrobat Readerissa"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Muunna linkin kohde Adobe PDF -muotoon"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Muunna verkkosivu Adobe PDF -muotoon..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopioidaan Acrobatiin"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Muunna PDF-muotoon"
+   },
+   "web2pdfDestinationText": {
+      "message": "Kohdekansio:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Valmis"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Täytä ja allekirjoita"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Muunna nykyinen verkkosivu Adobe PDF -tiedostoksi (vain Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Tiedostoa ei voi tallentaa, sillä se on toisen prosessin käytössä."
+   },
+   "web2pdfFilename": {
+      "message": "Tiedostonimi:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Täytä ja allekirjoita"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Vie PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_fi"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Siirry Acrobatin verkkoversioon"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Verkkosivua käsiteltäessä tapahtui virhe."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML-sisältö on liian suuri käsiteltäväksi."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat -laajennus suosittelee PDF-työkaluja, jotka helpottavat työsi suorittamista. Suosituksemme perustuu hakuihisi, ja toiminto suoritetaan laitteella; hakuja ei lähetetä Adobelle. Siirry \u003Cspan class = \"tooltip-content-settings\">asetuksiin\u003C/span>, jos haluat poistaa tämän toiminnon käytöstä."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Ladataan..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat for Chrome ei ole vielä saatavana Maciin."
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Acrobat DC -säilössä ei ole kansioita."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Sinulla ei ole kirjoitusoikeuksia valittuun tiedosoon."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Avaa Acrobatissa"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Lataa Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Avaa Acrobat Readerissa"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Avaa PDF Acrobatissa"
+   },
+   "web2pdfOptOut": {
+      "message": "Anna Adobe Acrobat for Chromen lähettää Adobelle nimettömiä käyttötietoja tuotteen parantamista varten."
+   },
+   "web2pdfOptions": {
+      "message": "Asetukset"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobatin asetukset"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "PDF-tiedoston avaaminen epäonnistui"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Avaaminen epäonnistui."
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF-tiedosto on avattu"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Avataan PDF-tiedostoa"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Oletusarvot..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Tietoja Adobe Acrobatista"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "on jo olemassa.\n Haluatko korvata sen?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Lähetä ja seurra"
+   },
+   "web2pdfSave": {
+      "message": "Tallenna"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Tallenna kopio"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Näytä Googlen hakutulosten kanssa"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Näytä ”Avaa Acrobatissa”"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Näytä aina ”Avaa Acrobatissa”"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Muunnos peruutettu."
+   },
+   "web2pdfStatusComplete": {
+      "message": "Muunnos onnistui."
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Ladataan muunnosta varten..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Ladataan PDF-tiedostoa"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Muunnosvirhe"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Muunnos käynnissä..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Tuntematon virhe"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Odotetaan muunnosta..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Acrobatin tuettua versiota ei löytynyt. Asenna \u003Ca target='_blank' href='https://acrobat.adobe.com/fi/fi/free-trial-download.html?trackingid=29NMCS7T&mv=other'>7 päivän maksuton kokeiluversio\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "nimetön"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Luo PDF Online"
+   }
+}

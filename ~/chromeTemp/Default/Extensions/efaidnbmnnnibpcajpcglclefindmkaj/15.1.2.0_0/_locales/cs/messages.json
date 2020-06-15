@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Otevřít v aplikaci Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Vyplnit a podepsat v aplikaci Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Přidat do existujícího PDF..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Zobrazit automaticky pro soubory PDF"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Připojit cíl vazby k existujícímu PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Přidat webovou stránku do existujícího PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Tato verze prohlížeče Chrome nepodporuje aplikaci Adobe Acrobat.  Minimální číslo verze je: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Kliknutím na odkaz níže otevřete dokument PDF v aplikaci Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Komprimovat PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Převést stránku do PDF…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Převést současnou webovou stránku na soubor Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Rozšíření pro Acrobat Reader je nyní vypnuto. Obraťte se na správce IT"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Otevřít PDF v Acrobat Readeru"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Převést cíl vazby do Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Převést webovou stránku do Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Kopírování do aplikace Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Převést do PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Cílová složka:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Hotovo"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Vyplnit a podepsat"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Převést aktuální webovou stránku na soubor Adobe PDF (pouze Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Soubor nemůže být uložen, protože je používán jiným procesem."
+   },
+   "web2pdfFilename": {
+      "message": "Název souboru:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Vyplnit a podepsat"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Exportovat PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_cz"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Přejděte na aplikaci Acrobat online"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Chyba při zpracování webové stránky."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Obsah HTML je příliš velký, nelze zpracovat."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Rozšíření aplikace Adobe Acrobat doporučuje nástroje PDF, které vám pomohou dokončit úlohu. Naše doporučení vychází z toho, co jste vyhledávali a co se objevuje v zařízení. Vyhledávání se neodesílají společnosti Adobe. Pokud chcete tuto funkci vypnout, přejděte do části \u003Cspan class = \"tools-content-settings\">Nastavení\u003C/span>."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Nahrávání..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Aplikace Adobe Acrobat for Chrome ještě není dostupná na platformě Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Ve vašem úložišti aplikace Acrobat DC nejsou žádné složky."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Nemáte oprávnění zápisu do vybraného souboru."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Otevřít v Acrobatu"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Stáhnout Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Otevřít v Acrobat Readeru"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Otevřít PDF v Acrobatu"
+   },
+   "web2pdfOptOut": {
+      "message": "Povolit aplikaci Adobe Acrobat for Chrome zasílat společnosti Adobe anonymní data o použití, jejichž cílem je vylepšení produktu."
+   },
+   "web2pdfOptions": {
+      "message": "Volby"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Volby aplikace Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Soubor PDF se nepodařilo otevřít"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Soubor se nepodařilo otevřít"
+   },
+   "web2pdfPDFOpened": {
+      "message": "Soubor PDF je otevřen"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Otevírání souboru PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Předvolby..."
+   },
+   "web2pdfPrivacy": {
+      "message": "O aplikaci Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "již existuje.\nChcete ho nahradit?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Send & Track"
+   },
+   "web2pdfSave": {
+      "message": "Uložit"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Uložit kopii"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Zobrazit s výsledky vyhledávání Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Zobrazit tlačítko \"Otevřít v Acrobatu\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Vždy zobrazit tlačítko \"Otevřít v Acrobatu\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Převod zrušen"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Převod byl úspěšný"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Stahování souboru pro převod..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Stahování souboru PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Chyba převodu"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Probíhá převod..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Neznámá chyba"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Čekání na převod..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Nemůžeme najít podporovanou verzi aplikace Acrobat. Nainstalujte si \u003Ca target='_blank' href='https://acrobat.adobe.com/cz/cs/free-trial-download.html?trackingid=29NMCS7T&mv=other'>bezplatnou 7denní zkušební verzi\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "bez názvu"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Vytvořit PDF online"
+   }
+}

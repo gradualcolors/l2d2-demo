@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "In Acrobat öffnen"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Ausfüllen und unterschreiben in Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Zu einer PDF hinzufügen..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Automatisch für PDFs anzeigen"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Linkziel an vorhandene PDF-Datei anhängen"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Webseite vorhandener PDF-Datei hinzufügen..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Adobe Acrobat wird nicht von dieser Version von Chrome unterstützt. Es ist mindestens die Version $version$ erforderlich.",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Klicken Sie unten auf den Link zum Öffnen der PDF-Datei in Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "PDF komprimieren"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Webseite in PDF konvert..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Konvertieren Sie die aktuelle Webseite in eine Adobe PDF-Datei"
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Die Acrobat Reader-Erweiterung ist momentan deaktiviert. Wenden Sie sich an Ihren IT-Admin."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "PDF-Datei in Acrobat Reader öffnen"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Linkziel in Adobe PDF konvertieren"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Webseite in Adobe PDF konvertieren..."
+   },
+   "web2pdfCopyText": {
+      "message": "In Acrobat kopieren"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "In PDF konvertieren"
+   },
+   "web2pdfDestinationText": {
+      "message": "Zielordner:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Fertig"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Ausfüllen und unterschreiben"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Konvertieren Sie die aktuelle Webseite in eine Adobe PDF-Datei (nur Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Die Datei kann nicht gespeichert werden, weil sie von einem anderen Prozess verwendet wird."
+   },
+   "web2pdfFilename": {
+      "message": "Dateiname:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Ausfüllen und unterschreiben"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "PDF-Datei exportieren"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_de"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Gehen Sie zu Acrobat online"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Fehler bei der Verarbeitung der Webseite."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML-Inhalt ist zu groß für die Verarbeitung."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Die Adobe Acrobat-Erweiterung empfiehlt PDF-Werkzeuge, die Ihnen bei Ihrer Aufgabe helfen. Unsere Empfehlung basiert auf dem, was Sie auf dem Gerät gesucht haben und findet auf dem Gerät statt. Suchvorgänge werden nicht an Adobe gesendet. Gehen Sie zu \u003Cspan class = \"tooltip-content-settings\">Einstellungen\u003C/span>, um diese Funktion zu deaktivieren."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Wird geladen..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat für Chrom ist für Mac derzeit nicht verfügbar."
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Sie haben noch keine Ordner in Ihrem Acrobat DC-Speicher."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Sie verfügen nicht über Schreibberechtigungen für die ausgewählte Datei."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "In Acrobat öffnen"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Adobe PDF herunterladen"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "In Acrobat Reader öffnen"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "PDF in Acrobat öffnen"
+   },
+   "web2pdfOptOut": {
+      "message": "Zulassen, dass Adobe Acrobat für Google Chrome zu Produkt-verbesserungszwecken anonym Nutzungsinformationen an Adobe sendet."
+   },
+   "web2pdfOptions": {
+      "message": "Optionen"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobat-Optionen"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "PDF konnte nicht geöffnet werden"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Konnte nicht geöffnet werden"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF geöffnet"
+   },
+   "web2pdfPDFOpening": {
+      "message": "PDF wird geöffnet"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Einstellungen…"
+   },
+   "web2pdfPrivacy": {
+      "message": "Info über Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "existiert bereits.\n Ersetzen?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Senden und verfolgen"
+   },
+   "web2pdfSave": {
+      "message": "Speichern"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Kopie speichern"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Mit Suchergebnissen von Google anzeigen"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "„In Acrobat geöffnet“ anzeigen"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Immer „In Acrobat geöffnet“ anzeigen"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Konversion abgebrochen"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Konversion erfolgreich"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Download für Konvertierung..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "PDF wird heruntergeladen"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Konvertierungsfehler"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Konvertierung läuft…"
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Unbekannter Fehler"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Warten auf Konvertierung…"
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Es konnte keine unterstützte Acrobat-Version gefunden werden. Installieren Sie eine \u003Ca target='_blank' href='https://acrobat.adobe.com/de/de/free-trial-download.html?trackingid=29NMCS7T&mv=other'>kostenlose 7-tägige Testversion\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "Unbenannt"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "PDF online erstellen"
+   }
+}

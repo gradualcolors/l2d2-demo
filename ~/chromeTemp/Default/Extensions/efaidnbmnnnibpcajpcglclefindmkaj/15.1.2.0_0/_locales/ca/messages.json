@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Obre a l'Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Emplena i signa a l'Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Afegir a PDF existent"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Mostra automàticament per als PDF"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Annexar destí d'enllaç amb PDF existent"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Afegir pàgina web a PDF existent..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Aquesta versió del Chrome no és compatible amb l'Adobe Acrobat. La versió mínima és la $version$.",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Feu clic a l'enllaç següent per obrir el PDF amb l'Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Comprimeix un PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Convertir pàgina web a PDF"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Convertir la pàgina web actual en un fitxer d'Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "L’extensió de l’Acrobat Reader està deshabilitada. Poseu-vos en contacte amb l’administrador de TI."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Obrir el PDF amb l'Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Convertir destí d'enllaç a Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Convertir pàgina web a Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "S'està copiant a l'Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Conversió a PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Carpeta de destinació:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Fet"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Emplenament i signatura"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Convertir la pàgina web actual en un fitxer Adobe PDF (només a Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "No es pot desar el fitxer perquè un altre procés l'està usant."
+   },
+   "web2pdfFilename": {
+      "message": "Nom de fitxer:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Emplena i signa"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Exportar el PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_es"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Vés a l'Acrobat en línia"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Error en processar la pàgina web."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "El contingut HTML és massa gran per poder-lo processar."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "L’extensió Adobe Acrobat recomana eines de PDF per ajudar-vos a fer la vostra tasca. La nostra recomanació es basa en el que heu cercat i succeeix al dispositiu; les cerques no s’envien a Adobe. Aneu a la \u003Cspan class = \"tooltip-content-settings\">configuració\u003C/span> per desactivar aquesta funció."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "S’està carregant…"
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat per a Chrome encara no està disponible per a Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "No teniu carpetes a l'emmagatzematge d'Acrobat DC."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "No teniu permís d'escriptura en el fitxer seleccionat."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Obrir a l'Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Baixa Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Obre a l'Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Obrir el PDF amb l'Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Permeteu que l'Adobe Acrobat per a Chrome envïi informació d'ús anònima a Adobe amb l'objectiu de millorar el producte."
+   },
+   "web2pdfOptions": {
+      "message": "Opcions"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Opcions de l'Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "No s'ha pogut obrir el PDF"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "No s'ha pogut obrir"
+   },
+   "web2pdfPDFOpened": {
+      "message": "S'ha obert el PDF"
+   },
+   "web2pdfPDFOpening": {
+      "message": "S'està obrint el PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Preferències..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Quant a l'Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "ja existeix. El voleu substituir?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Enviar i fer-ne el seguiment"
+   },
+   "web2pdfSave": {
+      "message": "Desa"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Desar-ne una còpia"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Mostra amb resultats de cerca de Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Mostra ”Obre en Acrobat”"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Mostra sempre ”Obre en Acrobat”"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Conversió cancel·lada"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Conversió correcta"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Baixant per a la conversió..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "S'està baixant el PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Error de conversió"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Conversió en curs..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Error desconegut"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Esperant la conversió..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "No s'ha trobat cap versió compatible de l'Acrobat. Instal·leu una \u003Ca target='_blank' href='https://acrobat.adobe.com/es/es/free-trial-download.html?trackingid=29NMCS7T&mv=other'>prova gratuïta de 7 dies\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "Sense títol"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Crea fitxers PDF en línia"
+   }
+}

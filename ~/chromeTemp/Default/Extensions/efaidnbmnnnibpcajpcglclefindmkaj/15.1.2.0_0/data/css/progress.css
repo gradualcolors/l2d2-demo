@@ -1,0 +1,18 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.progress{width:36px;height:36px;background-image:url(../images/spinner.gif);background-position:50%;float:right;margin-top:4px;margin-right:15px}.error{font-size:14px;width:50%;margin:0 auto;min-height:40px}.content{width:97%;margin-left:3%;margin-top:20px;min-height:230px;position:relative}.left-content{margin-left:3%;width:24%;float:left}.left-content,.right-content{height:100%;display:inline-block}.right-content{width:58%;margin-left:8%;margin-right:3%}.icon{width:50px;height:50px;display:inline-block;background-image:url(../images/icons.png);background-repeat:no-repeat;float:left}.icon.fileicon{background-position:-12px -463px;width:128px;height:128px;margin:0 15px 5px}.filelabel{display:inline-block;font-size:12px;width:96%;margin:0 2%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#797979;text-align:center}.sub-header{color:#333;font-size:16px}input[type=text].filename{width:100%;margin:6px 0}.folders{width:100%;margin:20px 0;color:#797979;font-size:16px}.folders-header{margin-bottom:10px}.folder-icon{width:30px;height:24px;background-image:url(../images/icons.png);background-repeat:no-repeat;background-position:-61px -10px;display:inline-block;margin-left:10px}.folder-name{display:inline-block;min-width:80px;height:30px;line-height:30px;font-size:14px;vertical-align:top}.folder-display{height:30px;cursor:pointer;display:block}.selected{background-color:#e7f2fb}.nofolders-message{font-size:14px;color:#ccc}#error{font-size:14px}.done{margin:30px 0 0 36%;display:block}.special_question{padding:15px}

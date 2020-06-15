@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Acrobat'ta Aç"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Acrobat Doldur ve İmzala"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Varolan PDF'ye ekle..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "PDF'ler için otomatik olarak göster"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Bağ Hedefini PDF’ye Ekle"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Web Sayfasını Mevcut PDF’ye Ekle..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Chrome'un bu sürümü Adobe Acrobat'ı desteklemiyor. Minimum sürüm: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "PDF'yi Acrobat'ta açmak için aşağıdaki bağlantıyı tıklatın."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "PDF'yi sıkıştır"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Web syfsnı PDF'ye dnştr…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Geçerli web sayfasını Adobe PDF Dosyasına dönüştür "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Acrobat Reader uzantısı şu anda devre dışı. Lütfen BT yöneticiniz ile iletişime geçin"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "PDF'yi Acrobat Reader'da Aç"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Bağ Hedefini PDF’ye Dönüştür"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Web Sayfasını Adobe PDF'ye Dönüştür..."
+   },
+   "web2pdfCopyText": {
+      "message": "Acrobat'a Kopyalanıyor"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "PDF'ye Dönüştür"
+   },
+   "web2pdfDestinationText": {
+      "message": "Hedef klasör:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Tamamlandı"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Fill & Sign"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Geçerli web sayfasını Adobe PDF dosyasına dönüştürün (yalnızca Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Dosya başka bir işlem tarafından kullanıldığından kaydedilemiyor."
+   },
+   "web2pdfFilename": {
+      "message": "Dosya Adı:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Doldur ve İmzala"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "PDF'yi Dışa Aktar"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_tr"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Acrobat online'a git"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Web sayfası işlenirken bir hata oluştu."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML İçeriği işlenemeyecek kadar büyük."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat uzantısı, görevinizi tamamlamanıza yardımcı olacak PDF araçlarını önerir. Önerilerimiz, aygıtınızda arama yaptığınız konuları ve gerçekleştirilen işlemleri temel alır. Aramalar Adobe'ye gönderilmez. Bu özelliği devre dışı bırakmak için \u003Cspan class = \"tooltip-content-settings\">ayarlar\u003C/span> bölümüne gidin."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Yükleniyor..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Chrome için Adobe Acrobat henüz Mac'te kullanılamıyor"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Acrobat DC depolama alanınızda klasör yok."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "Seçili dosya üzerinde yazma izinleriniz yok."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Acrobat’ta Aç"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Adobe PDF İndir"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Acrobat Reader'da Aç"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "PDF'yi Acrobat’ta Aç"
+   },
+   "web2pdfOptOut": {
+      "message": "Chrome için Adobe Acrobat'ın ürün geliştirme amacıyla Adobe'ye isimsiz kullanıcı bilgileri göndermesine izin verin."
+   },
+   "web2pdfOptions": {
+      "message": "Seçenekler"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobat Seçenekleri"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "PDF açılamadı"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Açılamadı"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF Açıldı"
+   },
+   "web2pdfPDFOpening": {
+      "message": "PDF açılıyor"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Tercihler..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Adobe Acrobat Hakkında"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "zaten mevcut.\n Değiştirmek istiyor musunuz?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Send & Track"
+   },
+   "web2pdfSave": {
+      "message": "Kaydet"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Kopya kaydet"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Google arama sonuçlarıyla göster"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "\"Acrobat'ta aç\" seçeneğini göster"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "\"Acrobat'ta aç\" seçeneğini her zaman göster"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Dönüştürme İptal Edildi"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Dönüştürme Başarılı"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Dönüştürme için indiriliyor..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "PDF İndiriliyor"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Dönüştürme Hatası"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Dönüştürme devam ediyor…"
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Bilinmeyen Hata"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Dönüştürme için bekleniyor..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Desteklenen bir Acrobat sürümü bulunamadı. \u003Ca target='_blank' href='https://acrobat.adobe.com/tr/tr/free-trial-download.html?trackingid=29NMCS7T&mv=other'>7 günlük ücretsiz deneme sürümünü\u003C/a> yükleyin."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "başlıksız"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Çevrimiçi PDF Oluştur"
+   }
+}

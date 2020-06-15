@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Acrobat에서 열기"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Acrobat에서 채우기 및 서명"
+   },
+   "web2pdfAddButtonText": {
+      "message": "기존 PDF에 추가..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "PDF에 대해 자동으로 표시"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "기존 PDF에 링크 대상 추가"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "웹 페이지를 기존 PDF에 추가..."
+   },
+   "web2pdfBadVersion": {
+      "message": "이 버전의 Chrome은 Adobe Acrobat을 지원하지 않습니다. 최소 버전은 $version$입니다.",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "PDF를 Acrobat에서 열려면 아래 링크를 클릭하십시오."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "PDF 압축"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "웹 페이지를 PDF로 변환..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "현재 웹 페이지를 Adobe PDF 파일로 변환 "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "현재 Acrobat Reader 확장 프로그램이 사용 중지되었습니다. IT 관리자에게 문의하시기 바랍니다."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Acrobat Reader에서 PDF 열기"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "링크 대상을 Adobe PDF로 변환"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "웹 페이지를 Adobe PDF 파일로 변환..."
+   },
+   "web2pdfCopyText": {
+      "message": "Acrobat으로 복사"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "PDF로 변환"
+   },
+   "web2pdfDestinationText": {
+      "message": "대상 폴더:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "완료"
+   },
+   "web2pdfExportButtonText": {
+      "message": "채우기 및 서명"
+   },
+   "web2pdfExtnDescription": {
+      "message": "현재 웹 페이지를 Adobe PDF 파일로 변환(Windows만 해당)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "파일을 다른 프로세스에서 사용 중이므로 저장할 수 없습니다."
+   },
+   "web2pdfFilename": {
+      "message": "파일 이름: "
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "채우기 및 서명"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "PDF 내보내기"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_kr"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "온라인 Acrobat으로 이동"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "웹 페이지 처리 중 오류."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML 내용이 너무 커서 처리할 수 없습니다."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat 확장 프로그램에서는 작업 수행을 지원하는 PDF 도구를 권장합니다. 검색한 내용과 장치에서 발생한 내용에 따라 권장 사항이 달라집니다. 검색 내용은 Adobe로 전송되지 않습니다. 이 기능을 사용하지 않도록 설정하려면 \u003Cspan class = \"tooltip-content-settings\">설정\u003C/span>으로 이동하십시오."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "로드 중..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Chrome용 Adobe Acrobat은 아직 Mac에서 이용할 수 없습니다."
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Acrobat DC 저장소에 폴더가 없습니다."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "선택된 파일에 대한 쓰기 권한이 없습니다."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Acrobat에서 열기"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Adobe PDF 다운로드"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Acrobat Reader에서 열기"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Acrobat에서 PDF 열기"
+   },
+   "web2pdfOptOut": {
+      "message": "Adobe Acrobat for Chrome에서 제품 개선을 위해 익명의 사용 정보를 Adobe로 보내도록 허용합니다."
+   },
+   "web2pdfOptions": {
+      "message": "옵션"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobat 옵션"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "PDF 열기 실패"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "열기 실패"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF 열림"
+   },
+   "web2pdfPDFOpening": {
+      "message": "PDF 여는 중"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "기본 설정..."
+   },
+   "web2pdfPrivacy": {
+      "message": "Adobe Acrobat 정보"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "이미 존재합니다.\n 교체하시겠습니까?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "보내기 및 추적"
+   },
+   "web2pdfSave": {
+      "message": "저장"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "사본 저장"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Google 검색 결과 표시"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "\"Acrobat에서 열기\" 표시"
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "항상 \"Acrobat에서 열기\" 표시"
+   },
+   "web2pdfStatusCancelled": {
+      "message": "변환 취소"
+   },
+   "web2pdfStatusComplete": {
+      "message": "변환 성공"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "변환을 위해 다운로드 중..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "PDF 다운로드 중"
+   },
+   "web2pdfStatusFailure": {
+      "message": "변환 실패"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "변환 진행 중..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "알 수 없는 오류"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "변환 대기 중..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "지원되는 Acrobat 버전을 찾을 수 없습니다. \u003Ca target='_blank' href='https://acrobat.adobe.com/kr/ko/free-trial-download.html?trackingid=29NMCS7T&mv=other'>7일 무료 평가판\u003C/a>을 설치하십시오."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "제목 없음"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "온라인으로 PDF 작성"
+   }
+}

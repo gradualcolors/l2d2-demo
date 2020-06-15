@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Открыть в Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Заполнить и подписать в Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Добавить в текущий PDF"
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Автоматически показывать для PDF"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Добавить содержимое по ссылке в существующий файл PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Добавить веб-страницу в существующий файл PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "Эта версия Chrome не поддерживает Adobe Acrobat. Минимальная версия: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Нажмите ссылку ниже, чтобы открыть файл PDF в Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Сжать PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Экспорт в PDF…"
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Преобразовать текущую веб-страницу в файл Adobe PDF "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Расширение Acrobat Reader отключено. Обратитесь к своему ИТ-администратору."
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Открыть PDF в Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Преобразовать содержимое по ссылке в файл Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Преобразовать веб-страницу в файл Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Копирование в Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Преобразовать в PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Папка назначения:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Готово"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Заполнение и подпись"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Преобразование текущей веб-страницы в файл Adobe PDF (только для Windows)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "Невозможно сохранить файл, так как он используется другим процессом."
+   },
+   "web2pdfFilename": {
+      "message": "Имя файла:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Заполнить и подписать"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Экспорт PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext_ru"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Перейти в Acrobat онлайн"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Ошибка обработки веб-страницы."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "Размер содержимого HTML превышает допустимый для обработки."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Расширение Adobe Acrobat предлагает инструменты, которые помогут вам выполнять задачи с файлами PDF. Эта функция работает на основе ваших результатов поиска и применяется на вашем устройстве. Данные поиска не отправляются в Adobe. Функцию можно отключить в \u003Cspan class = \"tooltip-content-settings\">настройках\u003C/span>."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Загрузка..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Программа Adobe Acrobat для Chrome пока недоступна для Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "Нет папок в хранилище Acrobat DC."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "У вас нет прав на запись в выбранный файл."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Открыть в Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Загрузить Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Открыть в Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Открыть PDF в Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Разрешить Adobe Acrobat для Chrome анонимно передавать информацию об использовании в Adobe для улучшения качества продукта."
+   },
+   "web2pdfOptions": {
+      "message": "Параметры"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Параметры Adobe Acrobat"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Не удалось открыть PDF"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Сбой при открытии"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF открыт"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Открытие файла PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Установки..."
+   },
+   "web2pdfPrivacy": {
+      "message": "О программе Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "уже существует.\n Заменить?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Отправка и отслеживание"
+   },
+   "web2pdfSave": {
+      "message": "Сохранить"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Сохранить копию"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Показывать с результатами поиска Google"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Показывать \"Открыть в Acrobat\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Всегда показывать \"Открыть в Acrobat\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Конвертация отменена"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Завершено"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Загрузка для выполнения преобразования..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Загрузка файла PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Сбой конвертации"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Выполняется преобразование..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Неизвестная ошибка"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Ожидается преобразование..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "Поддерживаемая версия Acrobat не найдена. Установите \u003Ca target='_blank' href='https://acrobat.adobe.com/ru/ru/free-trial-download.html?trackingid=29NMCS7T&mv=other'>бесплатную пробную версию на 7 дней\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "без имени"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Создать PDF онлайн"
+   }
+}

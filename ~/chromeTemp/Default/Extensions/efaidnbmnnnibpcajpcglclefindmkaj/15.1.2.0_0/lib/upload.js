@@ -1,0 +1,18 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+function dependOn(){"use strict";return[require("communicate"),require("util"),require("common"),require("proxy"),require("analytics")]}var def;require=function(e){"use strict";return e},def=window.define?window.define:function(e,n){"use strict";return n.apply(null,[{ajax:$.ajax.bind($)}])};var exports=acom_analytics={};def(dependOn(),(function(e,n,r,t,i){"use strict";var o,s,u=null;function a(e){return e.replace(/\/$/,"").split("/").splice(-1)[0].replace(/\?\S*/,"")}for(o in s=function(){return e.getModule("session")},u||(u=new function(){this.LOG=r.LOG,this.proxy=t.proxy.bind(this),this.ajaxRequest=function(e){var t=n.Deferred();return r.ajaxReady(!0).then((function(){s().newSession(null,!0,{filename:e.filename}),t.resolve()}),this.proxy((function(){s().sign_in(e).then((function(){t.resolve()}),(function(){t.reject(),n.consoleLog("upload rejected")}))}))),t},this.sendIt=function(e,i){var o,s=n.newFormData();return o={name:i.filename,parent_id:r.settings.files_root,on_dup_name:"auto_rename",ignore_content_type:!0,source_url:i.url},s.append("metadata",JSON.stringify(o)),s.append("file",e,i.filename),n.ajax({url:r.settings.files_upload+"assets",type:"POST",processData:!1,data:s,contentType:!1,headers:r.GET_headers()}).then((function(e){return e.request=i,e}),this.proxy((function(e){return t.REST_error(e,this),e})))},this.upload=function(e){return e.upload_promise=n.Deferred(),e.filename||(e.filename=a(e.url)),s().sessionRequest(e),this.ajaxRequest(e).then(this.proxy((function(){var r;if(i.event(i.e.UPLOAD_PROGRESS_SHOWN),0===e.url.indexOf("data"))throw new Error("Can't upload Data URIs (Yet)");(r=n.newXHR()).open("GET",e.url,!0),r.responseType="blob",r.onload=this.proxy((function(o){if(200===r.status){e.mime&&r.response.type!==e.mime&&(s().error({error:"Unexpected mime type",received:r.response.type,expected:e.mime,url:e.url,timestamp:(new Date).getTime()}),this.LOG("UnexpectedMimeType: "+r.response.type+" ExpectedMimeType"+e.mime),i.event(i.e.ERROR_WRONG_MIME_TYPE),e.upload_promise.reject(r));var u=n.newBlob([r.response]);this.sendIt(u,e).then(this.proxy((function(r){return n.consoleLogDir(r),e.upload_promise.resolve(r),r})),this.proxy((function(n){return e.upload_promise.reject(n),t.REST_error(n,this),n})))}})),r.send()}))),e.upload_promise.promise()},this.uploadHTML=function(e,r){return r.upload_promise=n.Deferred(),r.filename||(r.filename=a(r.url)),r.filename=r.filename.replace(".pdf",".zip"),this.sendIt(e,r).then(this.proxy((function(e){return n.consoleLogDir(e),r.upload_promise.resolve(e),e}))),r.upload_promise.promise()}},e.registerModule("upload",u)),u)u.hasOwnProperty(o)&&("function"==typeof u[o]?exports[o]=u[o].bind(u):exports[o]=u[o]);return u}));

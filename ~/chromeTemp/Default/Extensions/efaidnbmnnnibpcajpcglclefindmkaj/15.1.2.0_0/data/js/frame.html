@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/popup.css" type="text/css" rel="stylesheet"/>
+        <script src="./libs/jquery-3.1.1.min.js"></script>
+        <script src="./content-util.js"></script>
+        <script src="./analytics.js"></script>
+        <script src="./frame.js"></script>
+        <script src="./settings.js"></script>
+    </head>
+<body>
+<div class="acrobatMainDiv">
+    <div class="status-dialog">
+        <div class="action-available"><div class="translate" id="web2pdfTitle"></div>
+            <input type="button" class="close-dialog"/>
+        </div>
+        <div class="progress-area hidden">
+            <div class="convert-status hidden">
+                <div class="convert-status-icon"></div>
+                <div class="convert-status-title"></div>
+            </div>
+            <div class="convert-title"></div>
+            <div class="convert"></div>
+        </div>
+        <div class="actions">
+            <input type="button" class="acro-option pdf hidden do_acrobat translate" id="web2pdfOpenButtonText" value="Open in Acrobat"/>
+            <input type="button" class="pdf hidden do_acrobat do_acrobat_FS translate" id="web2pdfFillSignAcrobatButtonText"   value="Fill &amp; Sign"/>
+            <input type="button" class="reader-option html hidden do_frictionless_create translate" id="web2pdfCreatePDFText" value="web2pdfCreatePDFText"/>
+            <input type="button" class="api-option pdf hidden do_upload translate" id="web2pdfSaveButtonText"   value="Save a copy"/>
+            <input type="button" class="api-option pdf hidden do_fillsign translate" id="web2pdfFillSignButtonText" value="Fill &amp; Sign"/>
+            <input type="button" class="api-option pdf hidden do_export translate" id="web2pdfExportButtonText"   value="Export PDF"/>
+            <input type="button" class="api-option pdf hidden do_send translate" id="web2pdfSEndButtonText"    value="Send &amp; Track"/>
+            <input type="button" class="acro-option html hidden do_html_to_pdf translate" id="web2pdfConvertButtonText" value="web2pdfConvertButtonText"/>
+            <input type="button" class="acro-option html hidden do_html_add_to_pdf translate" id="web2pdfAddButtonText" value="Add to existing PDF..."/>
+            <div class="horizontal-rule reader-option html hidden"></div>
+            <input type="button" class="do_visit_acom translate" id="web2pdfVisitButtonText"   value="Visit Acrobat.com"/>
+            <input type="button" class="go_to_aonline reader-option html hidden translate" id="web2pdfGoToAOnlineButtonText"  value="Go to Acrobat online"/>
+
+            <div class="horizontal-rule acro-option html hidden"></div>
+            <div class="horizontal-rule reader-option pref-divider html hidden"></div>
+            <div class="acro-option api-option-container pdf hidden">
+                <div class="api-option-container-inner">
+                    <input type="checkbox" class="acro-option api-option always-show pdf hidden" name="always-show" value="always-show" checked></input>
+                    <span class="checkbox-toggle pdf"></span>
+                    <label class="acro-option api-option label translate pdf hidden" id="web2pdfShowPersistentOpen" for="always-show"></label>
+                </div>
+            </div>
+
+            <div class="reader-option api-option-container html hidden">
+                <div class="api-option-container-inner-pdftools">
+                    <input type="checkbox" class="reader-option api-option always-show-pdftools html hidden" name="always-show" value="always-show" checked></input>
+                    <span class="checkbox-toggle pdf"></span>
+                    <label class="reader-option api-option label translate html hidden" id="web2pdfShowPDFTools" for="always-show"></label>
+                </div>
+            </div>
+
+            <input type="button" class="acro-option html hidden do_set_open_pref translate" id="web2pdfOpenInDCButtonText" value="Open PDF in Acrobat DC"/>
+            <input type="button" class="acro-option html hidden do-acro-prefs translate" id="web2pdfPreferencesButtonText"   value="Preferences..."/>
+
+            <div class="ui-element special_question hidden">
+                <span id="action_message"></span>
+                <input type="button" class="ui-element" id="special" value="Learn More"/>
+            </div>
+
+             <div class="api-option hidden action-signout hidden">
+                <div class="horizontal-rule"></div>
+                 <div class="action-signout-message">
+                     <div class="icon-user"></div>
+                     <span class="displayName"></span>
+                 </div>
+                <input type="button" class="ui-element sign-out" value="Sign Out"/>
+            </div>
+
+        </div>
+
+        <div class="frictionless-host hidden">
+            <div class="frictionless-error hidden">
+                <div class="error-icon"></div>
+                <div class="error-title">Upload error</div>
+                <p class="error-details">The uploaded file is missing an extension. Please ensure that the uploaded file has the correct extension.</p>
+            </div>
+            <div class="frictionless-loader hidden" data-loading-title='Loading...'></div>
+            <div class="frictionless-container"></div>
+            <div class="frictionless-actions">
+                <div class="tooltip hidden">
+                    <i class="info-icon"></i>
+                    <span class="tooltip-content"></span>
+                </div>
+            </div>
+        </div>
+        <input type="button" class="ui-element acrobat-com hidden" value="See all your files on Acrobat.com"/>
+        <pre class="ui-element hidden error"></pre>
+    </div>
+</div>
+</body>
+</html>
+

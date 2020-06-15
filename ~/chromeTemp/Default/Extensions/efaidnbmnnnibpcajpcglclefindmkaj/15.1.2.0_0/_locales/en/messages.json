@@ -1,0 +1,208 @@
+{
+   "stripTextOpenAcrobat": {
+      "message": "Open in Acrobat"
+   },
+   "stripTextOpenFillnSign": {
+      "message": "Fill & Sign in Acrobat"
+   },
+   "web2pdfAddButtonText": {
+      "message": "Add to existing PDF..."
+   },
+   "web2pdfAlwaysShow": {
+      "message": "Show automatically for PDFs"
+   },
+   "web2pdfAppendLinkContextMenu": {
+      "message": "Append Link Target to Existing PDF"
+   },
+   "web2pdfAppendPageContextMenu": {
+      "message": "Add Web Page to Existing PDF..."
+   },
+   "web2pdfBadVersion": {
+      "message": "This version of Chrome does not support Adobe Acrobat.  Minimum version is: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "web2pdfClickToOpen": {
+      "message": "Click the link below to open PDF in Acrobat."
+   },
+   "web2pdfCompressPDFText": {
+      "message": "Compress PDF"
+   },
+   "web2pdfConvertButtonText": {
+      "message": "Convert webpage to PDF..."
+   },
+   "web2pdfConvertButtonToolTip": {
+      "message": "Convert current web page to an Adobe PDF File "
+   },
+   "web2pdfConvertButtonToolTipERPReader": {
+      "message": "Acrobat Reader extension is currently disabled. Please contact your IT admin"
+   },
+   "web2pdfConvertButtonToolTipReader": {
+      "message": "Open PDF in Acrobat Reader"
+   },
+   "web2pdfConvertLinkContextMenu": {
+      "message": "Convert Link Target to Adobe PDF"
+   },
+   "web2pdfConvertPageContextMenu": {
+      "message": "Convert Web Page to Adobe PDF..."
+   },
+   "web2pdfCopyText": {
+      "message": "Copying to Acrobat"
+   },
+   "web2pdfCreatePDFText": {
+      "message": "Convert to PDF"
+   },
+   "web2pdfDestinationText": {
+      "message": "Destination folder:"
+   },
+   "web2pdfDoneButtonText": {
+      "message": "Done"
+   },
+   "web2pdfExportButtonText": {
+      "message": "Fill & Sign"
+   },
+   "web2pdfExtnDescription": {
+      "message": "Convert current web page to an Adobe PDF file (Windows only)"
+   },
+   "web2pdfExtnName": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfFileLockedError": {
+      "message": "File cannot be saved because it is in use by another process."
+   },
+   "web2pdfFilename": {
+      "message": "Filename:"
+   },
+   "web2pdfFillSignAcrobatButtonText": {
+      "message": "Fill & Sign"
+   },
+   "web2pdfFillSignButtonText": {
+      "message": "Export PDF"
+   },
+   "web2pdfFrictionlessUrl": {
+      "message": "https://www.adobe.com/go/fl_chromeext"
+   },
+   "web2pdfGoToAOnlineButtonText": {
+      "message": "Go to Acrobat online"
+   },
+   "web2pdfHTMLJSError": {
+      "message": "Error processing web page."
+   },
+   "web2pdfHTMLTooLarge": {
+      "message": "HTML Content is too large to process."
+   },
+   "web2pdfInfoHoverPopup": {
+      "message": "Adobe Acrobat extension recommends PDF tools to help you accomplish your task. Our recommendation is based on what you searched and occurs on device; searches are not sent to Adobe. Go to \u003Cspan class = \"tooltip-content-settings\">settings\u003C/span> to disable this feature."
+   },
+   "web2pdfLoaderTitle": {
+      "message": "Loading..."
+   },
+   "web2pdfMissingMac": {
+      "message": "Adobe Acrobat for Chrome is not yet available for Mac"
+   },
+   "web2pdfNoFoldersText": {
+      "message": "You have no folders in your Acrobat DC storage."
+   },
+   "web2pdfNoWritePermissionOnSelectedFile": {
+      "message": "You do not have write permissions on the selected file."
+   },
+   "web2pdfOpenButtonText": {
+      "message": "Open in Acrobat"
+   },
+   "web2pdfOpenButtonTextOlder": {
+      "message": "Download Adobe PDF"
+   },
+   "web2pdfOpenButtonTextReader": {
+      "message": "Open in Acrobat Reader"
+   },
+   "web2pdfOpenInDCButtonText": {
+      "message": "Open PDF in Acrobat"
+   },
+   "web2pdfOptOut": {
+      "message": "Allow Adobe Acrobat for Chrome to send anonymous usage information to Adobe for product improvement purposes."
+   },
+   "web2pdfOptions": {
+      "message": "Options"
+   },
+   "web2pdfOptionsTitle": {
+      "message": "Adobe Acrobat Options"
+   },
+   "web2pdfPDFOpenFailed": {
+      "message": "Failed to open PDF"
+   },
+   "web2pdfPDFOpenFailedv2": {
+      "message": "Failed to Open"
+   },
+   "web2pdfPDFOpened": {
+      "message": "PDF Opened"
+   },
+   "web2pdfPDFOpening": {
+      "message": "Opening PDF"
+   },
+   "web2pdfPreferencesButtonText": {
+      "message": "Preferences..."
+   },
+   "web2pdfPrivacy": {
+      "message": "About Adobe Acrobat"
+   },
+   "web2pdfReplaceWarning": {
+      "message": "already exists.\n Do you want to replace it?"
+   },
+   "web2pdfSEndButtonText": {
+      "message": "Send & Track"
+   },
+   "web2pdfSave": {
+      "message": "Save"
+   },
+   "web2pdfSaveButtonText": {
+      "message": "Save a copy"
+   },
+   "web2pdfShowPDFTools": {
+      "message": "Show with Google search results"
+   },
+   "web2pdfShowPersistentOpen": {
+      "message": "Show \"Open in Acrobat\""
+   },
+   "web2pdfShowPersistentOpenAlways": {
+      "message": "Always show \"Open in Acrobat\""
+   },
+   "web2pdfStatusCancelled": {
+      "message": "Conversion Cancelled"
+   },
+   "web2pdfStatusComplete": {
+      "message": "Conversion Successful"
+   },
+   "web2pdfStatusDownloading": {
+      "message": "Downloading for conversion..."
+   },
+   "web2pdfStatusDownloadingPDF": {
+      "message": "Downloading PDF"
+   },
+   "web2pdfStatusFailure": {
+      "message": "Conversion Failure"
+   },
+   "web2pdfStatusInProgress": {
+      "message": "Conversion in progress..."
+   },
+   "web2pdfStatusUnknownFailure": {
+      "message": "Unknown Failure"
+   },
+   "web2pdfStatusWaiting": {
+      "message": "Waiting to convert..."
+   },
+   "web2pdfTitle": {
+      "message": "Adobe Acrobat"
+   },
+   "web2pdfUnsupportedAcrobatVersion": {
+      "message": "A supported version of Acrobat could not be found. Install a \u003Ca target='_blank' href='https://acrobat.adobe.com/us/en/free-trial-download.html?trackingid=29NMCS7T&mv=other'>free 7-day trial\u003C/a>."
+   },
+   "web2pdfUntitledFileName": {
+      "message": "untitled"
+   },
+   "web2pdfVisitButtonText": {
+      "message": "Create PDF Online"
+   }
+}
