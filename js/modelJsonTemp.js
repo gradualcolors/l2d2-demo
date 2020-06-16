@@ -201,8 +201,8 @@ function createJSON(char_name, modelBlob, textureBlob) {
 		char_name != "Akiomi" &&
 		char_name != "Seiya") {
 		modelJson.motions["motion"].push({
-			"name": char_name + "_amai",
-			"file": "assets/motions/" + char_name + "_amai.mtn"
+			"name": char_name.toLowerCase() + "_amai",
+			"file": "assets/motions/" + char_name.toLowerCase() + "_amai.mtn"
 		});
 	}
 

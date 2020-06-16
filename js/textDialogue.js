@@ -64,7 +64,7 @@ $("#speaker").html($("select#charName_text option:selected").html());
 var i = 0;
 var timer = setInterval(function(){
     document.getElementById("textbox").innerHTML+=dialogue[i];i++;if(i>dialogue.length-1){clearInterval(timer)}
-},100)
+},50)
 
 
 $("button#toggleTextbox").attr("disabled", false);
