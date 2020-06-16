@@ -278,6 +278,18 @@
     margin: auto;
     position: relative;
     margin-top: -160px;">
+	<div id="navi" style="display:none;">
+						<div class="left">
+						<div class="back" style="display:none;">
+							<img class="arrows a-back" src="assets/chevback.png" style="pointer-events: auto;">
+						</div>
+					</div>
+					<div class="right">
+						<div class="forward">
+							<img class="arrows a-next" src="assets/chevnext.png" style="pointer-events: auto;">
+						</div>
+					</div>
+			</div>
 					<div id="char-name">
 						<div class="bubble">
 							<div id="speaker"></div>
@@ -291,7 +303,8 @@
 					</div>
 				</div>
 			</div>
-<div id="fun_stuff" style="margin-left:35px; margin-top:15px;"><strong>Fun stuff: </strong><button id="openModal" disabled>Add Text</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button></div>						
+<div id="fun_stuff" style="margin-left:35px; margin-top:15px;"><strong>Fun stuff: </strong>
+<button id="openModal" disabled>Add Text</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="resetText">Restart Text</button></div>						
 <div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><span style="font-size:12px;"><strong>Console Log:</strong></span>
 			<ul id="log"></ul>
 			</div>
@@ -300,7 +313,8 @@
 <div id="textModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
+ <!-- ONE LINE DIALOGUE -->
+<!-- <div class="modal-content">
     <span class="close">&times;</span>
     <center><p><select id="charName_text">
 	<option value="" selected disabled hidden>Select Character</option>
@@ -312,6 +326,51 @@
 	</select></p>
 	<p id="modal_error"></p>
 	<button id="submitText" class="second">Input Text</button><center>
+  </div>-->
+
+ <div class="modal-content">
+    <div style="right:0;" class="close">&times;</div>
+	<div style="width:95%;margin:auto;">
+	<p>Choose number of lines: <select id="num_lines">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	</select></p>
+	<p>Turn on text animation? (Not recommended for laggy devices) <input type="checkbox" id="textwriter"/></p>
+	
+	<p class="inputText active">Line 1: <select  class="charLine_select"  id="charName_text1">
+	<option value="" selected disabled hidden>Select Character</option>
+	<option value="char_a"></option>
+	</select>: 
+	<input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="256"> Select motion 1: <select class="charMotion_select"  id="char_motion1">
+	<option value="" selected disabled hidden>Select Motion</option></select></p>
+	
+	
+	<p class="inputText" style="display:none;">Line 2: <select class="charLine_select" id="charName_text2">
+	<option value="" selected disabled hidden>Select Character</option>
+	<option value="char_a"></option>
+	</select>: 
+	<input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="256"> Select motion 2: <select class="charMotion_select"  id="char_motion2">
+	<option value="" selected disabled hidden>Select Motion</option></select></p>
+	
+	<p class="inputText" style="display:none;">Line 3: <select class="charLine_select" id="charName_text3">
+	<option value="" selected disabled hidden>Select Character</option>
+	<option value="char_a"></option>
+	</select>: 
+	<input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="256"> Select motion 3: <select class="charMotion_select"  id="char_motion3">
+	<option value="" selected disabled hidden>Select Motion</option></select></p>
+	
+	<p class="inputText" style="display:none;">Line 4: <select class="charLine_select" id="charName_text4">
+	<option value="" selected disabled hidden>Select Character</option>
+	<option value="char_a"></option>
+	</select>: 
+	<input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="256"> Select motion 4: <select class="charMotion_select"  id="char_motion4">
+	<option value="" selected disabled hidden>Select Motion</option></select></p>
+	<p id="modal_error"></p>
+	
+	<button id="submitText" class="second">Add Dialogue!</button>
+	</div>
   </div>
 
 </div>

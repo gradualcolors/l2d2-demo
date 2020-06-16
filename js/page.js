@@ -45,8 +45,13 @@ $(document).ready(function() {
 		$("button#modela").click( function() {
         //sl.change(function() {
 		charName1 = $("select#char1").val();
+				
 		$("span#active_charA").html(charName1);
-		$("select#charName_text").children("option[value='char_a']").text(charName1);
+		
+		//$("select#charName_text").children("option[value='char_a']").text(charName1);
+		$("select.charLine_select").children("option[value='char_a']").text(charName1);
+		
+		
 		if(charName1 == "")
 		{
 			$("#log").append("<li style=\"color:red;\">You must select Character A's name!</li>");
@@ -150,10 +155,13 @@ $(document).ready(function() {
 				$("button#removeb").show();
 					$("#log").append("<li>Changed Character B to " + charName2 + "</li>");
 			});
-			$("select#charName_text").children('option[value="char_b"]').text(charName2);
+				//$("select#charName_text").children('option[value="char_b"]').text(charName2);
+				$("select.charLine_select").children('option[value="char_b"]').text(charName2);
 			}
 			else{
-			$("select#charName_text").append($("<option></option>").text(charName2).val("char_b"));
+			//$("select#charName_text").append($("<option></option>").text(charName2).val("char_b"));
+			$("select.charLine_select").append($("<option></option>").text(charName2).val("char_b"));
+			
 			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2);
 			_show(charJson2, function(model2) {  
                 sm2.empty();
@@ -185,7 +193,9 @@ $(document).ready(function() {
 				$("button#removeb").hide();
 				$("button#modelb").html("Add Character B");
 				$("#log").append("<li>Removed Character B.</li>");
-				$("select#charName_text option[value='char_b']").remove();
+				//$("select#charName_text option[value='char_b']").remove();
+				$("select.charLine_select option[value='char_b']").remove();
+
 
 });
 		

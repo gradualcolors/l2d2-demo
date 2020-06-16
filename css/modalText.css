@@ -37,6 +37,14 @@ font-size:14px;
   cursor: pointer;
 }
 
+.c_text input {
+	width:235px;
+}
+
+#navi {
+	position:absolute;
+}
+
 #char-name {
 position: absolute;
     /* bottom: 0; */
@@ -53,6 +61,49 @@ position: absolute;
 	position: relative;
 }
 
+/* LEFT ARROW */
+
+.left {
+    /* position: relative; */
+    margin-top: 10px;
+    z-index: 100;
+    /* margin-bottom: 18px; */
+    margin-left: 235px;
+    width: 100px;
+    height: 100px;
+    /* display: inline-block; */
+    float: left;
+}
+
+/* RIGHT ARROW */
+
+.right {
+	/* position: relative; */
+	margin-top: 10px;
+    z-index: 100;
+    /* margin-bottom: 18px; */
+    margin-left: 535px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    float: right;
+}
+
+.arrows {
+	position: absolute;
+	width: 100px;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.arrows:hover {
+	width: 105px;
+}
+
+
 #arrowbox {
     width: 500px;
     height: 100px;
@@ -67,6 +118,42 @@ position: absolute;
     /* position: absolute; */
     z-index: 100;
     margin: auto;
+}
+
+.arrowtips:after {
+	right: 310px;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(245, 245, 245, 0);
+	border-left-color: #f0f0f0;
+	border-top-width: 25px;
+	border-right-width: 15px;
+	border-bottom-width: 25px;
+	border-left-width: 15px;
+	margin-top: -25px;
+}
+
+.arrowtips:before {
+	left: 310px;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(245, 245, 245, 0);
+	border-right-color: #f0f0f0;
+	border-top-width: 25px;
+	border-right-width: 15px;
+	border-bottom-width: 25px;
+	border-left-width: 15px;
+	margin-top: -25px;
 }
 
 #speaker {
@@ -140,7 +227,7 @@ position: absolute;
 position: absolute;
     z-index: 100;
     bottom: 0;
-    right: 0;
+    right: -10px;
     /* margin-bottom: 39px; */
     margin-right: 360px;
     /* margin-top: -40px; */
