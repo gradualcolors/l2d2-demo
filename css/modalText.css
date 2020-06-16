@@ -38,11 +38,12 @@ font-size:14px;
 }
 
 #char-name {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 110px;
+position: absolute;
+    /* bottom: 0; */
+    /* margin-bottom: 129px; */
     margin-left: 360px;
     z-index: 101;
+    margin-top: -20px;
 }
 
 
@@ -54,7 +55,7 @@ font-size:14px;
 
 #arrowbox {
     width: 500px;
-    height: 125px;
+    height: 100px;
     padding: 10px;
     border-radius: 20px;
     background: #ffffff;
@@ -69,24 +70,26 @@ font-size:14px;
 }
 
 #speaker {
-	font-size: 14px;
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	-webkit-transition: opacity .5s ease-in-out;
-	-moz-transition: opacity .5s ease-in-out;
-	-ms-transition: opacity .5s ease-in-out;
-	-o-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    /* vertical-align: top; */
+    font-weight: bold;
+    margin-top: -5px;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
 .dialogue {
-	padding-top: 20px;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-bottom: 15px;
-	font-weight: bold;
-	font-size: 16px;
+	padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
 	-webkit-transition: opacity .5s ease-in-out;
 	-moz-transition: opacity .5s ease-in-out;
 	-ms-transition: opacity .5s ease-in-out;
@@ -96,14 +99,15 @@ font-size:14px;
 
 
 .bubble {
-	position: relative;
-	width: 135px;
-	padding: 5px;
-	background: #2ba3e2;
-	-webkit-border-radius: 42px;
-	-moz-border-radius: 42px;
-	border-radius: 42px;
-	border: #ffffff solid 3px;
+    position: relative;
+    width: 135px;
+    padding: 5px;
+    background: #2ba3e2;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    height: 20px;
+    border: #ffffff solid 3px;
 }
 
 .bubble:after {
