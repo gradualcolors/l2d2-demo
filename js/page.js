@@ -41,10 +41,12 @@ $(document).ready(function() {
 
         let sm = $("#function > #g1 > select.motion");
 		let sm2 = $("#function2 > #g2 > select.motion");
+		
 		$("button#modela").click( function() {
         //sl.change(function() {
 		charName1 = $("select#char1").val();
 		$("span#active_charA").html(charName1);
+		$("select#charName_text").children("option[value='char_a']").text(charName1);
 		if(charName1 == "")
 		{
 			$("#log").append("<li style=\"color:red;\">You must select Character A's name!</li>");
@@ -71,6 +73,8 @@ $(document).ready(function() {
 				{
 					$("button#modela").html("Change Character A");
 					$("#log").append("<li>Added " + charName1 + ".</li>");
+					$("button#openModal").attr("disabled", false);
+
 				}
 			{while (firstChild = stage.children.shift()) { firstChild.destroy(); }}			
 			$("button#modelb").attr("disabled", false);
@@ -146,8 +150,10 @@ $(document).ready(function() {
 				$("button#removeb").show();
 					$("#log").append("<li>Changed Character B to " + charName2 + "</li>");
 			});
+			$("select#charName_text").children('option[value="char_b"]').text(charName2);
 			}
 			else{
+			$("select#charName_text").append($("<option></option>").text(charName2).val("char_b"));
 			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2);
 			_show(charJson2, function(model2) {  
                 sm2.empty();
@@ -170,7 +176,7 @@ $(document).ready(function() {
 		
 			
 		$("button#removeb").click( function() {
-
+		
 			let lastChild = null;
 			lastChild = stage.children[1]; lastChild.destroy();
 			stage.children[0].adjustTranslate(0.5, 0);                     
@@ -179,9 +185,9 @@ $(document).ready(function() {
 				$("button#removeb").hide();
 				$("button#modelb").html("Add Character B");
 				$("#log").append("<li>Removed Character B.</li>");
-			});
+				$("select#charName_text option[value='char_b']").remove();
 
-
+});
 		
         sm.change(function() { stage.children[0].model.startMotion("motion", this.value) });
 		sm2.change(function() { stage.children[1].model.startMotion("motion", this.value) });

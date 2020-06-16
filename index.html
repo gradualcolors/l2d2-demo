@@ -5,8 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <meta name="referrer" content="never" />
         <meta name="robots" content="none" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-		        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+		<link rel = "preload" as="font" href="css/FOT-SkipStd-E.otf" type="font/otf" crossorigin="anonymous">
+		<link rel = "preload" as="font" href="css/FOT-SlumpStd-DB.otf" type="font/otf" crossorigin="anonymous">
+      <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />-->
+		 <link href="css/modalText.css" rel="stylesheet" />
+		 
+		 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
         <script src="lib/live2d.min.js" type="text/javascript"></script>
         <script src="lib/netUtils.js" type="text/javascript"></script>
         <script src="lib/Live2DFramework.js" type="text/javascript"></script>
@@ -20,10 +25,42 @@
         <script src="lib/index.js" type="text/javascript"></script>
         <title>Enstars Live2D Demo</title>
         <style>
+				@font-face {
+			font-family: FOT-SkipStd-E;
+			src: url("css/FOT-SkipStd-E.otf") format("opentype");
+		}
+
+		@font-face {
+			font-family: FOT-SlumpStd-DB;
+			src: url("css/FOT-SlumpStd-DB.otf") format("opentype");
+		}
             body { 
+			font-family:sans-serif;
 			font-size:11px;
 			margin: 0; 
-			width:100%;}
+			width:100%;
+			color:#39597a}
+		
+		button {
+		border-radius:5px;
+			font-family:FOT-SlumpStd-DB;
+			border: 1px #1c72aa solid;
+			font-size:12px;
+		}
+		
+		.first{
+			background:#e0ac24;
+			color:white;
+		}
+		.second{
+			background:#1c72aa;
+			color:white;
+		}
+		.third{
+			background:#c10000;
+			color:white;
+		}
+
 			#page{
 				width:1278px;
 				margin: auto;
@@ -85,6 +122,10 @@
 			margin:auto;
 			text-align: center;
 		}
+		
+		#toggle_text, #console{
+		font-family:'FOT-SkipStd-E';
+		}
         </style>
 
     </head>
@@ -145,18 +186,18 @@
                 <option value="Akiomi">Akiomi Kunugi</option>
                 <option value="Seiya">Seiya Hidaka</option>
             </select></p>
-            <p> Upload model file<br/>
+            <p><strong>Upload model file:</strong><br/>
             <input type="file" id="modelElem" accept=".moc,.moc3"></p>
 
-            <p>Upload texture file:<br/>
+            <p><strong>Upload texture file:</strong><br/>
             <input type="file" id="texElem" accept="image/png"></p>			
-			<p><button id="modela">Add Character A</button></p>
+			<p><button id="modela" class="first">Add Character A</button></p>
 		<div id="function">
-		<p>Character: <span id="active_charA"></span></p>
+		<p><strong>Character: <span id="active_charA"></span></p>
             <div id="g1">
-                Character A Motion:&nbsp;
+                <strong>Character A Motion:&nbsp;</strong>
                 <select class="motion"></select>
-                <button class="motion">replay</button>
+                <button class="motion">Replay</button>
             </div>
 
         </div>
@@ -210,19 +251,19 @@
                 <option value="Akiomi">Akiomi Kunugi</option>
                 <option value="Seiya">Seiya Hidaka</option>
             </select></p>
-			<p> Upload model file:<br/>
+			<p><strong>Upload model file:</strong><br/>
             <input type="file" id="modelElem2" accept=".moc,.moc3"></p>
-            <p> Upload texture file: <br/>
+            <p><strong>Upload texture file: </strong><br/>
             <input type="file" id="texElem2" accept="image/png"></p>
-			<p><button id="modelb" disabled>Add Character B</button>
-			<button id="removeb" style="display:none;">Remove Character B</button></p>
+			<p><button id="modelb" class="first" disabled>Add Character B</button>
+			<button id="removeb" style="display:none;" class="third">Remove Character B</button></p>
 		<div id="function2">
-		<p>Character: <span id="active_charB"></span></p>
+		<p><strong>Character: </strong><span id="active_charB"></span></p>
 
 				<div id="g2">
-                Character B Motion:&nbsp;
+                <strong>Character B Motion:&nbsp;</strong>
                 <select class="motion"></select>
-                <button class="motion">replay</button>
+                <button class="motion">Replay</button>
             </div>
 			  </div>
 </div>		
@@ -233,11 +274,48 @@
                 </canvas>
             </div>
 			</div>
-			</div>
 			
-<div style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><strong>Log:</strong>
+			<div id="toggle_text" style="display:none;width: 100%;
+    margin: auto;
+    position: relative;
+    margin-top: -160px;">
+					<div id="char-name">
+						<div class="bubble">
+							<div id="speaker"></div>
+						</div>
+					</div>
+					<div id="arrowbox">
+						<div id="textbox" class="dialogue"></div>
+					</div>
+					<div id="star">
+						<img src="assets/star.png">
+					</div>
+				</div>
+			</div>
+<div id="fun_stuff" style="margin-left:35px; margin-top:15px;"><strong>Fun stuff: </strong><button id="openModal" disabled>Add Text</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button></div>						
+<div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><span style="font-size:12px;"><strong>Console Log:</strong></span>
 			<ul id="log"></ul>
 			</div>
+
+<!-- The Modal -->
+<div id="textModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <center><p><select id="charName_text">
+	<option value="" selected disabled hidden>Select Character</option>
+	<option value="char_a"></option>
+	</select> : 
+	<input type="text" name="c_dialogue" id="c_dialogue" maxlength="256" style="width:75%"></p>
+	<p>Select motion: <select id="char_motion">
+	<option value="" selected disabled hidden>Select Motion</option>
+	</select></p>
+	<p id="modal_error"></p>
+	<button id="submitText" class="second">Input Text</button><center>
+  </div>
+
+</div>
 
 </div>
 			
@@ -246,5 +324,6 @@
 		<script src="js/modelJsonTemp.js" type="text/javascript"></script>
         <script src="js/live2d.js" type="text/javascript"></script>
         <script src="js/page.js" type="text/javascript"></script>
+		<script src="js/textDialogue.js" type="text/javascript"></script>
 	</body>
 </html>
