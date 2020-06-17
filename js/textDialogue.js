@@ -190,6 +190,7 @@ activeMotion = [];
 counter = 0;
 
 $("button#toggleTextbox").attr("disabled", false);
+				
 
 	//fill arrays
 	$("p.inputText.active > select.charLine_select").each(function(){
@@ -210,6 +211,8 @@ modal.style.display = "none";
 			{
 				$("#arrowbox").addClass("arrowtips");
 				$("#navi").show();
+				$(".back").hide();
+				$(".forward").show();
 			}
 			else
 			{

@@ -157,6 +157,10 @@ $(document).ready(function() {
 			});
 				//$("select#charName_text").children('option[value="char_b"]').text(charName2);
 				$("select.charLine_select").children('option[value="char_b"]').text(charName2);
+				$("select#num_lines").val("-1");
+				$("#speaker").empty();
+				$("#textbox").empty();
+				$("#toggle_text").hide();
 			}
 			else{
 			//$("select#charName_text").append($("<option></option>").text(charName2).val("char_b"));
@@ -198,7 +202,10 @@ $(document).ready(function() {
 				$("#log").append("<li>Removed Character B.</li>");
 				//$("select#charName_text option[value='char_b']").remove();
 				$("select.charLine_select option[value='char_b']").remove();
-				
+				$("select#num_lines").val("-1");
+				$("#speaker").empty();
+				$("#textbox").empty();
+				$("#toggle_text").hide();
 				//$("select.charLine_select option[value='char_ab']").remove();
 
 
