@@ -319,7 +319,7 @@ return;}
 
 $("#resetText").click(function() {
 	
-	if($("select#num_lines").val() != 1{
+	if($("select#num_lines").val() != "1"){
 	
 	counter = 0;
 	$("#speaker").empty();
