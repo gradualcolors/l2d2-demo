@@ -189,6 +189,8 @@ activeDialogue = [];
 activeMotion = [];
 counter = 0;
 
+$("button#toggleTextbox").attr("disabled", false);
+
 	//fill arrays
 	$("p.inputText.active > select.charLine_select").each(function(){
 		activeChar.push($("option:selected", this).val());
@@ -230,7 +232,9 @@ $("#toggle_text").show();
 			{
 				stage.children[1].model.startMotion("motion", activeMotion[0])
 			}
-					if($("input#textwriter").is(":checked"))
+			
+			
+			if($("input#textwriter").is(":checked"))
 					{		
 							var i = 0;
 							var timer = setInterval(function(){
@@ -324,6 +328,19 @@ $("#resetText").click(function() {
 	counter = 0;
 	$("#speaker").empty();
 	$("#textbox").empty();
+	$("#speaker").html(activeSpeaker[0]);
+	$("#textbox").html(activeDialogue[0]);
+	
+			if (activeChar[0] == "char_a")
+			{
+				stage.children[0].model.startMotion("motion", activeMotion[0])
+			}
+			
+		else if (activeChar[0] == "char_b")
+			{
+				stage.children[1].model.startMotion("motion", activeMotion[0])
+			}
+			
 	$(".forward").show();
 	$(".back").hide();
 	$("#log").append("<li>Reset to beginning of text.</li>");

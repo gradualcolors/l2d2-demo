@@ -162,6 +162,9 @@ $(document).ready(function() {
 			//$("select#charName_text").append($("<option></option>").text(charName2).val("char_b"));
 			$("select.charLine_select").append($("<option></option>").text(charName2).val("char_b"));
 			
+			//$("select.charLine_select").append($("<option></option>").text("Both of them").val("char_ab"));
+
+			
 			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2);
 			_show(charJson2, function(model2) {  
                 sm2.empty();
@@ -195,6 +198,8 @@ $(document).ready(function() {
 				$("#log").append("<li>Removed Character B.</li>");
 				//$("select#charName_text option[value='char_b']").remove();
 				$("select.charLine_select option[value='char_b']").remove();
+				
+				//$("select.charLine_select option[value='char_ab']").remove();
 
 
 });
