@@ -1,28 +1,54 @@
 // Get the modal
-var modal = document.getElementById("textModal");
+var text_modal = document.getElementById("textModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("openModal");
+var open_btn = document.getElementById("openModal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+open_btn.onclick = function() {
+  text_modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span1.onclick = function() {
+  text_modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == text_modal) {
+    text_modal.style.display = "none";
   }
 }
+
+// Get the modal
+var dl_modal = document.getElementById("downloadModal");
+
+// Get the button that opens the modal
+var dl_btn = document.getElementById("dlModels");
+
+var span2 = document.getElementsByClassName("close")[1];
+span2.onclick = function() {
+  dl_modal.style.display = "none";
+}
+
+// When the user clicks the button, open the modal 
+dl_btn.onclick = function() {
+  dl_modal.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == dl_modal) {
+    dl_modal.style.display = "none";
+  }
+}
+
+
+
 
 
 /*$("select#charName_text").change(function() {
@@ -96,7 +122,7 @@ $("select#charName_text4").change(function() {
 	var activeChar4 = $(this).val(); 
 	
 	$("select#char_motion4").empty();
-	if (activeChar == "char_a")
+	if (activeChar4 == "char_a")
 	{
 		$("#function > #g1 > select.motion option").clone().appendTo("select#char_motion4");
 	}
@@ -206,7 +232,7 @@ $("button#toggleTextbox").attr("disabled", false);
 		activeMotion.push($(this).val());
 	})
 	
-modal.style.display = "none";
+text_modal.style.display = "none";
 			if (numlines > 1)
 			{
 				$("#arrowbox").addClass("arrowtips");
@@ -239,17 +265,9 @@ $("#toggle_text").show();
 			
 			if($("input#textwriter").is(":checked"))
 					{		
-							var i = 0;
-							var timer = setInterval(function(){
-								$(".forward").css("pointer-events", "none");
-								document.getElementById("textbox").innerHTML+=firstText[i];i++;
-								
-								if(i > firstText.length-1)
-								{
-									$(".forward").css("pointer-events", "auto");
-									clearInterval(timer)
-								}
-							},50)
+						$(".arrows").css("pointer-events", "none");
+						typeWriter(firstText);
+						
 							}
 					else{
 						$("#textbox").html(firstText);
@@ -282,19 +300,8 @@ if (counter <= (parseInt($("select#num_lines").val())-1))
 	
 		if($("input#textwriter").is(":checked"))
 		{
-				var i = 0;
-				var timer = setInterval(function(){
-					$(".forward").css("pointer-events", "none");
-					$(".back").css("pointer-events", "none");
-					document.getElementById("textbox").innerHTML+=currentText[i];i++;
-					
-					if(i > currentText.length-1)
-					{
-						$(".forward").css("pointer-events", "auto");
-						$(".back").css("pointer-events", "auto");
-						clearInterval(timer)
-					}
-				},50)
+			$(".arrows").css("pointer-events", "none");
+			typeWriter(currentText);
 		}
 		else{
 			$("#textbox").html(currentText);
@@ -373,20 +380,8 @@ if (counter >= 0)
 			
 	if($("input#textwriter").is(":checked"))
 		{
-			var i = 0;
-			var timer = setInterval(function(){
-				$(".forward").css("pointer-events", "none");
-				$(".back").css("pointer-events", "none");
-				document.getElementById("textbox").innerHTML+=currentText[i];i++;
-				
-				if(i > currentText.length-1)
-				{
-					$(".forward").css("pointer-events", "auto");
-					$(".back").css("pointer-events", "auto");
-					clearInterval(timer)
-				}
-			},50)
-			
+				$(".arrows").css("pointer-events", "none");
+				typeWriter(currentText);			
 			}
 		else{
 			$("#textbox").html(currentText);
@@ -440,6 +435,22 @@ function checkFields(){
 	})
 }
 
+//TYPEWRITER
+function typeWriter(str) {
+ 
+var convBox = document.getElementById("textbox");
+ 
+    setTimeout(function() {
+        $(".arrows").css("pointer-events", "auto");
+    }, 51+str.length * 20);
+    
+    for (let i = 0; i <= str.length; i++) {
+        setTimeout(function() {
+            convBox.innerHTML = str.substr(0, i);
+        }, 50 + i * 20);        
+    }
+    
+}
 
 
 $("#toggleTextbox").click(function() {

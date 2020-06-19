@@ -51,8 +51,8 @@ function _show(model, callback) {
     });
     stage.addChild(live2dSprite);
 	
-	let pos_y = parseInt(EnstBoyData.characters[model.name][0].position_y);
-	let coeff = parseInt(EnstBoyData.characters[model.name][0].scale);
+	let pos_y = parseInt(EnstCharData.characters[model.name][0].position_y);
+	let coeff = parseInt(EnstCharData.characters[model.name][0].scale);
 	let scale = parseFloat(coeff/100) + 0.400;
 	let sy = parseFloat(pos_y/350) + 0.15; 
 	

@@ -36,8 +36,23 @@ function get(url, callback) {
 
 $(document).ready(function() {
     //init(parseInt($("#width").val()), parseInt($("#height").val()));
+	
+	if (window.innerWidth > 1278)
+	{
 	init(1200, 676);
-
+	} 
+	else if (window.innerWidth > 818)
+		
+	{
+		var w = document.getElementById("main").offsetWidth;
+		init(w, w/1.775);
+	}
+	
+	else 
+		
+	{
+		init(768, 432);
+	}
 
         let sm = $("#function > #g1 > select.motion");
 		let sm2 = $("#function2 > #g2 > select.motion");
@@ -77,13 +92,16 @@ $(document).ready(function() {
 				else
 				{
 					$("button#modela").html("Change Character A");
+					$("#show_charBox1 > .float_bubble").css("background-image", "url('assets/icons/"+charName1+".png')");
+					$("#show_charBox1 > .float_bubble >img.symbol").attr("src","assets/swap.png");
 					$("#log").append("<li>Added " + charName1 + ".</li>");
 					$("button#openModal").attr("disabled", false);
 
 				}
 			{while (firstChild = stage.children.shift()) { firstChild.destroy(); }}			
 			$("button#modelb").attr("disabled", false);
-			
+			$("#show_charBox2").css("pointer-events", "auto");
+			$("#show_charBox2").css("filter", "none");
 			}
 			else
 			{
@@ -92,7 +110,7 @@ $(document).ready(function() {
 				window.URL.revokeObjectURL(mocRef);
 				window.URL.revokeObjectURL(texRef);				
 				firstChild = stage.children[0]; firstChild.destroy(); 
-		
+					$("#show_charBox1 > .float_bubble").css("background-image", "url('assets/icons/"+charName1+".png')");
 					$("#log").append("<li>Changed Character A to " + charName1 + "</li>");
 			}
 			
@@ -153,6 +171,7 @@ $(document).ready(function() {
 				stage.children[1].adjustTranslate(0.5, 0);
 				$("button#modelb").html("Change Character B");
 				$("button#removeb").show();
+				$("#show_charBox2 > .float_bubble").css("background-image", "url('assets/icons/"+charName2+".png')");
 					$("#log").append("<li>Changed Character B to " + charName2 + "</li>");
 			});
 				//$("select#charName_text").children('option[value="char_b"]').text(charName2);
@@ -181,6 +200,8 @@ $(document).ready(function() {
 				stage.children[1].adjustTranslate(0.5, 0);
 				$("button#modelb").html("Change Character B");
 				$("button#removeb").show();
+				$("#show_charBox2 > .float_bubble").css("background-image", "url('assets/icons/"+charName2+".png')");
+				$("#show_charBox2 > .float_bubble >img.symbol").attr("src","assets/swap.png");
 					$("#log").append("<li>Added " + charName2 + ".</li>");
 			});
 			}
@@ -199,6 +220,8 @@ $(document).ready(function() {
                 sm2.val("");
 				$("button#removeb").hide();
 				$("button#modelb").html("Add Character B");
+				$("#show_charBox2 > .float_bubble").css("background-image", "url('assets/icons/Hokuto.png')");
+				$("#show_charBox2 > .float_bubble >img.symbol").attr("src","assets/add.png");
 				$("#log").append("<li>Removed Character B.</li>");
 				//$("select#charName_text option[value='char_b']").remove();
 				$("select.charLine_select option[value='char_b']").remove();
@@ -219,4 +242,58 @@ $(document).ready(function() {
     $('#background').click(function(){
         $('.background').toggle();
     });
+	
+	    $('#close_charBox1').click(function(){
+    	var hidden = $('#charSpace1');
+        hidden.fadeOut(150);		
+		$('#show_charBox1').show();
+    });
+    
+    $('#show_charBox1').click(function(){
+    	var hidden = $('#charSpace1');
+		$('#show_charBox1').hide();
+		hidden.delay(150).fadeIn(150);			
+    });
+
+	    $('#close_charBox2').click(function(){
+    	var hidden = $('#charSpace2');
+        hidden.fadeOut(150);		
+		$('#show_charBox2').show();
+    });
+    
+    $('#show_charBox2').click(function(){
+    	var hidden = $('#charSpace2');
+		$('#show_charBox2').hide();
+		hidden.delay(150).fadeIn(150);			
+    });
+
+/* CREATE DIV BOX */
+let idols = document.getElementById("idols");
+let charDataLength = Object.keys(EnstCharData.characters).length;
+var enstaChar = []; 
+enstaChar = EnstCharData.characters;
+for(var i = 0; i < charDataLength; i++) {
+	var char_name = Object.keys(enstaChar)[i] ;
+	var icon_path = "assets/icons/" + enstaChar[char_name][0].icon;
+	var zip_url = enstaChar[char_name][0].drive_url;
+	
+	var imgLink = document.createElement("a");
+    var elem = document.createElement("img");
+	
+	if (zip_url == "")
+    {imgLink.className = "linkbox unavailable";}
+	else{
+	imgLink.className = "linkbox";
+    imgLink.setAttribute("href", zip_url);
+	imgLink.setAttribute("target", "_blank");
+	}
+	elem.setAttribute("src", icon_path);
+	imgLink.setAttribute("title", char_name);
+	
+	  imgLink.appendChild(elem); 
+      idols.appendChild(imgLink);
+	}
+	  
+	
+	
 });

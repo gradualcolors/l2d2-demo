@@ -18,8 +18,15 @@ font-size:14px;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 35%;
+  width: 500px;
+border: 2px solid #1c72aa;
+border-radius:10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
 }
 
 /* The Close Button */
@@ -42,23 +49,52 @@ font-size:14px;
 }
 
 #navi {
+	width: 735px;
+	margin:auto;
+}
+
+@media only screen and (max-width: 818px) {
+#navi {
+	width: 635px;
+}
+}
+
+#toggle_text
+{
+	display:none;
+	width: 100%;
 	position:absolute;
+    margin: auto;
+    margin-top: -160px;
+	
+}
+
+#wrapper{
+	width: 500px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 818px) {
+#wrapper {
+    width: 400px;
+}
 }
 
 #char-name {
 position: absolute;
     /* bottom: 0; */
     /* margin-bottom: 129px; */
-    margin-left: 360px;
     z-index: 101;
     margin-top: -20px;
 }
-
 
 #textbox {
 	height: 100%;
 	width: 100%;
 	position: relative;
+    margin: auto;
+    position: relative;
+    overflow-wrap: break-word;
 }
 
 /* LEFT ARROW */
@@ -68,7 +104,6 @@ position: absolute;
     margin-top: 10px;
     z-index: 100;
     /* margin-bottom: 18px; */
-    margin-left: 235px;
     width: 100px;
     height: 100px;
     /* display: inline-block; */
@@ -82,7 +117,6 @@ position: absolute;
 	margin-top: 10px;
     z-index: 100;
     /* margin-bottom: 18px; */
-    margin-left: 535px;
     width: 100px;
     height: 100px;
     display: inline-block;
@@ -120,8 +154,11 @@ position: absolute;
     margin: auto;
 }
 
+
+
 .arrowtips:after {
-	right: 310px;
+	margin-left: 513px;
+	/*right: 310px;*/
 	top: 50%;
 	border: solid transparent;
 	content: " ";
@@ -139,7 +176,8 @@ position: absolute;
 }
 
 .arrowtips:before {
-	left: 310px;
+	margin-left: -43px;
+	/*left: 310px;*/
 	top: 50%;
 	border: solid transparent;
 	content: " ";
@@ -154,6 +192,16 @@ position: absolute;
 	border-bottom-width: 25px;
 	border-left-width: 15px;
 	margin-top: -25px;
+}
+
+@media only screen and (max-width: 818px) {
+#arrowbox {
+    width: 400px;
+}
+
+.arrowtips:after{
+	margin-left: 413px;
+}
 }
 
 #speaker {
@@ -176,7 +224,8 @@ position: absolute;
     padding-right: 5px;
     padding-bottom: 15px;
     font-weight: bold;
-    font-size: 14px;
+	color:black;
+    font-size: 16px;
 	-webkit-transition: opacity .5s ease-in-out;
 	-moz-transition: opacity .5s ease-in-out;
 	-ms-transition: opacity .5s ease-in-out;
@@ -227,9 +276,8 @@ position: absolute;
 position: absolute;
     z-index: 100;
     bottom: 0;
-    right: -10px;
     /* margin-bottom: 39px; */
-    margin-right: 360px;
+	margin-left: 465px;
     /* margin-top: -40px; */
     user-select: none;
     -webkit-user-select: none;
@@ -237,9 +285,13 @@ position: absolute;
     -moz-user-select: none;
     -ms-user-select: none;
     animation: MoveUpDown .75s linear infinite;
-
 }
 
+@media only screen and (max-width: 818px) {
+#star {
+   margin-left: 370px;
+}
+}
 @keyframes MoveUpDown {
 	0%,
 	100% {

@@ -234,8 +234,8 @@ function createJSON(char_name, modelBlob, textureBlob) {
 			"name": "doll_3",
 			"file": "assets/motions/doll_3.mtn"
 		});
-
 	}
+	
 	console.log(char_name);
 	console.log(modelJson.model);
 	console.log(modelJson.textures);

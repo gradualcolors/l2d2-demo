@@ -13,6 +13,7 @@
 		 
 		 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+		<!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>-->
         <script src="lib/live2d.min.js" type="text/javascript"></script>
         <script src="lib/netUtils.js" type="text/javascript"></script>
         <script src="lib/Live2DFramework.js" type="text/javascript"></script>
@@ -63,22 +64,33 @@
 		}
 
 			#page{
-				width:1278px;
+				width:100%;
+				min-width:818px;
+				max-width:1278px;
 				margin: auto;
 				margin-top:35px;
 			}
 
+		@media only screen and (min-width: 1278px) {	
+						#main{
+							height: 676px;
+							}
+				}
+
 			#main{
 			margin:auto;
-			height: 676px;
-			width:1200px;
+			height:auto;
+			width:94%;
+			max-width:1200px;
+			min-width:768px;
 			background-image: url(assets/image/bg_2_3.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: relative;
-			
 		}
 		
+
+				
 		.charBox{
 		    width: 225px;
 			padding: 5px;
@@ -86,21 +98,23 @@
 			border-radius: 10px;
 			position: absolute;
 			background: white;
-			opacity: 0.4;
+			opacity: 0.8;
 			transition: 0.3s;
 			z-index: 99;
 			margin: 5px;
 		}
 		
 		.charBox:hover{
-		opacity:0.85;
+		opacity:1;
 		}
 		
 		#charSpace1{
+		display:none;
 		left:0;
 		}
 		
 		#charSpace2{
+		display:none;
 		right:0;
 		}
        #canvas {
@@ -121,6 +135,92 @@
 		#toggle_text, #console{
 		font-family:'FOT-SkipStd-E';
 		}
+		
+		#idols {
+		margin:auto;
+		text-align:center;
+		}
+		
+		.linkbox {
+			border: 2px solid #1c72aa;
+				padding: 3px;
+				margin: 3px;
+				height: 65px;
+				width: 65px;
+				display: inline-block;
+				border-radius: 10px;
+
+		}
+		
+		.linkbox img {
+			height: 60px;
+			width: 60px;
+		}
+		
+		.unavailable img {
+			filter: grayscale(100%);
+		}
+		.c_text{
+			width:35%;
+		}
+		#show_charBox1
+		{	
+			height: 75px;
+			width: 75px;
+			position:absolute;
+			z-index: 9999;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+		
+	#show_charBox2
+		{	
+			height: 75px;
+			width: 75px;
+			position:absolute;
+			z-index: 9999;
+			right: 0;
+			margin-top: 20px;
+			margin-right: 20px;
+
+		}
+
+		.float_bubble {
+				margin:auto;
+				height: 65px;
+				width: 65px;
+				border-radius: 50%;
+				background-color: #FFF;			
+				background-size: 90%;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 1px #1c72aa solid;
+				transition: 0.1s;
+		}
+		.float_bubble:hover{
+			height: 70px;
+			width: 70px;
+		}
+		.symbol
+		{		float:right;
+				height: 22px;
+				width: 22px;
+				margin-top: 40px;
+				}
+				
+			.char_close {
+			  color: #aaaaaa;
+			  float: right;
+			  font-size: 28px;
+			  font-weight: bold;
+			}
+
+			.char_close:hover,
+			.char_close:focus {
+			  color: #000;
+			  text-decoration: none;
+			  cursor: pointer;
+			}
         </style>
 
     </head>
@@ -132,8 +232,9 @@
 	
 					
 			<div id="main">
-			
+			<div id="show_charBox1"><div class="float_bubble" style="background-image: url(assets/icons/Subaru.png);"><img class="symbol" src="assets/add.png"></div></div>
 			 <div id="charSpace1" class="charBox">
+			 <div style="right:0;" id="close_charBox1" class="char_close">&times;</div>
             <p>  <select id="char1">
                 <option value="" selected disabled hidden> Select Character A</option>
                 <option value="Tetora">Tetora Nagumo</option>
@@ -197,8 +298,9 @@
 
         </div>
         </div>
-		
+			<div id="show_charBox2" style="filter: grayscale(100%);pointer-events:none;"><div class="float_bubble" style="background-image: url(assets/icons/Hokuto.png);"><img class="symbol" src="assets/add.png"></div></div>
 			<div id="charSpace2" class="charBox">
+			<div style="right:0;" id="close_charBox2" class="char_close">&times;</div>
 			  <p><select id="char2">
                 <option value="" selected disabled hidden> Select Character B</option>
                 <option value="Tetora">Tetora Nagumo</option>
@@ -270,13 +372,10 @@
             </div>
 			</div>
 			
-			<div id="toggle_text" style="display:none;width: 100%;
-    margin: auto;
-    position: relative;
-    margin-top: -160px;">
-	<div id="navi" style="display:none;">
+			<div id="toggle_text">
+	<div id="navi" style="display:;">
 						<div class="left">
-						<div class="back" style="display:none;">
+						<div class="back" style="display:;">
 							<img class="arrows a-back" src="assets/chevback.png" style="pointer-events: auto;">
 						</div>
 					</div>
@@ -286,21 +385,24 @@
 						</div>
 					</div>
 			</div>
+		<div id="wrapper">
 					<div id="char-name">
 						<div class="bubble">
 							<div id="speaker"></div>
 						</div>
 					</div>
-					<div id="arrowbox">
-						<div id="textbox" class="dialogue"></div>
 					</div>
-					<div id="star">
+					<div id="arrowbox" class="arrowtips">
+						<div id="textbox" class="dialogue"></div>
+											<div id="star">
 						<img src="assets/star.png">
 					</div>
+					</div>
+
 				</div>
 			</div>
-<div id="fun_stuff" style="margin-left:35px; margin-top:15px;width:94%;"><strong>Fun stuff: </strong>
-<button id="openModal" disabled>Add Text</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="resetText">Restart Text</button>
+<div id="fun_stuff" style="margin-left:35px; margin-top:15px;width:94%;"><strong>Options: </strong>
+<button id="openModal" disabled>Add Text</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="resetText">Restart Text</button>&nbsp;<button id="dlModels">Download Models</button>
 <div style="float: right;">Coded by <a target="_blank" href="https://twitter.com/gradualcolours">@gradualcolours</a></div>
 </div>						
 <div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><span style="font-size:12px;"><strong>Console Log:</strong></span>
@@ -326,7 +428,10 @@
 	<button id="submitText" class="second">Input Text</button><center>
   </div>-->
 
- <div class="modal-content">
+ <div class="modal-content" 
+ style="width: 40%;
+    max-width: 650px;
+    min-width: 320px;">
     <div style="right:0;" class="close">&times;</div>
 	<div style="width:95%;margin:auto;">
 	<p>Choose number of lines: <select id="num_lines">
@@ -335,13 +440,13 @@
 	<option value="3">3</option>
 	<option value="4">4</option>
 	</select></p>
-	<!--<p>Turn on text animation? (Not recommended for laggy devices) <input type="checkbox" id="textwriter"/></p>-->
+	<p>Turn on text animation? (Not recommended for laggy devices) <input type="checkbox" id="textwriter"/></p>
 	
 	<p class="inputText active">Line 1: <select  class="charLine_select"  id="charName_text1">
 	<option value="" selected disabled hidden>Select Character</option>
 	<option value="char_a"></option>
 	</select>: 
-	<input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="256"> Select motion 1: <select class="charMotion_select"  id="char_motion1">
+	<input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="100"> Select motion 1: <select class="charMotion_select"  id="char_motion1">
 	<option value="" selected disabled hidden>Select Motion</option></select></p>
 	
 	
@@ -349,21 +454,21 @@
 	<option value="" selected disabled hidden>Select Character</option>
 	<option value="char_a"></option>
 	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="256"> Select motion 2: <select class="charMotion_select"  id="char_motion2">
+	<input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="100"> Select motion 2: <select class="charMotion_select"  id="char_motion2">
 	<option value="" selected disabled hidden>Select Motion</option></select></p>
 	
 	<p class="inputText" style="display:none;">Line 3: <select class="charLine_select" id="charName_text3">
 	<option value="" selected disabled hidden>Select Character</option>
 	<option value="char_a"></option>
 	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="256"> Select motion 3: <select class="charMotion_select"  id="char_motion3">
+	<input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="100"> Select motion 3: <select class="charMotion_select"  id="char_motion3">
 	<option value="" selected disabled hidden>Select Motion</option></select></p>
 	
 	<p class="inputText" style="display:none;">Line 4: <select class="charLine_select" id="charName_text4">
 	<option value="" selected disabled hidden>Select Character</option>
 	<option value="char_a"></option>
 	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="256"> Select motion 4: <select class="charMotion_select"  id="char_motion4">
+	<input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="100"> Select motion 4: <select class="charMotion_select"  id="char_motion4">
 	<option value="" selected disabled hidden>Select Motion</option></select></p>
 	<p id="modal_error"></p>
 	
@@ -373,10 +478,21 @@
 
 </div>
 
+<div id="downloadModal" class="modal">
+	 <div class="modal-content">
+	     <div style="right:0;" class="close">&times;</div>
+	<p style="text-align:center;padding-top: 15px;">Click an idol below to download their models zip. Idols greyed out do not have a link yet.</p> 
+	<div id="idols">
+	
+	
+	</div>
+	</div>
+</div>
+
 </div>
 			
 			
-		<script src="js/EnstBoyData.js" type="text/javascript"></script>
+		<script src="js/EnstCharData.js" type="text/javascript"></script>
 		<script src="js/modelJsonTemp.js" type="text/javascript"></script>
         <script src="js/live2d.js" type="text/javascript"></script>
         <script src="js/page.js" type="text/javascript"></script>
