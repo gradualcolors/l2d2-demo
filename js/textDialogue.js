@@ -196,6 +196,7 @@ $("button#toggleTextbox").attr("disabled", false);
 	$("#log").append("<li>Input dialogue for " + $("select#charName_text option:selected").html() + "</li>");
 });*/
 
+/*GLOBAL VARIABLES*/
 var activeSpeaker = [];	
 var activeChar = [];
 var activeDialogue = [];
@@ -248,9 +249,15 @@ text_modal.style.display = "none";
 
 $("#toggle_text").show();
 
-		//initialize first dialogue
+if(($("input#textwriter").is(":checked")) && 
+($("input#auto_text").is(":checked")) && 
+parseInt($("select#num_lines").val()) > 1)
+{
+		autoTextPlayer();
+}
+
+else{
 		$("#speaker").html(activeSpeaker[0]);
-		//$("#textbox").html(activeDialogue[0]);
 		var firstText = activeDialogue[0];
 		if (activeChar[0] == "char_a")
 			{
@@ -277,6 +284,8 @@ $("#toggle_text").show();
 
 	$("#log").append("<li>Input: " + activeSpeaker[0] + ", \"" + activeDialogue[0] + "\", " + activeMotion[0] +"</li>");
 	counter++;
+	
+}
 });
 
 $(".forward").click(function() {
@@ -354,6 +363,7 @@ $("#resetText").click(function() {
 	$(".forward").show();
 	$(".back").hide();
 	$("#log").append("<li>Reset to beginning of text.</li>");
+	counter++;
 	}
 	else
 		return;
@@ -411,7 +421,7 @@ return;}
 function checkFields(){
 	
 	$("p.inputText.active > select.charLine_select").each(function(){
-		if(this.value == "")
+		if(this.value == "" || this.value == null)
 		{
 			$("#modal_error").html("You are missing character names!");
 			return;	
@@ -419,7 +429,7 @@ function checkFields(){
 	})
 	
 	$("p.inputText.active > input.c_text").each(function(){
-		if(this.value == "")
+		if(this.value == "" || this.value == null)
 		{
 			$("#modal_error").html("You are missing character dialogue!");
 			return;	
@@ -427,7 +437,7 @@ function checkFields(){
 	})
 	
 	$("p.inputText.active > select.charMotion_select").each(function(){
-		if(this.value == "")
+		if(this.value == "" || this.value == null)
 		{
 			$("#modal_error").html("You are missing character motions!");
 			return;	
@@ -439,18 +449,87 @@ function checkFields(){
 function typeWriter(str) {
  
 var convBox = document.getElementById("textbox");
+var speed = parseInt($("#text_speed").val());
  
     setTimeout(function() {
         $(".arrows").css("pointer-events", "auto");
-    }, 51+str.length * 20);
+    }, speed+1+str.length * 20);
     
     for (let i = 0; i <= str.length; i++) {
         setTimeout(function() {
             convBox.innerHTML = str.substr(0, i);
-        }, 50 + i * 20);        
+        }, speed + i * 20);        
     }
     
 }
+
+async function autoTextPlayer() {
+	
+
+var lines = parseInt($("select#num_lines").val());
+var convBox = document.getElementById("textbox");
+var speed = parseInt($("#text_speed").val());
+$(".arrows").css("pointer-events", "none");
+$(".charBox").css("pointer-events", "none");
+$("button#openModal").attr("disabled", true);
+$("button#dlModels").attr("disabled", true);
+$("button#toggleTextbox").attr("disabled", true);
+$("button#resetText").attr("disabled", true);
+$("#textbox").empty();
+
+for (counter = 0; counter < lines; counter++) {
+	
+if (counter != 0)
+{
+	$(".back").show();
+}
+	
+var str = activeDialogue[counter]; 
+			
+$("#speaker").html(activeSpeaker[counter]);
+
+if (activeChar[counter] == "char_a")
+			{
+				stage.children[0].model.startMotion("motion", activeMotion[counter])
+			}
+			
+else if (activeChar[counter] == "char_b")
+			{
+				stage.children[1].model.startMotion("motion", activeMotion[counter])
+			}			
+
+				
+		//for (let i = 0; i <= str.length; i++) {
+	  
+				/*setTimeout(function() {convBox.innerHTML = str.substr(0, i);     
+						}, speed + i * 20); */
+						
+					//typeWriter(str);
+					
+	for (let i = 0; i <= str.length; i++) {
+        setTimeout(function() {
+            convBox.innerHTML = str.substr(0, i);
+        }, speed + i * 20);        
+    }	
+					
+				await new Promise(r => setTimeout(r, speed + str.length * 20 + 4000));
+				$("#log").append("<li style=\"color:red;\">Autoplaying Dialogue Line " + (counter+1) + "...</li>");
+
+}
+
+$("#log").append("<li>Autoplay finished.</li>");
+
+
+$(".forward").hide();	
+$(".arrows").css("pointer-events", "auto");
+$("button#openModal").attr("disabled", false);
+$("button#dlModels").attr("disabled", false);
+$("button#toggleTextbox").attr("disabled", false);
+$("button#resetText").attr("disabled", false);
+$(".charBox").css("pointer-events", "auto");
+counter = counter-2;
+}
+
 
 
 $("#toggleTextbox").click(function() {

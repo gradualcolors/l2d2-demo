@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("select.charLine_select").children("option[value='char_a']").text(charName1);
 		
 		
-		if(charName1 == "")
+		if(charName1 == "" || charName1 == null)
 		{
 			$("#log").append("<li style=\"color:red;\">You must select Character A's name!</li>");
 			return;
@@ -138,7 +138,7 @@ $(document).ready(function() {
 			
 		charName2 = $("select#char2").val();
 		$("span#active_charB").html(charName2);
-		if(charName2 == "")
+		if(charName2 == ""  || charName2 == null)
 		{
 			$("#log").append("<li style=\"color:red;\">You must select Character B's name!</li>");
 			return;
@@ -276,6 +276,7 @@ for(var i = 0; i < charDataLength; i++) {
 	var char_name = Object.keys(enstaChar)[i] ;
 	var icon_path = "assets/icons/" + enstaChar[char_name][0].icon;
 	var zip_url = enstaChar[char_name][0].drive_url;
+	var divGroup = document.getElementById(enstaChar[char_name][0].group);
 	
 	var imgLink = document.createElement("a");
     var elem = document.createElement("img");
@@ -291,9 +292,17 @@ for(var i = 0; i < charDataLength; i++) {
 	imgLink.setAttribute("title", char_name);
 	
 	  imgLink.appendChild(elem); 
-      idols.appendChild(imgLink);
+      divGroup.appendChild(imgLink);
 	}
 	  
+	  
+
+	$("input#textwriter").change(function() {
+	
+	$("#text_options").toggle();
+
+});
+	
 	
 	
 });

@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <meta name="referrer" content="never" />
         <meta name="robots" content="none" />
+
 		<link rel = "preload" as="font" href="css/FOT-SkipStd-E.otf" type="font/otf" crossorigin="anonymous">
 		<link rel = "preload" as="font" href="css/FOT-SlumpStd-DB.otf" type="font/otf" crossorigin="anonymous">
 		<link rel="icon" type="x-icon" href="favicon.ico" />
-      <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />-->
-		 <link href="css/modalText.css" rel="stylesheet" />
-		 
-		 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+
+		 <link href="css/site-interface.css" rel="stylesheet" type="text/css" />
+		 <link href="css/modalText.css" rel="stylesheet" type="text/css"/>
+		 <link href="css/accordion.css" rel="stylesheet" type="text/css"/>
 		<!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>-->
         <script src="lib/live2d.min.js" type="text/javascript"></script>
         <script src="lib/netUtils.js" type="text/javascript"></script>
@@ -25,209 +26,14 @@
         <script src="lib/ModelSettingJson.js" type="text/javascript"></script>
         <script src="lib/LAppModel.js" type="text/javascript"></script>
         <script src="lib/index.js" type="text/javascript"></script>
-        <title>Enstars Live2D Demo</title>
-        <style>
-				@font-face {
-			font-family: FOT-SkipStd-E;
-			src: url("css/FOT-SkipStd-E.otf") format("opentype");
-		}
+        <title>Ensemble Stars! Live2D Viewer</title>
 
-		@font-face {
-			font-family: FOT-SlumpStd-DB;
-			src: url("css/FOT-SlumpStd-DB.otf") format("opentype");
-		}
-            body { 
-			font-family:sans-serif;
-			font-size:11px;
-			margin: 0; 
-			width:100%;
-			color:#39597a}
-		
-		button {
-		border-radius:5px;
-			font-family:FOT-SlumpStd-DB;
-			border: 1px #1c72aa solid;
-			font-size:12px;
-		}
-		
-		.first{
-			background:#e0ac24;
-			color:white;
-		}
-		.second{
-			background:#1c72aa;
-			color:white;
-		}
-		.third{
-			background:#c10000;
-			color:white;
-		}
-
-			#page{
-				width:100%;
-				min-width:818px;
-				max-width:1278px;
-				margin: auto;
-				margin-top:35px;
-			}
-
-		@media only screen and (min-width: 1278px) {	
-						#main{
-							height: 676px;
-							}
-				}
-
-			#main{
-			margin:auto;
-			height:auto;
-			width:94%;
-			max-width:1200px;
-			min-width:768px;
-			background-image: url(assets/image/bg_2_3.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			position: relative;
-		}
-		
-
-				
-		.charBox{
-		    width: 225px;
-			padding: 5px;
-			border: 2px #1c72aa solid;
-			border-radius: 10px;
-			position: absolute;
-			background: white;
-			opacity: 0.8;
-			transition: 0.3s;
-			z-index: 99;
-			margin: 5px;
-		}
-		
-		.charBox:hover{
-		opacity:1;
-		}
-		
-		#charSpace1{
-		display:none;
-		left:0;
-		}
-		
-		#charSpace2{
-		display:none;
-		right:0;
-		}
-       #canvas {
-            background-size: 150%;
-            background-position: 50% 50%;
-            position: relative;
-        }
-		
-		.canvasClass {
-			display:inline-block;
-		}
-		
-		#model_display {
-			margin:auto;
-			text-align: center;
-		}
-		
-		#toggle_text, #console{
-		font-family:'FOT-SkipStd-E';
-		}
-		
-		#idols {
-		margin:auto;
-		text-align:center;
-		}
-		
-		.linkbox {
-			border: 2px solid #1c72aa;
-				padding: 3px;
-				margin: 3px;
-				height: 65px;
-				width: 65px;
-				display: inline-block;
-				border-radius: 10px;
-
-		}
-		
-		.linkbox img {
-			height: 60px;
-			width: 60px;
-		}
-		
-		.unavailable img {
-			filter: grayscale(100%);
-		}
-		.c_text{
-			width:35%;
-		}
-		#show_charBox1
-		{	
-			height: 75px;
-			width: 75px;
-			position:absolute;
-			z-index: 9999;
-			margin-left: 20px;
-			margin-top: 20px;
-		}
-		
-	#show_charBox2
-		{	
-			height: 75px;
-			width: 75px;
-			position:absolute;
-			z-index: 9999;
-			right: 0;
-			margin-top: 20px;
-			margin-right: 20px;
-
-		}
-
-		.float_bubble {
-				margin:auto;
-				height: 65px;
-				width: 65px;
-				border-radius: 50%;
-				background-color: #FFF;			
-				background-size: 90%;
-				background-repeat: no-repeat;
-				background-position: center;
-				border: 1px #1c72aa solid;
-				transition: 0.1s;
-		}
-		.float_bubble:hover{
-			height: 70px;
-			width: 70px;
-		}
-		.symbol
-		{		float:right;
-				height: 22px;
-				width: 22px;
-				margin-top: 40px;
-				}
-				
-			.char_close {
-			  color: #aaaaaa;
-			  float: right;
-			  font-size: 28px;
-			  font-weight: bold;
-			}
-
-			.char_close:hover,
-			.char_close:focus {
-			  color: #000;
-			  text-decoration: none;
-			  cursor: pointer;
-			}
-        </style>
 
     </head>
     <body>
 
 	<div id="page">
-		<center><h1>Enstars Live2D Viewer</h1></center>
+		<center><h1>Ensemble Stars! Live2D Viewer</h1></center>
        
 	
 					
@@ -430,7 +236,7 @@
 
  <div class="modal-content" 
  style="width: 50%;
-    max-width: 650px;
+    max-width: 680px;
     min-width: 360px;">
     <div style="right:0;" class="close">&times;</div>
 	<div style="width:95%;margin:auto;">
@@ -440,8 +246,12 @@
 	<option value="3">3</option>
 	<option value="4">4</option>
 	</select></p>
-	<p>Turn on text animation? (Not recommended for laggy devices) <input type="checkbox" id="textwriter"/></p>
-	
+	<p>Turn on text animation? (Not recommended for laggy devices) <label class="switch"><input type="checkbox" id="textwriter"/><span class="check_slider round"></span>
+</label></p>
+	<p id="text_options" style="display:none;">Text Speed: <input id="text_speed" type="range" min="50" max="80" value="80" step="5"> Turn on Auto? <label class="switch">
+  <input id="auto_text" type="checkbox">
+  <span class="check_slider round"></span>
+</label><br><span style="font-size:12px">Note: Turning on auto will disable all buttons until the end!</span><br/></p>
 	<p class="inputText active">Line 1: <select  class="charLine_select"  id="charName_text1">
 	<option value="" selected disabled hidden>Select Character</option>
 	<option value="char_a"></option>
@@ -487,7 +297,61 @@
 	style="margin: auto;
     text-align: center;
     overflow-y: auto;
-    height: 500px;">
+	width:450px;padding-bottom:15px;">
+	
+<div class="acc-container">          
+     <div>
+       <input type="radio" name="acc" id="acc1a">
+       <label for="acc1a">Class 1-A</label>
+       <div class="acc-body" id="group1-A">
+       </div>
+      </div>
+     <div>
+        <input type="radio" name="acc" id="acc1b">
+        <label for="acc1b">Class 1-B</label>
+        <div class="acc-body" id="group1-B">
+        </div>
+      </div>
+     <div>
+        <input type="radio" name="acc" id="acc2a">
+        <label for="acc2a">Class 2-A</label>
+        <div class="acc-body" id="group2-A">
+        </div>
+       </div>
+	       <div>
+       <input type="radio" name="acc" id="acc2b">
+       <label for="acc2b">Class 2-B</label>
+       <div class="acc-body" id="group2-B">
+       </div>
+      </div>
+     <div>
+        <input type="radio" name="acc" id="acc3a">
+        <label for="acc3a">Class 3-A</label>
+        <div class="acc-body" id="group3-A">
+        </div>
+      </div>
+     <div>
+        <input type="radio" name="acc" id="acc3b">
+        <label for="acc3b">Class 3-B</label>
+        <div class="acc-body" id="group3-B">
+        </div>
+       </div>
+	  
+	  <div>
+        <input type="radio" name="acc" id="accEden">
+        <label for="accEden">Eden</label>
+        <div class="acc-body" id="groupEden">
+        </div>
+       </div>
+	   
+	    <div>
+        <input type="radio" name="acc" id="accTeachers">
+        <label for="accTeachers">Teachers</label>
+        <div class="acc-body" id="groupTeachers">
+        </div>
+       </div>
+  </div>
+	
 	
 	
 	</div>

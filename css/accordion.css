@@ -1,0 +1,51 @@
+
+/*--------Accordion-------*/
+.acc-container {
+  width: 100%;
+  margin: auto;
+  font-family:'FOT-SkipStd-E';
+}
+.acc-container .acc-body {
+  width: 98%;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  height: 0;
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+  line-height: 28px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  overflow:hidden;
+}
+
+.acc-container label {
+	cursor: pointer;
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #1c72aa;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: #1c72aa;
+    font-weight: 400;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.acc-container input{
+  display: none;
+}
+
+
+.acc-container input:checked+label {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.acc-container input:checked~.acc-body {
+  height: auto;
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+  transition: 0.5s;
+}
