@@ -217,7 +217,7 @@ activeMotion = [];
 counter = 0;
 
 $("button#toggleTextbox").attr("disabled", false);
-				
+$("button#resetText").attr("disabled", false);				
 
 	//fill arrays
 	$("p.inputText.active > select.charLine_select").each(function(){
@@ -283,15 +283,16 @@ else{
 
 
 	$("#log").append("<li>Input: " + activeSpeaker[0] + ", \"" + activeDialogue[0] + "\", " + activeMotion[0] +"</li>");
-	counter++;
 	
 }
 });
 
 $(".forward").click(function() {
 
-if (counter <= (parseInt($("select#num_lines").val())-1))
+if (counter < (parseInt($("select#num_lines").val())-1))
 {
+	counter++;	
+	
 	
 		$("#speaker").html(activeSpeaker[counter]);
 		var currentText = activeDialogue[counter];
@@ -316,19 +317,17 @@ if (counter <= (parseInt($("select#num_lines").val())-1))
 			$("#textbox").html(currentText);
 		}
 		
-$("#log").append("<li>Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] +"</li>");
+$("#log").append("<li>Forward - Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] +"</li>");
 		
 		if(counter == (parseInt($("select#num_lines").val())-1))
 		{
 			$(".back").show();
 			$(".forward").hide();
-			counter--;
 		}
 		
 		else{
 			$(".forward").show();
-			$(".back").show();
-			counter++;
+			$(".back").show();			
 		}
 
 
@@ -341,8 +340,6 @@ return;}
 });
 
 $("#resetText").click(function() {
-	
-	if($("select#num_lines").val() != "1"){
 	
 	counter = 0;
 	$("#speaker").empty();
@@ -363,16 +360,25 @@ $("#resetText").click(function() {
 	$(".forward").show();
 	$(".back").hide();
 	$("#log").append("<li>Reset to beginning of text.</li>");
-	counter++;
-	}
-	else
-		return;
+
 });
 
 $(".back").click(function() {
 
-if (counter >= 0)
+if (counter > 0)
 {	
+counter--;	
+					
+					if (counter == 0)
+					{
+						$(".forward").show();
+						$(".back").hide();
+					}
+					
+					else{
+					$(".back").show();
+					$(".forward").show();
+					}
 
 		$("#textbox").empty();
 		$("#speaker").html(activeSpeaker[counter]);
@@ -396,23 +402,15 @@ if (counter >= 0)
 		else{
 			$("#textbox").html(currentText);
 		}
-$("#log").append("<li>Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] +"</li>");					
-
+$("#log").append("<li>Back - Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] +"</li>");					
 	
-					if (counter == 0)
-					{
-						$(".forward").show();
-						$(".back").hide();
-						counter++;
-					}
-					else{
-						$(".back").show();
-						$(".forward").show();
-						counter--;
-					}
+	
+	
+
 			}
 else
 {	
+			
 $("#log").append("<li>Reached beginning of input dialogue</li>");
 return;}
 
@@ -471,10 +469,13 @@ var convBox = document.getElementById("textbox");
 var speed = parseInt($("#text_speed").val());
 $(".arrows").css("pointer-events", "none");
 $(".charBox").css("pointer-events", "none");
-$("button#openModal").attr("disabled", true);
+$("#fun_stuff").css("pointer-events", "none");
+/*$("button#openModal").attr("disabled", true);
 $("button#dlModels").attr("disabled", true);
 $("button#toggleTextbox").attr("disabled", true);
-$("button#resetText").attr("disabled", true);
+$("button#resetText").attr("disabled", true);*/
+
+
 $("#textbox").empty();
 
 for (counter = 0; counter < lines; counter++) {
@@ -522,12 +523,13 @@ $("#log").append("<li>Autoplay finished.</li>");
 
 $(".forward").hide();	
 $(".arrows").css("pointer-events", "auto");
-$("button#openModal").attr("disabled", false);
+/*$("button#openModal").attr("disabled", false);
 $("button#dlModels").attr("disabled", false);
 $("button#toggleTextbox").attr("disabled", false);
-$("button#resetText").attr("disabled", false);
+$("button#resetText").attr("disabled", false);*/
+$("#fun_stuff").css("pointer-events", "auto");
 $(".charBox").css("pointer-events", "auto");
-counter = counter-2;
+counter = counter-1;
 }
 
 
