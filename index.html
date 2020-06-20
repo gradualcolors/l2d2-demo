@@ -27,7 +27,71 @@
         <script src="lib/LAppModel.js" type="text/javascript"></script>
         <script src="lib/index.js" type="text/javascript"></script>
         <title>Ensemble Stars! Live2D Viewer</title>
+		
+		<style>
+		
+				@font-face {
+			font-family: FOT-SkipStd-E;
+			src: url("FOT-SkipStd-E.otf") format("opentype");
+		}
 
+		@font-face {
+			font-family: FOT-SlumpStd-DB;
+			src: url("FOT-SlumpStd-DB.otf") format("opentype");
+		}
+            body { 
+			font-family:sans-serif;
+			font-size:11px;
+			margin: 0; 
+			width:100%;
+			color:#39597a}
+		
+		button {
+		border-radius:5px;
+			font-family:FOT-SlumpStd-DB;
+			border: 1px #1c72aa solid;
+			font-size:12px;
+		}
+		
+		.first{
+			background:#e0ac24;
+			color:white;
+		}
+		.second{
+			background:#1c72aa;
+			color:white;
+		}
+		.third{
+			background:#c10000;
+			color:white;
+		}
+
+			#page{
+				width:100%;
+				min-width:818px;
+				max-width:1278px;
+				margin: auto;
+				margin-top:35px;
+			}
+
+		@media only screen and (min-width: 1278px) {	
+						#main{
+							height: 676px;
+							}
+				}
+
+			#main{
+			margin:auto;
+			height:auto;
+			width:94%;
+			max-width:1200px;
+			min-width:768px;
+			background-image: url(/assets/image/bg_2_3.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: relative;
+		}
+		</style>
 
     </head>
     <body>
