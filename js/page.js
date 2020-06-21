@@ -302,6 +302,10 @@ for(var i = 0; i < charDataLength; i++) {
 	$("#text_options").toggle();
 
 });
+
+    $('#hide_ui').click(function(){
+		$('#ui').toggle();			
+    });
 	
 	
 	
