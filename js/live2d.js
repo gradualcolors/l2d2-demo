@@ -55,11 +55,10 @@ function _show(model, callback) {
 	let coeff = parseInt(EnstCharData.characters[model.name][0].scale);
 	let scale = parseFloat(coeff/100) + 0.400;
 	//let sy = parseFloat(pos_y/350) + 0.15; 
-	let sy = parseFloat(pos_y/720) + 0.20;
+	let sy = parseFloat(pos_y/720) + 0.18;
 	
 	live2dSprite.adjustTranslate(0, sy);
 	
-	//live2dSprite.position.y = pos_y;
 	
     //live2dSprite.adjustScale(0, 0, 0.75);
 	
