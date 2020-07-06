@@ -1,4 +1,5 @@
-﻿function modelJsonCreate(char_name, mocSelect, texSelect) {
+﻿
+function modelJsonCreate(char_name, mocSelect, texSelect) {
 	
 	// console.log("--> LAppLive2DManager()");
 var modelBlob;
@@ -13,6 +14,22 @@ modelJson = createJSON(char_name, modelBlob, textureBlob);
 return modelJson;
 }
 
+	/*   $("#file-input").on('change', function(){
+		window.URL.revokeObjectURL(currentBlobBG);
+        readURL(this);
+    });
+    
+    $(".float_square.bg-swap").on('click', function() {
+       $("#file-input").click();
+    });
+	
+	 var readURL = function(input) {
+        if (input.length > 0) {
+		currentBlobBG = window.URL.createObjectURL(input.files[0]);
+		$("#main").css("background-image", currentBlobBG);
+        }
+    }*/
+	
 
 function handleTexture(files) {
 

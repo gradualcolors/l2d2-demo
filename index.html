@@ -1,435 +1,549 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <meta name="referrer" content="never" />
-        <meta name="robots" content="none" />
-
-		<link rel = "preload" as="font" href="css/FOT-SkipStd-E.otf" type="font/otf" crossorigin="anonymous">
-		<link rel = "preload" as="font" href="css/FOT-SlumpStd-DB.otf" type="font/otf" crossorigin="anonymous">
-		<link rel="icon" type="x-icon" href="favicon.ico" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
-
-		 <link href="css/site-interface.css" rel="stylesheet" type="text/css" />
-		 <link href="css/modalText.css" rel="stylesheet" type="text/css"/>
-		 <link href="css/accordion.css" rel="stylesheet" type="text/css"/>
-		<!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>-->
-        <script src="lib/live2d.min.js" type="text/javascript"></script>
-        <script src="lib/netUtils.js" type="text/javascript"></script>
-        <script src="lib/Live2DFramework.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.8/pixi.min.js" type="text/javascript"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.4/pixi.min.js"></script> -->
-        <script src="lib/glMatrix-common.js" type="text/javascript"></script>
-        <script src="lib/glMatrix-mat4.js" type="text/javascript"></script>
-        <script src="lib/MatrixStack.js" type="text/javascript"></script>
-        <script src="lib/ModelSettingJson.js" type="text/javascript"></script>
-        <script src="lib/LAppModel.js" type="text/javascript"></script>
-        <script src="lib/index.js" type="text/javascript"></script>
-        <title>Ensemble Stars! Live2D Viewer</title>
-		
-		<style>
-		
-				@font-face {
-			font-family: FOT-SkipStd-E;
-			src: url("css/FOT-SkipStd-E.otf") format("opentype");
-		}
-
-		@font-face {
-			font-family: FOT-SlumpStd-DB;
-			src: url("css/FOT-SlumpStd-DB.otf") format("opentype");
-		}
-            body { 
-			font-family:sans-serif;
-			font-size:11px;
-			margin: 0; 
-			width:100%;
-			color:#39597a}
-		
-		button {
-		border-radius:5px;
-			font-family:FOT-SlumpStd-DB;
-			border: 1px #1c72aa solid;
-			font-size:12px;
-		}
-		
-		.first{
-			background:#e0ac24;
-			color:white;
-		}
-		.second{
-			background:#1c72aa;
-			color:white;
-		}
-		.third{
-			background:#c10000;
-			color:white;
-		}
-
-			#page{
-				width:100%;
-				min-width:818px;
-				max-width:1278px;
-				margin: auto;
-				margin-top:35px;
-			}
-
-		@media only screen and (min-width: 1278px) {	
-						#main{
-							height: 676px;
-							}
-				}
-
-			#main{
-			margin:auto;
-			height:auto;
-			width:94%;
-			max-width:1200px;
-			min-width:768px;
-			background-image: url(assets/image/bg_1000011_2.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			position: relative;
-		}
-		</style>
-
-    </head>
-    <body>
-
-	<div id="page">
-		<center><h1>Ensemble Stars! Live2D Viewer</h1></center>
-       
-	
-					
-			<div id="main">
-			<div id="ui">
-			<div id="show_charBox1"><div class="float_bubble" style="background-image: url(assets/icons/Subaru.png);"><img class="symbol" src="assets/add.png"></div></div>
-			 <div id="charSpace1" class="charBox">
-			 <div style="right:0;" id="close_charBox1" class="char_close">&times;</div>
-            <p>  <select id="char1">
-                <option value="" selected disabled hidden> Select Character A</option>
-                <option value="Tetora">Tetora Nagumo</option>
-                <option value="Hajime">Hajime Shino</option>
-                <option value="Tomoya">Tomoya Mashiro</option>
-                <option value="Hinata">Hinata Aoi</option>
-                <option value="Midori">Midori Takamine</option>
-                <option value="Tori">Tori Himemiya</option>
-                <option value="Shinobu">Shinobu Sengoku</option>
-                <option value="Yuta">Yuta Aoi</option>
-                <option value="Mitsuru">Mitsuru Tenma</option>
-                <option value="Tsukasa">Tsukasa Suou</option>
-                <option value="Sora">Sora Harukawa</option>
-                <option value="Subaru">Subaru Akehoshi</option>
-                <option value="Hokuto">Hokuto Hidaka</option>
-                <option value="Makoto">Makoto Yuuki</option>
-                <option value="Souma">Souma Kanzaki</option>
-                <option value="Adonis">Adonis Otogari</option>
-                <option value="Koga">Koga Ogami</option>
-                <option value="Ritsu">Ritsu Sakuma</option>
-                <option value="Mao">Mao Isara</option>
-                <option value="Yuzuru">Yuzuru Fushimi</option>
-                <option value="Arashi">Arashi Narukami</option>
-                <option value="Mika">Mika Kagehira</option>
-                <option value="Natsume">Natsume Sakasaki</option>
-                <option value="Keito">Keito Hasumi</option>
-                <option value="Eichi">Eichi Tenshouin</option>
-                <option value="Kaoru">Kaoru Hakaze</option>
-                <option value="Izumi">Izumi Sena</option>
-                <option value="Chiaki">Chiaki Morisawa</option>
-                <option value="Kuro">Kuro Kiryu</option>
-                <option value="Wataru">Wataru Hibiki</option>
-                <option value="Kanata">Kanata Shinkai</option>
-                <option value="Rei">Rei Sakuma</option>
-                <option value="Nazuna">Nazuna Nito</option>
-                <option value="Leo">Leo Tsukinaga</option>
-                <option value="Shu">Shu Itsuki</option>
-                <option value="Tsumugi">Tsumugi Aoba</option>
-                <option value="Madara">Madara Mikejima</option>
-                <option value="Nagisa">Nagisa Ran</option>
-                <option value="Hiyori">Hiyori Tomoe</option>
-                <option value="Ibara">Ibara Saegusa</option>
-                <option value="Jun">Jun Sazanami</option>
-                <option value="Jin">Jin Sagami</option>
-                <option value="Akiomi">Akiomi Kunugi</option>
-                <option value="Seiya">Seiya Hidaka</option>
-            </select></p>
-            <p><strong>Upload model file:</strong><br/>
-            <input type="file" id="modelElem" accept=".moc,.moc3"></p>
-
-            <p><strong>Upload texture file:</strong><br/>
-            <input type="file" id="texElem" accept="image/png"></p>			
-			<p><button id="modela" class="first">Add Character A</button></p>
-		<div id="function">
-		<p><strong>Character: </strong><span id="active_charA"></span></p>
-            <div id="g1">
-                <strong>Character A Motion:&nbsp;</strong>
-                <select class="motion"></select>
-                <button class="motion">Replay</button>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+      <meta name="referrer" content="never" />
+      <meta name="robots" content="none" />
+      <link rel = "preload" as="font" href="css/FOT-SkipStd-E.otf" type="font/otf" crossorigin="anonymous">
+      <link rel = "preload" as="font" href="css/FOT-SlumpStd-DB.otf" type="font/otf" crossorigin="anonymous">
+      <link rel="icon" type="x-icon" href="favicon.ico" />
+      <!-- STYLESHEETS -->
+      <link href="css/site-interface.css" rel="stylesheet" type="text/css" />
+      <link href="css/modalText.css" rel="stylesheet" type="text/css"/>
+      <link href="css/accordion.css" rel="stylesheet" type="text/css"/>
+      <!-- SCRIPTS -->
+      <!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+      <script src="lib/live2d.min.js" type="text/javascript"></script>
+      <script src="lib/netUtils.js" type="text/javascript"></script>
+      <script src="lib/Live2DFramework.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.8/pixi.min.js" type="text/javascript"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.4/pixi.min.js"></script> -->
+      <script src="lib/glMatrix-common.js" type="text/javascript"></script>
+      <script src="lib/glMatrix-mat4.js" type="text/javascript"></script>
+      <script src="lib/MatrixStack.js" type="text/javascript"></script>
+      <script src="lib/ModelSettingJson.js" type="text/javascript"></script>
+      <script src="lib/LAppModel.js" type="text/javascript"></script>
+      <script src="lib/index.js" type="text/javascript"></script>
+      <script>
+         var imageSrcs = [];
+         imageSrcs.push("/assets/image/bg_20_2.png");
+         imageSrcs.push("/assets/rai.jpg","/assets/rai2.jpg", "/assets/rai3.jpg");		
+         
+         var images = [];
+         
+         preloadImages(imageSrcs, images, loadModels);
+         
+         function preloadImages(srcs, imgs, callback) {
+             var img;
+             var remaining = srcs.length;
+             for (var i = 0; i < srcs.length; i++) {
+                 img = new Image();
+                 img.onload = function() {
+                     --remaining;
+                     if (remaining <= 0) {
+                         callback();
+                     }
+                 };
+                 img.src = srcs[i];
+                 imgs.push(img);
+             }
+         }
+         
+         function loadModels() {
+           console.log("Images loaded");
+         }
+      </script>
+      <title>Ensemble Stars! Live2D Viewer</title>
+      <style>
+         @font-face {
+         font-family: FOT-SkipStd-E;
+         src: url("css/FOT-SkipStd-E.otf") format("opentype");
+         }
+         @font-face {
+         font-family: FOT-SlumpStd-DB;
+         src: url("css/FOT-SlumpStd-DB.otf") format("opentype");
+         }
+         body { 
+         font-family:sans-serif;
+         font-size:11px;
+         margin: 0; 
+         width:100%;
+         color:#39597a}
+         button {
+         border-radius:5px;
+         font-family:FOT-SlumpStd-DB;
+         border: 1px #1c72aa solid;
+         font-size:12px;
+         }
+         .first{
+         background:#e0ac24;
+         color:white;
+         }
+         .second{
+         background:#1c72aa;
+         color:white;
+         }
+         .third{
+         background:#c10000;
+         color:white;
+         }
+         #page{
+         width:100%;
+         min-width:818px;
+         max-width:1278px;
+         margin: auto;
+         margin-top:35px;
+         }
+         #main{
+         margin:auto;
+         width:1200px;
+         height:676px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+         }
+         @media only screen and (max-width: 1200px) {	
+         #main{
+         width:900px;
+         height: 507px;
+         }
+         }
+         @media only screen and (max-width: 817px) {	
+         #main{
+         width:768px;
+         height:432px;
+         }
+         }
+         #capture{
+         width:auto;
+         height:auto;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="page">
+         <center>
+            <h1>Ensemble Stars! Live2D Viewer</h1>
+         </center>
+         <div id="capture">
+            <div id="main" style="background-image: url(assets/image/bg_20_2.png);">
+               <div id="credits_box" class="credits_m credits_m_hide">
+                  <div class="back_button credit_back"></div>
+                  <div id="credit_content">
+                     <div class="credit">
+                        <div class="credit_title">Click the circles below.</div>
+                        <table id="credits_table" style="	width: 100%;
+                           padding-top: 15px;
+                           margin: auto;
+                           text-align: center;">
+                           <tbody>
+                              <tr>
+                                 <td style="padding:10px;">
+                                    <div class="icon rai2 inst activeI"></div>
+                                 </td>
+                                 <td style="padding:10px;">
+                                    <div class="icon rai program passiveI"></div>
+                                 </td>
+                                 <td style="padding:10px;">
+                                    <div class="icon rai3 other passiveI"></div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="padding:10px;">Instructions</td>
+                                 <td style="padding:10px;">Programmer</td>
+                                 <td style="padding:10px;">Other Info</td>
+                              </tr>
+                              <!--						<tr>
+                                 <td>Coded in: HTML/JS</td>
+                                 <td>Uses: <a href="https://github.com/pixijs/" target="_blank">PixiJS</a>/<a href="https://github.com/avgjs/pixi-live2d" target="_blank">Pixi-Live2D</a></td>
+                                 <td><a href="TEMP URL" target="_blank">Report Bug Here</a></td>
+                                 </tr>-->
+                           </tbody>
+                        </table>
+                        <div id="instructions" class="">
+                           <p><strong>Instructions:</strong></p>
+                           <p>First, download the models and extract the folders. Click the character icon on the left first. Choose a character name and select the <strong>.moc</strong> file into the <strong>Model</strong> uploader. Then select the <strong>.png</strong> file into the <strong>Texture</strong> uploader.</p>
+                           <p>Click Add a Character and your character will be loaded! The second character button will be enabled after the first one. You can add dialogue by clicking the Add Text button and there's a background swapper to change backgrounds. Have fun!</p>
+                        </div>
+                        <div id="programmer"  class="" style="display:none;">
+                           <p><strong>Programmer's note:</strong></p>
+                           <p>Hi! I'm Rai <a href="https://twitter.com/sakasakitty" target="_blank">@sakasakitty</a> on Twitter, the coder behind the <a href="http://subanatsu.elementfx.com/" target="_blank">Subanatsu VN</a> and <a href="http://gradualcolors.github.io/ansta-search" target="_blank">ansta-search</a>, the renders search tool. I was inspired to build a Live2D viewer for Enstars after seeing some cool Magia Record Live2D viewers like <a href="https://jp.rika.ren/live2d/index.html"  target="_blank">these</a> <a href="https://magireco.nuke.moe/"  target="_blank">two</a>.</p>
+                           <p>I also promised a while ago I would release a user friendly, customisable version of the SubaNatsu VN I programmed last year for Enstars Shipping Olympics. So I combined both and this simulator was born. Please enjoy creating scenarios to your hearts' contents.</p>
+                        </div>
+                        <div id="other_info"   class="" style="display:none;">
+                           <p><strong>Change Log:</strong></p>
+                           <div id="change_log"></div>
+                           <p>---------</p>
+                           <p><strong>To-Do:</strong></p>
+                           <div id="to-do"></div>
+                           <p>---------</p>
+                           <p>Found a bug report? Contact me <a href="https://twitter.com/gradualcolours" target="_blank">@gradualcolours</a>. If you want to view the code behind this, the respository is <a href="https://github.com/gradualcolors/l2d2-demo" target="_blank">here</a>.</p>
+                           <p>This Live2D viewer uses the following libraries: <a href="https://github.com/pixijs/" target="_blank">PixiJS</a> and <a href="https://github.com/avgjs/pixi-live2d" target="_blank">Pixi-Live2D</a> plugin.</p>
+                           <p>Live2D Models are Happy Elements / Ensemble Stars' property.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="ui">
+                  <div id="show_charBox1">
+                     <div class="float_bubble" style="background-image: url(assets/icons/Subaru.png);"><img class="symbol" src="assets/add.png"></div>
+                  </div>
+                  <div id="charSpace1" class="charBox">
+                     <div style="right:0;" id="close_charBox1" class="char_close">&times;</div>
+                     <p>
+                        <select id="char1">
+                           <option value="" selected disabled hidden> Select Character A</option>
+                           <option value="Tetora">Tetora Nagumo</option>
+                           <option value="Hajime">Hajime Shino</option>
+                           <option value="Tomoya">Tomoya Mashiro</option>
+                           <option value="Hinata">Hinata Aoi</option>
+                           <option value="Midori">Midori Takamine</option>
+                           <option value="Tori">Tori Himemiya</option>
+                           <option value="Shinobu">Shinobu Sengoku</option>
+                           <option value="Yuta">Yuta Aoi</option>
+                           <option value="Mitsuru">Mitsuru Tenma</option>
+                           <option value="Tsukasa">Tsukasa Suou</option>
+                           <option value="Sora">Sora Harukawa</option>
+                           <option value="Subaru">Subaru Akehoshi</option>
+                           <option value="Hokuto">Hokuto Hidaka</option>
+                           <option value="Makoto">Makoto Yuuki</option>
+                           <option value="Souma">Souma Kanzaki</option>
+                           <option value="Adonis">Adonis Otogari</option>
+                           <option value="Koga">Koga Ogami</option>
+                           <option value="Ritsu">Ritsu Sakuma</option>
+                           <option value="Mao">Mao Isara</option>
+                           <option value="Yuzuru">Yuzuru Fushimi</option>
+                           <option value="Arashi">Arashi Narukami</option>
+                           <option value="Mika">Mika Kagehira</option>
+                           <option value="Natsume">Natsume Sakasaki</option>
+                           <option value="Keito">Keito Hasumi</option>
+                           <option value="Eichi">Eichi Tenshouin</option>
+                           <option value="Kaoru">Kaoru Hakaze</option>
+                           <option value="Izumi">Izumi Sena</option>
+                           <option value="Chiaki">Chiaki Morisawa</option>
+                           <option value="Kuro">Kuro Kiryu</option>
+                           <option value="Wataru">Wataru Hibiki</option>
+                           <option value="Kanata">Kanata Shinkai</option>
+                           <option value="Rei">Rei Sakuma</option>
+                           <option value="Nazuna">Nazuna Nito</option>
+                           <option value="Leo">Leo Tsukinaga</option>
+                           <option value="Shu">Shu Itsuki</option>
+                           <option value="Tsumugi">Tsumugi Aoba</option>
+                           <option value="Madara">Madara Mikejima</option>
+                           <option value="Nagisa">Nagisa Ran</option>
+                           <option value="Hiyori">Hiyori Tomoe</option>
+                           <option value="Ibara">Ibara Saegusa</option>
+                           <option value="Jun">Jun Sazanami</option>
+                           <option value="Jin">Jin Sagami</option>
+                           <option value="Akiomi">Akiomi Kunugi</option>
+                           <option value="Seiya">Seiya Hidaka</option>
+                        </select>
+                     </p>
+                     <p><strong>Upload model file:</strong><br/>
+                        <input type="file" id="modelElem" accept=".moc,.moc3">
+                     </p>
+                     <p><strong>Upload texture file:</strong><br/>
+                        <input type="file" id="texElem" accept="image/png">
+                     </p>
+                     <p><button id="modela" class="first">Add Character A</button></p>
+                     <div id="function">
+                        <p><strong>Character: </strong><span id="active_charA"></span></p>
+                        <div id="g1">
+                           <strong>Character A Motion:&nbsp;</strong>
+                           <select class="motion"></select>
+                           <button class="motion">Replay</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="float_square cd-start" style="background-image: url(assets/start.png);"></div>
+                  <div id="show_charBox2" style="filter: grayscale(100%);pointer-events:none;">
+                     <div class="float_bubble" style="background-image: url(assets/icons/Hokuto.png);"><img class="symbol" src="assets/add.png"></div>
+                  </div>
+                  <div id="charSpace2" class="charBox">
+                     <div style="right:0;" id="close_charBox2" class="char_close">&times;</div>
+                     <p>
+                        <select id="char2">
+                           <option value="" selected disabled hidden> Select Character B</option>
+                           <option value="Tetora">Tetora Nagumo</option>
+                           <option value="Hajime">Hajime Shino</option>
+                           <option value="Tomoya">Tomoya Mashiro</option>
+                           <option value="Hinata">Hinata Aoi</option>
+                           <option value="Midori">Midori Takamine</option>
+                           <option value="Tori">Tori Himemiya</option>
+                           <option value="Shinobu">Shinobu Sengoku</option>
+                           <option value="Yuta">Yuta Aoi</option>
+                           <option value="Mitsuru">Mitsuru Tenma</option>
+                           <option value="Tsukasa">Tsukasa Suou</option>
+                           <option value="Sora">Sora Harukawa</option>
+                           <option value="Subaru">Subaru Akehoshi</option>
+                           <option value="Hokuto">Hokuto Hidaka</option>
+                           <option value="Makoto">Makoto Yuuki</option>
+                           <option value="Souma">Souma Kanzaki</option>
+                           <option value="Adonis">Adonis Otogari</option>
+                           <option value="Koga">Koga Ogami</option>
+                           <option value="Ritsu">Ritsu Sakuma</option>
+                           <option value="Mao">Mao Isara</option>
+                           <option value="Yuzuru">Yuzuru Fushimi</option>
+                           <option value="Arashi">Arashi Narukami</option>
+                           <option value="Mika">Mika Kagehira</option>
+                           <option value="Natsume">Natsume Sakasaki</option>
+                           <option value="Keito">Keito Hasumi</option>
+                           <option value="Eichi">Eichi Tenshouin</option>
+                           <option value="Kaoru">Kaoru Hakaze</option>
+                           <option value="Izumi">Izumi Sena</option>
+                           <option value="Chiaki">Chiaki Morisawa</option>
+                           <option value="Kuro">Kuro Kiryu</option>
+                           <option value="Wataru">Wataru Hibiki</option>
+                           <option value="Kanata">Kanata Shinkai</option>
+                           <option value="Rei">Rei Sakuma</option>
+                           <option value="Nazuna">Nazuna Nito</option>
+                           <option value="Leo">Leo Tsukinaga</option>
+                           <option value="Shu">Shu Itsuki</option>
+                           <option value="Tsumugi">Tsumugi Aoba</option>
+                           <option value="Madara">Madara Mikejima</option>
+                           <option value="Nagisa">Nagisa Ran</option>
+                           <option value="Hiyori">Hiyori Tomoe</option>
+                           <option value="Ibara">Ibara Saegusa</option>
+                           <option value="Jun">Jun Sazanami</option>
+                           <option value="Jin">Jin Sagami</option>
+                           <option value="Akiomi">Akiomi Kunugi</option>
+                           <option value="Seiya">Seiya Hidaka</option>
+                        </select>
+                     </p>
+                     <p><strong>Upload model file:</strong><br/>
+                        <input type="file" id="modelElem2" accept=".moc,.moc3">
+                     </p>
+                     <p><strong>Upload texture file: </strong><br/>
+                        <input type="file" id="texElem2" accept="image/png">
+                     </p>
+                     <p><button id="modelb" class="first" disabled>Add Character B</button>
+                        <button id="removeb" style="display:none;" class="third">Remove Character B</button>
+                     </p>
+                     <div id="function2">
+                        <p><strong>Character: </strong><span id="active_charB"></span></p>
+                        <div id="g2">
+                           <strong>Character B Motion:&nbsp;</strong>
+                           <select class="motion"></select>
+                           <button class="motion">Replay</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="float_square bg-swap" style="background-image: url(assets/bg_swap.png);">
+                     <label>
+                        <div class="placeholder"></div>
+                        <input id="file-input" type="file"  accept="image/*" onchange="readURL(this)"/>
+                     </label>
+                  </div>
+               </div>
+               <div id ="model_display">
+                  <div class="canvasClass">
+                     <canvas id="canvas" width="450">
+                     </canvas>
+                  </div>
+               </div>
+               <div id="toggle_text">
+                  <div id="navi" style="display:none;">
+                     <div class="left">
+                        <div class="back" style="display:none;">
+                           <img class="arrows a-back" src="assets/chevback.png" style="pointer-events: auto;">
+                        </div>
+                     </div>
+                     <div class="right">
+                        <div class="forward">
+                           <img class="arrows a-next" src="assets/chevnext.png" style="pointer-events: auto;">
+                        </div>
+                     </div>
+                  </div>
+                  <div id="wrapper">
+                     <div id="char-name">
+                        <div class="bubble">
+                           <div id="speaker"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="arrowbox">
+                     <div id="textbox" class="dialogue"></div>
+                     <div id="star">
+                        <img src="assets/star.png">
+                     </div>
+                  </div>
+               </div>
             </div>
-
-        </div>
-        </div>
-			<div id="show_charBox2" style="filter: grayscale(100%);pointer-events:none;"><div class="float_bubble" style="background-image: url(assets/icons/Hokuto.png);"><img class="symbol" src="assets/add.png"></div></div>
-			<div id="charSpace2" class="charBox">
-			<div style="right:0;" id="close_charBox2" class="char_close">&times;</div>
-			  <p><select id="char2">
-                <option value="" selected disabled hidden> Select Character B</option>
-                <option value="Tetora">Tetora Nagumo</option>
-                <option value="Hajime">Hajime Shino</option>
-                <option value="Tomoya">Tomoya Mashiro</option>
-                <option value="Hinata">Hinata Aoi</option>
-                <option value="Midori">Midori Takamine</option>
-                <option value="Tori">Tori Himemiya</option>
-                <option value="Shinobu">Shinobu Sengoku</option>
-                <option value="Yuta">Yuta Aoi</option>
-                <option value="Mitsuru">Mitsuru Tenma</option>
-                <option value="Tsukasa">Tsukasa Suou</option>
-                <option value="Sora">Sora Harukawa</option>
-                <option value="Subaru">Subaru Akehoshi</option>
-                <option value="Hokuto">Hokuto Hidaka</option>
-                <option value="Makoto">Makoto Yuuki</option>
-                <option value="Souma">Souma Kanzaki</option>
-                <option value="Adonis">Adonis Otogari</option>
-                <option value="Koga">Koga Ogami</option>
-                <option value="Ritsu">Ritsu Sakuma</option>
-                <option value="Mao">Mao Isara</option>
-                <option value="Yuzuru">Yuzuru Fushimi</option>
-                <option value="Arashi">Arashi Narukami</option>
-                <option value="Mika">Mika Kagehira</option>
-                <option value="Natsume">Natsume Sakasaki</option>
-                <option value="Keito">Keito Hasumi</option>
-                <option value="Eichi">Eichi Tenshouin</option>
-                <option value="Kaoru">Kaoru Hakaze</option>
-                <option value="Izumi">Izumi Sena</option>
-                <option value="Chiaki">Chiaki Morisawa</option>
-                <option value="Kuro">Kuro Kiryu</option>
-                <option value="Wataru">Wataru Hibiki</option>
-                <option value="Kanata">Kanata Shinkai</option>
-                <option value="Rei">Rei Sakuma</option>
-                <option value="Nazuna">Nazuna Nito</option>
-                <option value="Leo">Leo Tsukinaga</option>
-                <option value="Shu">Shu Itsuki</option>
-                <option value="Tsumugi">Tsumugi Aoba</option>
-                <option value="Madara">Madara Mikejima</option>
-                <option value="Nagisa">Nagisa Ran</option>
-                <option value="Hiyori">Hiyori Tomoe</option>
-                <option value="Ibara">Ibara Saegusa</option>
-                <option value="Jun">Jun Sazanami</option>
-                <option value="Jin">Jin Sagami</option>
-                <option value="Akiomi">Akiomi Kunugi</option>
-                <option value="Seiya">Seiya Hidaka</option>
-            </select></p>
-			<p><strong>Upload model file:</strong><br/>
-            <input type="file" id="modelElem2" accept=".moc,.moc3"></p>
-            <p><strong>Upload texture file: </strong><br/>
-            <input type="file" id="texElem2" accept="image/png"></p>
-			<p><button id="modelb" class="first" disabled>Add Character B</button>
-			<button id="removeb" style="display:none;" class="third">Remove Character B</button></p>
-		<div id="function2">
-		<p><strong>Character: </strong><span id="active_charB"></span></p>
-
-				<div id="g2">
-                <strong>Character B Motion:&nbsp;</strong>
-                <select class="motion"></select>
-                <button class="motion">Replay</button>
+         </div>
+         <div id="fun_stuff" style="margin-left:35px; margin-top:15px;width:94%;">
+            <span style="font-size:12px;";><strong>Menu: </strong></span>
+            <button id="dlModels">Download Models</button>&nbsp;<button id="openModal" disabled>Add Dialogue</button>&nbsp;<button id="resetText" disabled>Restart Dialogue</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="hide_ui">Toggle UI</button>&nbsp;<button class="captureB" id="capture_div" onclick="getImage()" disabled>Capture Window</button>&nbsp;<button class="captureB" id="capture_transparent" onclick="capture()" disabled>Capture Renders</button>
+            <!--<div style="float: right;">Coded by <a target="_blank" href="https://twitter.com/gradualcolours">@gradualcolours</a></div>-->
+         </div>
+         <div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;">
+            <span style="font-size:12px;"><strong>Console Log:</strong></span>
+            <ul id="log"></ul>
+         </div>
+         <!-- The Modal -->
+         <div id="textModal" class="modal">
+            <!-- Modal content -->
+            <!-- ONE LINE DIALOGUE -->
+            <!-- <div class="modal-content">
+               <span class="close">&times;</span>
+               <center><p><select id="charName_text">
+               <option value="" selected disabled hidden>Select Character</option>
+               <option value="char_a"></option>
+               </select> : 
+               <input type="text" name="c_dialogue" id="c_dialogue" maxlength="256" style="width:75%"></p>
+               <p>Select motion: <select id="char_motion">
+               <option value="" selected disabled hidden>Select Motion</option>
+               </select></p>
+               <p id="modal_error"></p>
+               <button id="submitText" class="second">Input Text</button><center>
+               </div>-->
+            <div class="modal-content" 
+               style="width: 70%;
+               max-width: 720px;
+               min-width: 360px;">
+               <div style="right:0;" class="close">&times;</div>
+               <div style="width:95%;margin:auto;">
+                  <p>
+                     Choose number of lines: 
+                     <select id="num_lines">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                     </select>
+                  </p>
+                  <p>Turn on text animation? (Not recommended for laggy devices) <label class="switch"><input type="checkbox" id="textwriter"/><span class="check_slider round"></span>
+                     </label>
+                  </p>
+                  <p id="text_options" style="display:none;">Text Speed: <input id="text_speed" type="range" min="50" max="80" value="80" step="5"> Turn on Auto? <label class="switch">
+                     <input id="auto_text" type="checkbox">
+                     <span class="check_slider round"></span>
+                     </label><br><span style="font-size:12px">Note: Turning on auto will disable all buttons until the end!</span><br/>
+                  </p>
+                  <p class="inputText active">
+                     Line 1: 
+                     <select  class="charLine_select"  id="charName_text1">
+                        <option value="" selected disabled hidden>Select Character</option>
+                        <option value="char_a"></option>
+                     </select>
+                     : 
+                     <input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="100"> Select motion 1: 
+                     <select class="charMotion_select"  id="char_motion1">
+                        <option value="" selected disabled hidden>Select Motion</option>
+                     </select>
+                  </p>
+                  <p class="inputText" style="display:none;">
+                     Line 2: 
+                     <select class="charLine_select" id="charName_text2">
+                        <option value="" selected disabled hidden>Select Character</option>
+                        <option value="char_a"></option>
+                     </select>
+                     : 
+                     <input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="100"> Select motion 2: 
+                     <select class="charMotion_select"  id="char_motion2">
+                        <option value="" selected disabled hidden>Select Motion</option>
+                     </select>
+                  </p>
+                  <p class="inputText" style="display:none;">
+                     Line 3: 
+                     <select class="charLine_select" id="charName_text3">
+                        <option value="" selected disabled hidden>Select Character</option>
+                        <option value="char_a"></option>
+                     </select>
+                     : 
+                     <input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="100"> Select motion 3: 
+                     <select class="charMotion_select"  id="char_motion3">
+                        <option value="" selected disabled hidden>Select Motion</option>
+                     </select>
+                  </p>
+                  <p class="inputText" style="display:none;">
+                     Line 4: 
+                     <select class="charLine_select" id="charName_text4">
+                        <option value="" selected disabled hidden>Select Character</option>
+                        <option value="char_a"></option>
+                     </select>
+                     : 
+                     <input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="100"> Select motion 4: 
+                     <select class="charMotion_select"  id="char_motion4">
+                        <option value="" selected disabled hidden>Select Motion</option>
+                     </select>
+                  </p>
+                  <p id="modal_error"></p>
+                  <button id="submitText" class="second">Add Dialogue!</button>
+               </div>
             </div>
-			  </div>
-</div>		
-		</div>	
-			<div id ="model_display">
-            <div class="canvasClass">
-                <canvas id="canvas" width="450">
-                </canvas>
+         </div>
+         <div id="downloadModal" class="modal">
+            <div class="modal-content" 
+               style="max-height: 775px;">
+               <div style="right:0;" class="close">&times;</div>
+               <p style="text-align:center;padding-top: 15px;">Click an idol below to download their models zip. Idols greyed out do not have a link yet.</p>
+               <div id="idols" 
+                  style="margin: auto;
+                  text-align: center;
+                  overflow-y: auto;
+                  width:450px;padding-bottom:15px;">
+                  <div class="acc-container">
+                     <div>
+                        <input type="radio" name="acc" id="acc1a">
+                        <label for="acc1a">Class 1-A</label>
+                        <div class="acc-body" id="group1-A">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="acc1b">
+                        <label for="acc1b">Class 1-B</label>
+                        <div class="acc-body" id="group1-B">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="acc2a">
+                        <label for="acc2a">Class 2-A</label>
+                        <div class="acc-body" id="group2-A">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="acc2b">
+                        <label for="acc2b">Class 2-B</label>
+                        <div class="acc-body" id="group2-B">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="acc3a">
+                        <label for="acc3a">Class 3-A</label>
+                        <div class="acc-body" id="group3-A">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="acc3b">
+                        <label for="acc3b">Class 3-B</label>
+                        <div class="acc-body" id="group3-B">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="accEden">
+                        <label for="accEden">Eden</label>
+                        <div class="acc-body" id="groupEden">
+                        </div>
+                     </div>
+                     <div>
+                        <input type="radio" name="acc" id="accTeachers">
+                        <label for="accTeachers">Teachers</label>
+                        <div class="acc-body" id="groupTeachers">
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-			</div>
-			
-			<div id="toggle_text">
-	<div id="navi" style="display:none;">
-						<div class="left">
-						<div class="back" style="display:none;">
-							<img class="arrows a-back" src="assets/chevback.png" style="pointer-events: auto;">
-						</div>
-					</div>
-					<div class="right">
-						<div class="forward">
-							<img class="arrows a-next" src="assets/chevnext.png" style="pointer-events: auto;">
-						</div>
-					</div>
-			</div>
-		<div id="wrapper">
-					<div id="char-name">
-						<div class="bubble">
-							<div id="speaker"></div>
-						</div>
-					</div>
-					</div>
-					<div id="arrowbox">
-						<div id="textbox" class="dialogue"></div>
-											<div id="star">
-						<img src="assets/star.png">
-					</div>
-					</div>
-
-				</div>
-			</div>
-<div id="fun_stuff" style="margin-left:35px; margin-top:15px;width:94%;"><strong>Menu: </strong>
-<button id="dlModels">Download Models</button>&nbsp;<button id="openModal" disabled>Add Text</button>&nbsp;<button id="resetText" disabled>Restart Dialogue</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="hide_ui">Hide UI</button>
-<div style="float: right;">Coded by <a target="_blank" href="https://twitter.com/gradualcolours">@gradualcolours</a></div>
-</div>						
-<div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;"><span style="font-size:12px;"><strong>Console Log:</strong></span>
-			<ul id="log"></ul>
-			</div>
-
-<!-- The Modal -->
-<div id="textModal" class="modal">
-
-  <!-- Modal content -->
- <!-- ONE LINE DIALOGUE -->
-<!-- <div class="modal-content">
-    <span class="close">&times;</span>
-    <center><p><select id="charName_text">
-	<option value="" selected disabled hidden>Select Character</option>
-	<option value="char_a"></option>
-	</select> : 
-	<input type="text" name="c_dialogue" id="c_dialogue" maxlength="256" style="width:75%"></p>
-	<p>Select motion: <select id="char_motion">
-	<option value="" selected disabled hidden>Select Motion</option>
-	</select></p>
-	<p id="modal_error"></p>
-	<button id="submitText" class="second">Input Text</button><center>
-  </div>-->
-
- <div class="modal-content" 
- style="width: 70%;
-    max-width: 720px;
-    min-width: 360px;">
-    <div style="right:0;" class="close">&times;</div>
-	<div style="width:95%;margin:auto;">
-	<p>Choose number of lines: <select id="num_lines">
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	</select></p>
-	<p>Turn on text animation? (Not recommended for laggy devices) <label class="switch"><input type="checkbox" id="textwriter"/><span class="check_slider round"></span>
-</label></p>
-	<p id="text_options" style="display:none;">Text Speed: <input id="text_speed" type="range" min="50" max="80" value="80" step="5"> Turn on Auto? <label class="switch">
-  <input id="auto_text" type="checkbox">
-  <span class="check_slider round"></span>
-</label><br><span style="font-size:12px">Note: Turning on auto will disable all buttons until the end!</span><br/></p>
-	<p class="inputText active">Line 1: <select  class="charLine_select"  id="charName_text1">
-	<option value="" selected disabled hidden>Select Character</option>
-	<option value="char_a"></option>
-	</select>: 
-	<input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="100"> Select motion 1: <select class="charMotion_select"  id="char_motion1">
-	<option value="" selected disabled hidden>Select Motion</option></select></p>
-	
-	
-	<p class="inputText" style="display:none;">Line 2: <select class="charLine_select" id="charName_text2">
-	<option value="" selected disabled hidden>Select Character</option>
-	<option value="char_a"></option>
-	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="100"> Select motion 2: <select class="charMotion_select"  id="char_motion2">
-	<option value="" selected disabled hidden>Select Motion</option></select></p>
-	
-	<p class="inputText" style="display:none;">Line 3: <select class="charLine_select" id="charName_text3">
-	<option value="" selected disabled hidden>Select Character</option>
-	<option value="char_a"></option>
-	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="100"> Select motion 3: <select class="charMotion_select"  id="char_motion3">
-	<option value="" selected disabled hidden>Select Motion</option></select></p>
-	
-	<p class="inputText" style="display:none;">Line 4: <select class="charLine_select" id="charName_text4">
-	<option value="" selected disabled hidden>Select Character</option>
-	<option value="char_a"></option>
-	</select>: 
-	<input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="100"> Select motion 4: <select class="charMotion_select"  id="char_motion4">
-	<option value="" selected disabled hidden>Select Motion</option></select></p>
-	<p id="modal_error"></p>
-	
-	<button id="submitText" class="second">Add Dialogue!</button>
-	</div>
-  </div>
-
-</div>
-
-<div id="downloadModal" class="modal">
-	 <div class="modal-content" 
-	  style="max-height: 775px;">
-	     <div style="right:0;" class="close">&times;</div>
-	<p style="text-align:center;padding-top: 15px;">Click an idol below to download their models zip. Idols greyed out do not have a link yet.</p> 
-	<div id="idols" 
-	style="margin: auto;
-    text-align: center;
-    overflow-y: auto;
-	width:450px;padding-bottom:15px;">
-	
-<div class="acc-container">          
-     <div>
-       <input type="radio" name="acc" id="acc1a">
-       <label for="acc1a">Class 1-A</label>
-       <div class="acc-body" id="group1-A">
-       </div>
+         </div>
       </div>
-     <div>
-        <input type="radio" name="acc" id="acc1b">
-        <label for="acc1b">Class 1-B</label>
-        <div class="acc-body" id="group1-B">
-        </div>
-      </div>
-     <div>
-        <input type="radio" name="acc" id="acc2a">
-        <label for="acc2a">Class 2-A</label>
-        <div class="acc-body" id="group2-A">
-        </div>
-       </div>
-	       <div>
-       <input type="radio" name="acc" id="acc2b">
-       <label for="acc2b">Class 2-B</label>
-       <div class="acc-body" id="group2-B">
-       </div>
-      </div>
-     <div>
-        <input type="radio" name="acc" id="acc3a">
-        <label for="acc3a">Class 3-A</label>
-        <div class="acc-body" id="group3-A">
-        </div>
-      </div>
-     <div>
-        <input type="radio" name="acc" id="acc3b">
-        <label for="acc3b">Class 3-B</label>
-        <div class="acc-body" id="group3-B">
-        </div>
-       </div>
-	  
-	  <div>
-        <input type="radio" name="acc" id="accEden">
-        <label for="accEden">Eden</label>
-        <div class="acc-body" id="groupEden">
-        </div>
-       </div>
-	   
-	    <div>
-        <input type="radio" name="acc" id="accTeachers">
-        <label for="accTeachers">Teachers</label>
-        <div class="acc-body" id="groupTeachers">
-        </div>
-       </div>
-  </div>
-	
-	
-	
-	</div>
-	</div>
-</div>
-
-</div>
-			
-			
-		<script src="js/EnstCharData.js" type="text/javascript"></script>
-		<script src="js/modelJsonTemp.js" type="text/javascript"></script>
-        <script src="js/live2d.js" type="text/javascript"></script>
-        <script src="js/page.js" type="text/javascript"></script>
-		<script src="js/textDialogue.js" type="text/javascript"></script>
-	</body>
+      <script src="lib/FileSaver.min.js" type="text/javascript"></script>
+      <script src="lib/dom-to-image.min.js" type="text/javascript"></script>
+      <script src="js/EnstCharData.js" type="text/javascript"></script>
+      <script src="js/modelJsonTemp.js" type="text/javascript"></script>
+      <script src="js/live2d.js" type="text/javascript"></script>
+      <script src="js/page.js" type="text/javascript"></script>
+      <script src="js/textDialogue.js" type="text/javascript"></script>
+   </body>
 </html>

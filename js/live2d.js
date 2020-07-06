@@ -23,7 +23,7 @@ function getModel(path, model, callback, callback2) {
 // Pixi option
 const option = {
     transparent: true,
-    preserveDrawingBuffer: false,    // to capture
+    preserveDrawingBuffer: true,    // to capture
     view: document.getElementById("canvas")
 }
 if (!PIXI.Renderer) PIXI.Renderer = PIXI.WebGLRenderer

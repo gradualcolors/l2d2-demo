@@ -1,7 +1,6 @@
 window.URL = window.URL || window.webkitURL;
 let page = 0;
-let models = null;
-let voices = null;
+let mainDiv = document.getElementById('capture');
 let sl = $("#custom");
 let charName1 = null;
 let charName2 = null;
@@ -12,15 +11,25 @@ let texElem2 = $("input#texElem2");
 let charJson1 = {}
 let charJson2 = {}
 let webDir = window.location.protocol + window.location.hostname + "/" ;
-function triggerF() { follow = !follow; sl.change(); }
+let screenshotName = null;
+var currentDate = new Date();
+var date = currentDate.getDate();
+var month = currentDate.getMonth();
+var year = currentDate.getFullYear();
+var timeStamp;
+let currentBlobBG = null;
 
 const downloadBlob = function(index) {
     return function(blob) {
         const a = document.createElement("a");
-        a.download = index;
+		screenshotName = charName1;
+		if(charName2 != null)
+		{screenshotName += "_" + charName2;}
+		a.download = screenshotName + "_" + index;
         a.href = window.URL.createObjectURL(blob);
         a.click();
         window.URL.revokeObjectURL(a.href);
+		$("#log").append("<li style=\"color:red;\">Render screenshot captured.</li>");
     }
 }
 function save(index) { renderer.view.toBlob(downloadBlob(index)); }
@@ -34,18 +43,62 @@ function get(url, callback) {
     })
 }
 
+function getImage() {
+$("button#capture_div").attr("disabled", true);
+$("#log").append("<li style=\"color:red;\">Processing window screenshot...</li>");
+  domtoimage.toBlob(mainDiv)
+    .then(function(blob) 
+	{timeStamp = Math.round(+new Date()/1000);
+      window.saveAs(blob, 'Screenshot_' + timeStamp + '.png');
+	  $("#log").append("<li style=\"color:red;\">Window screenshot captured.</li>");
+	  $("button#capture_div").attr("disabled", false);
+    });
+}
+
+
 $(document).ready(function() {
     //init(parseInt($("#width").val()), parseInt($("#height").val()));
 	
-	if (window.innerWidth > 1278)
+	$( ".cd-start" ).click(function() {
+		  $( "#credits_box" ).toggleClass("credits_m_hide");
+		}); 
+		    
+	$( ".credit_back" ).click(function() {
+		  $( "#credits_box" ).toggleClass("credits_m_hide");
+		});   
+		
+		$( ".inst" ).click(function() {
+		$(".icon").removeClass("activeI").addClass("passiveI");
+		$(".inst" ).addClass("activeI").removeClass("passiveI");
+		  $( "#other_info" ).hide();
+		  $( "#instructions" ).show();
+		  $( "#programmer" ).hide();
+		});  
+		
+	$( ".program" ).click(function() {
+		$(".icon").removeClass("activeI").addClass("passiveI");
+		$(".program" ).addClass("activeI").removeClass("passiveI");
+		  $( "#other_info" ).hide();
+		  $( "#instructions" ).hide();
+		  $( "#programmer" ).show();
+		});  
+
+	$( ".other" ).click(function() {
+		$(".icon").removeClass("activeI").addClass("passiveI");
+		$(".other" ).addClass("activeI").removeClass("passiveI");
+		  $( "#other_info" ).show();
+		  $( "#instructions" ).hide();
+		  $( "#programmer" ).hide();
+		});   		
+	
+	if (window.innerWidth > 1200)
 	{
 	init(1200, 676);
 	} 
-	else if (window.innerWidth > 818)
+	else if (window.innerWidth > 817)
 		
 	{
-		var w = document.getElementById("main").offsetWidth;
-		init(w, w/1.775);
+		init(900, 507);
 	}
 	
 	else 
@@ -96,6 +149,7 @@ $(document).ready(function() {
 					$("#show_charBox1 > .float_bubble >img.symbol").attr("src","assets/swap.png");
 					$("#log").append("<li>Added " + charName1 + ".</li>");
 					$("button#openModal").attr("disabled", false);
+					$("button.captureB").attr("disabled", false);
 
 				}
 			{while (firstChild = stage.children.shift()) { firstChild.destroy(); }}			
@@ -247,24 +301,31 @@ $(document).ready(function() {
     	var hidden = $('#charSpace1');
         hidden.fadeOut(150);		
 		$('#show_charBox1').show();
+		$('.cd-start').css("margin-top", "");
+		
     });
     
     $('#show_charBox1').click(function(){
     	var hidden = $('#charSpace1');
 		$('#show_charBox1').hide();
-		hidden.delay(150).fadeIn(150);			
+		hidden.delay(150).fadeIn(150);	
+		$('.cd-start').css("margin-top", "250px");
+		
     });
 
 	    $('#close_charBox2').click(function(){
     	var hidden = $('#charSpace2');
         hidden.fadeOut(150);		
 		$('#show_charBox2').show();
+			$('.bg-swap').css("margin-top", "");
+		
     });
     
     $('#show_charBox2').click(function(){
     	var hidden = $('#charSpace2');
 		$('#show_charBox2').hide();
-		hidden.delay(150).fadeIn(150);			
+		hidden.delay(150).fadeIn(150);		
+	$('.bg-swap').css("margin-top", "280px");
     });
 
 /* CREATE DIV BOX */
@@ -308,5 +369,20 @@ for(var i = 0; i < charDataLength; i++) {
     });
 	
 	
-	
 });
+
+function readURL(input) {
+		let file = input.files[0];
+		window.URL.revokeObjectURL(currentBlobBG);
+		if (file != null) {
+			currentBlobBG = window.URL.createObjectURL(file);
+			
+		$('#main').attr('style', 'background-image:url(' + currentBlobBG + ')');
+		$("#log").append("<li style=\"color:red;\">Changed background to " + file.name +"</li>");
+		}
+		else
+		{window.URL.revokeObjectURL(currentBlobBG);
+		$('#main').attr('style', 'background-image:url("assets/image/bg_20_2.png")');
+			$("#log").append("<li style=\"color:red;\">Reverted to default background.</li>");		
+	}
+}

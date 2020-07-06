@@ -468,6 +468,7 @@ var lines = parseInt($("select#num_lines").val());
 var convBox = document.getElementById("textbox");
 var speed = parseInt($("#text_speed").val());
 $(".arrows").css("pointer-events", "none");
+$(".arrows").css("filter", "brightness(50%)");
 $(".charBox").css("pointer-events", "none");
 $("#fun_stuff").css("pointer-events", "none");
 /*$("button#openModal").attr("disabled", true);
@@ -523,6 +524,7 @@ $("#log").append("<li>Autoplay finished.</li>");
 
 $(".forward").hide();	
 $(".arrows").css("pointer-events", "auto");
+$(".arrows").css("filter", "brightness(1)");
 /*$("button#openModal").attr("disabled", false);
 $("button#dlModels").attr("disabled", false);
 $("button#toggleTextbox").attr("disabled", false);
