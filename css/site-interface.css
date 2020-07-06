@@ -299,7 +299,7 @@ input:checked+.check_slider:before {
 	margin-top: 10px;
 	position: absolute;
 	height: 64px;
-	background-image: url(/assets/backbutton.png);
+	background-image: url(/backbutton.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -376,15 +376,15 @@ input:checked+.check_slider:before {
 }
 
 .rai {
-	background-image: url('/assets/rai.jpg');
+	background-image: url('/rai.jpg');
 }
 
 .rai2 {
-	background-image: url('/assets/rai2.jpg');
+	background-image: url('/rai2.jpg');
 }
 
 .rai3 {
-	background-image: url('/assets/rai3.jpg');
+	background-image: url('/rai3.jpg');
 }
 
 .cred_text {
