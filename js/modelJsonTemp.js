@@ -9,8 +9,14 @@ var modelJson = {};
 modelBlob = handleModel(mocSelect[0].files);
 textureBlob = handleTexture(texSelect[0].files);
 
-modelJson = createJSON(char_name, modelBlob, textureBlob);
 
+if (char_name == "Mademoiselle")
+{
+	modelJson = createJSON("Mademoiselle", modelBlob, textureBlob);
+}
+else
+{modelJson = createJSON(char_name, modelBlob, textureBlob);
+}
 return modelJson;
 }
 
@@ -216,7 +222,8 @@ function createJSON(char_name, modelBlob, textureBlob) {
 		char_name != "Jun" &&
 		char_name != "Jin" &&
 		char_name != "Akiomi" &&
-		char_name != "Seiya") {
+		char_name != "Seiya" &&
+		char_name != "Mademoiselle") {
 		modelJson.motions["motion"].push({
 			"name": char_name.toLowerCase() + "_amai",
 			"file": "assets/motions/" + char_name.toLowerCase() + "_amai.mtn"
@@ -238,7 +245,7 @@ function createJSON(char_name, modelBlob, textureBlob) {
 		});
 	}
 
-	else if (char_name == "Shu") {
+	else if (char_name == "Shu" || char_name == "Mademoiselle") {
 		modelJson.motions["motion"].push({
 			"name": "doll_1",
 			"file": "assets/motions/doll_1.mtn"

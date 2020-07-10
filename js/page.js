@@ -27,8 +27,10 @@ const downloadBlob = function(index) {
 		{screenshotName += "_" + charName2;}
 		a.download = screenshotName + "_" + index;
         a.href = window.URL.createObjectURL(blob);
+		a.target='_blank';
         a.click();
-        window.URL.revokeObjectURL(a.href);
+		setTimeOut(function(){
+        window.URL.revokeObjectURL(a.href);}, 1000);
 		$("#log").append("<li style=\"color:red;\">Render screenshot captured.</li>");
     }
 }
@@ -52,7 +54,10 @@ $("#log").append("<li style=\"color:red;\">Processing window screenshot...</li>"
       window.saveAs(blob, 'Screenshot_' + timeStamp + '.png');
 	  $("#log").append("<li style=\"color:red;\">Window screenshot captured.</li>");
 	  $("button#capture_div").attr("disabled", false);
-    });
+    },'image/png');
+	
+	setTimeOut(function(){
+        window.URL.revokeObjectURL(blob);}, 1000);
 }
 
 
