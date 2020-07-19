@@ -29,7 +29,7 @@ const downloadBlob = function(index) {
         a.href = window.URL.createObjectURL(blob);
 		a.target='_blank';
         a.click();
-		setTimeOut(function(){
+		setTimeout(function(){
         window.URL.revokeObjectURL(a.href);}, 1000);
 		$("#log").append("<li style=\"color:green;\">Render screenshot captured.</li>");
     }
