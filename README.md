@@ -58,9 +58,12 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 3. Collect all the Live2D models from JP enstars
 4. Will add more as testing becomes public
 
-## Frequently Asked Questions
+## [Frequently Asked Questions](#frequently-asked-questions)
 > What's the difference between JP and CN/TW models?
 - Exclusives aside, CN/TW models have a 1024 x 1024 texture file, meaning they're lower quality than JP which is 2048 x 2048. However, CN/TW models are easier to extract so that's why they're available while I'm collecting the JP files.
+
+> Why are there some outfits missing?
+- TW only has models up to Meteor Impact. I'm still collecting the JP files and will have a tracking sheet up soon. If you're looking for a specific outfit, please contact me and I will add it to the list of what I need to find.
 
 > Will you add collab characters?
 - Yes, after I collect data on them.
@@ -73,3 +76,6 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 
 > Will there be a Live2D viewer/Dialogue Simulator for Ensemble Stars!!?
 - Yes! It is currently being planned out while I figure out how to convert the motions since they're in a new format.
+
+> Are you taking helpers or volunteers?
+- I'm thinking on it, but the answer might be yes. I do need help with some people who has knowledge in Asset Studio so we can compile all the JP outfits for usage. If you're interested in helping, dm me @sakasakitty or @gradualcolours! As for helping with coding, that's to be decided.
