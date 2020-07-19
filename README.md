@@ -57,8 +57,11 @@ Click **Add Dialogue** on the bottom. The character dropdown will only have what
 4. Will add more as testing becomes public
 
 ## Frequently Asked Questions
+> Will you add collab characters?
+- Yes, after I collect data on them.
+
 > Will you add a music uploader?
-- No plans to, unfortunately 
+- No plans to, unfortunately.
 
 > What about voices?
 - Debatable but there's way too many sound files for me to extract and unlike models, harder to implement into an uploader.
