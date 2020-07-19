@@ -17,7 +17,7 @@ Click **Add Dialogue** on the bottom. The character dropdown will onlye have wha
 
 You can also import a JSON file to fill the textboxes. You can create one based on this template [here](https://docs.google.com/spreadsheets/d/1FGvia5xyn4OObxyJz6B4W51gwk4Tsj3g4rAIrx7BhcE/edit?usp=sharing "JSON Script Template"). **Export Dialogue** can export your script as a JSON file for future use.
 
-## [Change Log](#known-bugs)
+## [Change Log](#change-log)
 1. 07/19/20 - Added Export and Import Script Functions
 2.
 3.
