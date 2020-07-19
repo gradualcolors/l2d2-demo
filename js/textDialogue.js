@@ -189,10 +189,15 @@ $(".forward").click(function() {
             $(".arrows").css("pointer-events", "none");
             typeWriter(currentText);
         } else {
-            $("#textbox").html(currentText);
+			$(".arrows").css("pointer-events", "none");
+            $("#textbox").html(currentText);	
+			setTimeout(function(){
+			$(".arrows").css("pointer-events", "auto");}, 5000);
         }
+		
+		$("#log").append("<li>Forward - Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] + "</li>");
 
-        $("#log").append("<li>Forward - Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] + "</li>");
+        
 
         if (counter == (parseInt($("select#num_lines").val()) - 1)) {
             $(".back").show();
@@ -257,7 +262,10 @@ $(".back").click(function() {
             $(".arrows").css("pointer-events", "none");
             typeWriter(currentText);
         } else {
+			$(".arrows").css("pointer-events", "none");
             $("#textbox").html(currentText);
+			setTimeout(function(){
+			$(".arrows").css("pointer-events", "auto");}, 5000);
         }
         $("#log").append("<li>Back - Input: " + activeSpeaker[counter] + ", \"" + activeDialogue[counter] + "\", " + activeMotion[counter] + "</li>");
 
