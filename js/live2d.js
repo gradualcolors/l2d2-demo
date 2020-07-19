@@ -56,21 +56,23 @@ function _show(model, callback) {
 	
 	if(model.name == "Mademoiselle")
 	{
-	pos_y = parseInt(EnstCharData.characters["Shu"][0].position_y);
-	coeff = parseInt(EnstCharData.characters["Shu"][0].scale);
+	pos_y = parseFloat(EnstCharData.characters["Shu"][0].position_y);
+	coeff = parseFloat(EnstCharData.characters["Shu"][0].scale);
 	}
 	else{
-	pos_y = parseInt(EnstCharData.characters[model.name][0].position_y);
-	coeff = parseInt(EnstCharData.characters[model.name][0].scale);
+	pos_y = parseFloat(EnstCharData.characters[model.name][0].position_y);
+	coeff = parseFloat(EnstCharData.characters[model.name][0].scale);
 	}
-	let scale = parseFloat(coeff/100) + 0.400;
+	//let scale = parseFloat(coeff/100) + 0.400;
+	let scale = parseFloat(coeff/2.05);
 	//let sy = parseFloat(pos_y/350) + 0.15; 
-	let sy = parseFloat(pos_y/720) + 0.18;
+	//let sy = parseFloat(pos_y/720) + 0.18;
+	let sy = -(pos_y);
 	
 	live2dSprite.adjustTranslate(0, sy);
 	
 	
-    //live2dSprite.adjustScale(0, 0, 0.75);
+    //live2dSprite.adjustScale(0, 0, 0.70);
 	
 	live2dSprite.adjustScale(0, 0, scale);
     // live2dSprite.startRandomMotion("motion");

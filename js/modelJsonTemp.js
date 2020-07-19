@@ -1,21 +1,29 @@
 ﻿
-function modelJsonCreate(char_name, mocSelect, texSelect) {
+function modelJsonCreate(char_name, mocSelect, texSelect, $flag) {
 	
 	// console.log("--> LAppLive2DManager()");
 var modelBlob;
 var textureBlob;
 var modelJson = {};
+var textureAry = [];
 
 modelBlob = handleModel(mocSelect[0].files);
 textureBlob = handleTexture(texSelect[0].files);
 
+var checkFlag = $flag.find("input.keitocomicworld").is(':checked');
+
+if(checkFlag == true)
+{textureAry.push("assets/image/keitoroses.png");
+textureAry.push(textureBlob);
+}
+else{textureAry.push(textureBlob);}
 
 if (char_name == "Mademoiselle")
 {
-	modelJson = createJSON("Mademoiselle", modelBlob, textureBlob);
+	modelJson = createJSON("Mademoiselle", modelBlob, textureAry, checkFlag);
 }
 else
-{modelJson = createJSON(char_name, modelBlob, textureBlob);
+{modelJson = createJSON(char_name, modelBlob, textureAry, checkFlag);
 }
 return modelJson;
 }
@@ -55,12 +63,12 @@ function handleModel(files) {
 	return modelURL;
 }
 
-function createJSON(char_name, modelBlob, textureBlob) {
+function createJSON(char_name, modelBlob, textureBlob, checkFlag) {
 
 	modelJson = {
 		"version": "Sample 1.0.0",
 		"model": modelBlob,
-		"textures": [textureBlob],
+		"textures": textureBlob,
 		"expressions": [
 			{ "name": "", "file": "" }
 		],
@@ -228,7 +236,17 @@ function createJSON(char_name, modelBlob, textureBlob) {
 			"name": char_name.toLowerCase() + "_amai",
 			"file": "assets/motions/" + char_name.toLowerCase() + "_amai.mtn"
 		});
+		
+			if (char_name == "Keito" && checkFlag == true)
+				{
+					modelJson.motions["motion"].push({
+						"name": "effect",
+						"file": "assets/motions/effect.mtn"
+					});
+				}
 	}
+	
+
 
 	else if (char_name == "Ibara") {
 		modelJson.motions["motion"].push({

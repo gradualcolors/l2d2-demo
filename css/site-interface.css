@@ -103,7 +103,7 @@
 	background-size: 100%;
 	transition: 0.1s;
 	/* box-shadow: 2px 2px 5px rgba(68,68,68,0.6); */
-	margin-top: 100px;
+	margin-top: 115px;
 	margin-left: 15px;
 	-moz-box-shadow: 2px 2px 5px rgba(68, 68, 68, 0.6);
 	/* -webkit-box-shadow: 2px 2px 5px rgba(68,68,68,0.6); */
@@ -387,23 +387,67 @@ input:checked+.check_slider:before {
 	background-image: url('rai3.jpg');
 }
 
-.cred_text {
-	max-height: 250px;
-	overflow-y: scroll;
+#cred_text{
+	max-height:225px;
+	overflow-y:auto;
 }
 
-.cred_text::-webkit-scrollbar {
+#cred_text::-webkit-scrollbar {
 	width: 8px;
 	height: 10px;
 }
 
-.cred_text::-webkit-scrollbar-track {
+#cred_text::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 5px #b0a88b;
 	border-radius: 10px;
 }
 
-.cred_text::-webkit-scrollbar-thumb {
+#cred_text::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: #f9c53a;
 	border: white;
+}
+
+.blurb{
+	padding:15px;
+	font-weight:normal;
+}
+
+#inner_console{
+	overflow-y:auto;
+}
+
+#inner_console::-webkit-scrollbar {
+	width: 8px;
+	height: 10px;
+}
+
+#inner_console::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #b0a88b;
+	border-radius: 10px;
+}
+
+#inner_console::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #f9c53a;
+	border: white;
+}
+
+.tooltip {
+    text-decoration:none;
+}
+.tooltip span {
+    display:none;
+	position:fixed;
+	overflow:hidden;
+	font-size:12px;
+	color:white;
+	background:#2DB5D8;
+	padding:8px;
+	font-weight:bold;
+	border-radius:8px;
+	border: #6C6C6C solid 1px;
+}
+.tooltip:hover span {
+    display:block;
 }

@@ -55,7 +55,7 @@
            console.log("Images loaded");
          }
       </script>
-      <title>Ensemble Stars! Live2D Viewer</title>
+      <title>Ensemble Stars! Live2D Viewer & Dialogue Simulator</title>
       <style>
          @font-face {
          font-family: FOT-SkipStd-E;
@@ -96,6 +96,9 @@
          margin: auto;
          margin-top:35px;
          }
+		 #page h1{
+		 font-size:18px;
+		 }
          #main{
          margin:auto;
          width:1200px;
@@ -125,7 +128,7 @@
    <body>
       <div id="page">
          <center>
-            <h1>Ensemble Stars! Live2D Viewer</h1>
+            <h1>Ensemble Stars! Live2D Viewer & Dialogue Simulator</h1>
          </center>
          <div id="capture">
             <div id="main" style="background-image: url(assets/image/bg_20_2.png);">
@@ -134,7 +137,7 @@
                   <div id="credit_content">
                      <div class="credit">
                         <div class="credit_title">Click the circles below.</div>
-                        <table id="credits_table" style="	width: 100%;
+                        <table id="credits_table" style="width: 100%;
                            padding-top: 15px;
                            margin: auto;
                            text-align: center;">
@@ -162,38 +165,62 @@
                                  </tr>-->
                            </tbody>
                         </table>
-                        <div id="instructions" class="">
-                           <p><strong>Instructions:</strong></p>
-                           <p>First, download the models and extract the folders. Click the character icon on the left first. Choose a character name and select the <strong>.moc</strong> file into the <strong>Model</strong> uploader. Then select the <strong>.png</strong> file into the <strong>Texture</strong> uploader.</p>
-                           <p>Click Add a Character and your character will be loaded! The second character button will be enabled after the first one. You can add dialogue by clicking the Add Text button and there's a background swapper to change backgrounds. Have fun!</p>
+						<div id="cred_text">
+                        <div id="instructions" class="blurb">
+						<p><strong><a href="https://github.com/gradualcolors/l2d2-demo/blob/master/README.md" target="_blank">More text-friendly README.md</a></strong></p>
+                           <p><strong>How to Add Models:</strong></p>
+                           <p>First, download the models and extract the folders. Click the character icon on the left first. Choose a character name and select the <strong>model.moc</strong> (or model.moc.txt) file into the <strong>Model</strong> uploader. Then select the <strong>.png</strong> file into the <strong>Texture</strong> uploader.</p> 
+						   <p><strong>Do NOT use a different textures for different models.</strong> Every moc file has its own texture file and the model will not display correctly if you mix and match. (Meaning if you were changing outfits, <strong>you need to change the model file AND texture file!</strong>)</p>
+                           <p>Click <strong>Add a Character</strong> and your character will be loaded! The second character button will be enabled after the first one.</p>
+                           <p><strong>How to Add Dialogue:</strong></p>
+                           <p>Click <strong>Add Dialogue</strong> on the bottom. The character dropdown will only have what characters you loaded currently. After selecting their name, the motions dropdown will load.</p>
+                           <p>You can also import a JSON file to fill the textboxes. You can create one by copying this Google spreadsheet <a target="_blank" href="https://docs.google.com/spreadsheets/d/1FGvia5xyn4OObxyJz6B4W51gwk4Tsj3g4rAIrx7BhcE/edit?usp=sharing" title="JSON Script Template">here</a> and export to JSON. <strong>Make sure to copy the JSON code into notepad and save it as a .txt or .json file.</strong></p>
+						   <p><strong>Export Dialogue</strong> can export your script as a JSON file for future use. Be sure the JSON script file matches the exact format.</p>
+						   <p>If for some reason you are unable to use the spreadsheet, you can copy the format below. Be sure to add a comma after each brace except the end. Motions List can be found <a href="https://github.com/gradualcolors/l2d2-demo/blob/master/Motions-List.md" target="_blank">here</a>.</p>
+<div style="width:150px;margin-left:50px;"><pre style="text-align:left;font-size:11px;">
+[{
+	"linenumber": 1,
+	"activespeaker": "Natsume",
+	"charposition": "char_a",
+	"dialogue": "Hokke-kun~",
+	"motion": "naderu_1",
+	"motionnum": "95"
+},
+{
+	"linenumber": 2,
+	"activespeaker": "Hokuto",
+	"charposition": "char_b",
+	"dialogue": "Sakasaki.",
+	"motion": "amazed_1_2",
+	"motionnum": "4"
+}]</pre></div>
+                           <p>Have fun!!</p>
                         </div>
-                        <div id="programmer"  class="" style="display:none;">
-                           <p><strong>Programmer's note:</strong></p>
-                           <p>Hi! I'm Rai <a href="https://twitter.com/sakasakitty" target="_blank">@sakasakitty</a> on Twitter, the coder behind the <a href="http://subanatsu.elementfx.com/" target="_blank">Subanatsu VN</a> and <a href="http://gradualcolors.github.io/ansta-search" target="_blank">ansta-search</a>, the renders search tool. I was inspired to build a Live2D viewer for Enstars after seeing some cool Magia Record Live2D viewers like <a href="https://jp.rika.ren/live2d/index.html"  target="_blank">these</a> <a href="https://magireco.nuke.moe/"  target="_blank">two</a>.</p>
-                           <p>I also promised a while ago I would release a user friendly, customisable version of the SubaNatsu VN I programmed last year for Enstars Shipping Olympics. So I combined both and this simulator was born. Please enjoy creating scenarios to your hearts' contents.</p>
+                        <div id="programmer"  class="blurb" style="display:none;">
+                           <p>Hi! I'm <strong>Rai</strong> <a href="https://twitter.com/sakasakitty" target="_blank">@sakasakitty</a> on Twitter, the coder behind the <strong><a href="http://subanatsu.elementfx.com/" target="_blank">Subanatsu VN</a></strong> and <strong><a href="http://gradualcolors.github.io/ansta-search" target="_blank">ansta-search</a></strong>, the renders search tool. I was inspired to build a Live2D viewer for Enstars after seeing some cool Magia Record Live2D viewers like <a href="https://jp.rika.ren/live2d/index.html"  target="_blank">these</a> <a href="https://magireco.nuke.moe/"  target="_blank">two</a>.</p>
+                           <p>I also promised a while ago I would release a user friendly, customisable version of the SubaNatsu VN I programmed last year for Enstars Shipping Olympics. So I combined both and this simulator was born. Please enjoy creating scenarios to your heart's content.</p>
                         </div>
-                        <div id="other_info"   class="" style="display:none;">
-                           <p><strong>Change Log:</strong></p>
-                           <div id="change_log"></div>
-                           <p>---------</p>
-                           <p><strong>To-Do:</strong></p>
-                           <div id="to-do"></div>
-                           <p>---------</p>
-                           <p>Found a bug? Report it to me on <a href="https://twitter.com/gradualcolours" target="_blank">@gradualcolours</a>. If you want to view the code behind this, the respository is <a href="https://github.com/gradualcolors/l2d2-demo" target="_blank">here</a>.</p>
+                        <div id="other_info"   class="blurb" style="display:none;">
+						<p><strong>Ensemble Stars Live2D Viewer & Dialogue Simulator v.1.0</strong></p>
+                           <p><strong>Change Log / Known Bugs / To-Do <a href="https://github.com/gradualcolors/l2d2-demo/blob/master/README.md#change-log" target="_blank">HERE</a></strong></p>
+						   <p>Check the FAQ <a href="https://github.com/gradualcolors/l2d2-demo/blob/master/README.md#frequently-asked-questions" target="_blank">HERE</a> first before contacting me about bugs.</p>
+						   <p>Found a bug? Report it to me on <strong><a href="https://twitter.com/gradualcolours" target="_blank">@gradualcolours</a></strong>. If you want to view the code behind this, the respository is <a href="https://github.com/gradualcolors/l2d2-demo" target="_blank">here</a>. I'm always looking for feedback to improve my coding.</p>
+						   <p>Currently the models being put up are
                            <p>This Live2D viewer uses the following libraries: <a href="https://github.com/pixijs/" target="_blank">PixiJS</a> and <a href="https://github.com/avgjs/pixi-live2d" target="_blank">Pixi-Live2D</a> plugin.</p>
-                           <p>Live2D Models are Happy Elements / Ensemble Stars' property.</p>
+                           <p>Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some assets from Ensemble Stars Basic.</p>
                         </div>
+						</div>
                      </div>
                   </div>
                </div>
                <div id="ui">
                   <div id="show_charBox1">
-                     <div class="float_bubble" style="background-image: url(assets/icons/Subaru.png);"><img class="symbol" src="assets/add.png"></div>
+                     <div class="float_bubble tooltip" style="background-image: url(assets/icons/Subaru.png);"><img class="symbol" src="assets/add.png"><span>Add First Character</span></div>
                   </div>
                   <div id="charSpace1" class="charBox">
                      <div style="right:0;" id="close_charBox1" class="char_close">&times;</div>
                      <p>
-                        <select id="char1">
+                        <select id="char1" class="char_select">
                            <option value="" selected disabled hidden> Select Character A</option>
                            <option value="Tetora">Tetora Nagumo</option>
                            <option value="Hajime">Hajime Shino</option>
@@ -239,11 +266,13 @@
                            <option value="Jin">Jin Sagami</option>
                            <option value="Akiomi">Akiomi Kunugi</option>
                            <option value="Seiya">Seiya Hidaka</option>
-						   <option value="Mademoiselle">Mademoiselle</option>
+                           <option value="Mademoiselle">Mademoiselle</option>
                         </select>
+						<br/><span class="flag keichan" style="display:none;"><input type="checkbox" class="keitocomicworld"/> Comic World?<br/>
+						<strong style="color:red;">This MUST be checked off if the Comic World outfit (w/ roses) is loaded or there will be glitches!</strong></span>
                      </p>
                      <p><strong>Upload model file:</strong><br/>
-                        <input type="file" id="modelElem" accept=".moc,.moc3">
+                        <input type="file" id="modelElem" accept=".moc,.moc3,.txt">
                      </p>
                      <p><strong>Upload texture file:</strong><br/>
                         <input type="file" id="texElem" accept="image/png">
@@ -253,19 +282,23 @@
                         <p><strong>Character: </strong><span id="active_charA"></span></p>
                         <div id="g1">
                            <strong>Character A Motion:&nbsp;</strong>
-                           <select class="motion"></select>
+                           <select class="motion">
+                              <option value="" selected disabled hidden>Select Motion</option>
+                           </select>
                            <button class="motion">Replay</button>
                         </div>
                      </div>
                   </div>
-                  <div class="float_square cd-start" style="background-image: url(assets/start.png);"></div>
+                  <div class="float_square cd-start tooltip" style="background-image: url(assets/start.png);"><div class="placeholder"></div>
+<span>How to Use
+    </span></div>
                   <div id="show_charBox2" style="filter: grayscale(100%);pointer-events:none;">
-                     <div class="float_bubble" style="background-image: url(assets/icons/Hokuto.png);"><img class="symbol" src="assets/add.png"></div>
+                     <div class="float_bubble tooltip" style="background-image: url(assets/icons/Hokuto.png);"><img class="symbol" src="assets/add.png"><span>Add Second Character</span></div>
                   </div>
                   <div id="charSpace2" class="charBox">
                      <div style="right:0;" id="close_charBox2" class="char_close">&times;</div>
                      <p>
-                        <select id="char2">
+                        <select id="char2" class="char_select">
                            <option value="" selected disabled hidden> Select Character B</option>
                            <option value="Tetora">Tetora Nagumo</option>
                            <option value="Hajime">Hajime Shino</option>
@@ -311,11 +344,13 @@
                            <option value="Jin">Jin Sagami</option>
                            <option value="Akiomi">Akiomi Kunugi</option>
                            <option value="Seiya">Seiya Hidaka</option>
-						   <option value="Mademoiselle">Mademoiselle</option>
+                           <option value="Mademoiselle">Mademoiselle</option>
                         </select>
+						<br/><span class="flag keichan" style="display:none;"><input type="checkbox" class="keitocomicworld"/> Comic World?<br/>
+						<strong style="color:red;">This MUST be checked off if the Comic World outfit (w/ roses) is loaded or there will be glitches!</strong></span>
                      </p>
                      <p><strong>Upload model file:</strong><br/>
-                        <input type="file" id="modelElem2" accept=".moc,.moc3">
+                        <input type="file" id="modelElem2" accept=".moc,.moc3,.txt">
                      </p>
                      <p><strong>Upload texture file: </strong><br/>
                         <input type="file" id="texElem2" accept="image/png">
@@ -327,16 +362,19 @@
                         <p><strong>Character: </strong><span id="active_charB"></span></p>
                         <div id="g2">
                            <strong>Character B Motion:&nbsp;</strong>
-                           <select class="motion"></select>
+                           <select class="motion">
+                              <option value="" selected disabled hidden>Select Motion</option>
+                           </select>
                            <button class="motion">Replay</button>
                         </div>
                      </div>
                   </div>
-                  <div class="float_square bg-swap" style="background-image: url(assets/bg_swap.png);">
+                  <div class="float_square bg-swap tooltip" style="background-image: url(assets/bg_swap.png);">
                      <label>
                         <div class="placeholder"></div>
                         <input id="file-input" type="file"  accept="image/*" onchange="readURL(this)"/>
                      </label>
+					<span>Swap Background</span>
                   </div>
                </div>
                <div id ="model_display">
@@ -376,12 +414,12 @@
          </div>
          <div id="fun_stuff" style="margin-left:35px; margin-top:15px;width:94%;">
             <span style="font-size:12px;";><strong>Menu: </strong></span>
-            <button id="dlModels">Download Models</button>&nbsp;<button id="openModal" disabled>Add Dialogue</button>&nbsp;<button id="resetText" disabled>Restart Dialogue</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="hide_ui">Toggle UI</button>&nbsp;<button class="captureB" id="capture_div" onclick="getImage()" disabled>Capture Window</button>&nbsp;<button class="captureB" id="capture_transparent" onclick="capture()" disabled>Capture Renders</button>
+            <button id="dlModels">Download Models</button>&nbsp;<button id="openModal" disabled>Add Dialogue</button>&nbsp;<button id="resetText" disabled>Restart Dialogue</button>&nbsp;<button id="toggleTextbox" disabled>Toggle Textbox</button>&nbsp;<button id="hide_ui">Toggle UI</button>&nbsp;<button class="captureB" id="capture_div" onclick="getImage()" disabled>Capture Window</button>&nbsp;<button class="captureB" id="capture_transparent" onclick="capture()" disabled>Capture Renders</button>&nbsp;<button class="downloadJson" id="downloadJsonScript" onclick="exportText()" disabled>Export Dialogue</button>
             <!--<div style="float: right;">Coded by <a target="_blank" href="https://twitter.com/gradualcolours">@gradualcolours</a></div>-->
          </div>
          <div id="console" style="width:80%;margin:auto;margin-top:10px;padding:5px;overflow:auto;border:1px solid #000;height:100px;">
             <span style="font-size:12px;"><strong>Console Log:</strong></span>
-            <ul id="log"></ul>
+            <div id="inner_console"><ul id="log"></ul></div>
          </div>
          <!-- The Modal -->
          <div id="textModal" class="modal">
@@ -406,13 +444,20 @@
                min-width: 360px;">
                <div style="right:0;" class="close">&times;</div>
                <div style="width:95%;margin:auto;">
+                  <p>Be sure to select character first before selecting motion.</p>
                   <p>
-                     Choose number of lines: 
+                     <strong>Choose number of lines:</strong> 
                      <select id="num_lines">
-                        <option value="1">1</option>
+                        <option value="1" selected>1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                      </select>
                   </p>
                   <p>Turn on text animation? (Not recommended for laggy devices) <label class="switch"><input type="checkbox" id="textwriter"/><span class="check_slider round"></span>
@@ -423,56 +468,131 @@
                      <span class="check_slider round"></span>
                      </label><br><span style="font-size:12px">Note: Turning on auto will disable all buttons until the end!</span><br/>
                   </p>
-                  <p class="inputText active">
-                     Line 1: 
-                     <select  class="charLine_select"  id="charName_text1">
-                        <option value="" selected disabled hidden>Select Character</option>
-                        <option value="char_a"></option>
-                     </select>
-                     : 
-                     <input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="100"> Select motion 1: 
-                     <select class="charMotion_select"  id="char_motion1">
-                        <option value="" selected disabled hidden>Select Motion</option>
-                     </select>
-                  </p>
-                  <p class="inputText" style="display:none;">
-                     Line 2: 
-                     <select class="charLine_select" id="charName_text2">
-                        <option value="" selected disabled hidden>Select Character</option>
-                        <option value="char_a"></option>
-                     </select>
-                     : 
-                     <input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="100"> Select motion 2: 
-                     <select class="charMotion_select"  id="char_motion2">
-                        <option value="" selected disabled hidden>Select Motion</option>
-                     </select>
-                  </p>
-                  <p class="inputText" style="display:none;">
-                     Line 3: 
-                     <select class="charLine_select" id="charName_text3">
-                        <option value="" selected disabled hidden>Select Character</option>
-                        <option value="char_a"></option>
-                     </select>
-                     : 
-                     <input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="100"> Select motion 3: 
-                     <select class="charMotion_select"  id="char_motion3">
-                        <option value="" selected disabled hidden>Select Motion</option>
-                     </select>
-                  </p>
-                  <p class="inputText" style="display:none;">
-                     Line 4: 
-                     <select class="charLine_select" id="charName_text4">
-                        <option value="" selected disabled hidden>Select Character</option>
-                        <option value="char_a"></option>
-                     </select>
-                     : 
-                     <input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="100"> Select motion 4: 
-                     <select class="charMotion_select"  id="char_motion4">
-                        <option value="" selected disabled hidden>Select Motion</option>
-                     </select>
-                  </p>
+                  <div id="textboxes" style="max-height:200px;overflow-y:auto;font-size:12px;">
+                     <p class="inputText active">
+                        Line 1: 
+                        <select  class="charLine_select"  id="charName_text1">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text" type="text" name="c_dialogue" id="c_dialogue1" maxlength="100">&nbsp;Motion 1: 
+                        <select class="charMotion_select"  id="char_motion1">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 2: 
+                        <select class="charLine_select" id="charName_text2">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue2" id="c_dialogue2" maxlength="100">&nbsp;Motion 2: 
+                        <select class="charMotion_select"  id="char_motion2">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 3: 
+                        <select class="charLine_select" id="charName_text3">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue3" id="c_dialogue3" maxlength="100">&nbsp;Motion 3: 
+                        <select class="charMotion_select"  id="char_motion3">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 4: 
+                        <select class="charLine_select" id="charName_text4">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue4" id="c_dialogue4" maxlength="100">&nbsp;Motion 4: 
+                        <select class="charMotion_select"  id="char_motion4">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 5: 
+                        <select class="charLine_select" id="charName_text5">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue5" id="c_dialogue5" maxlength="100">&nbsp;Motion 5: 
+                        <select class="charMotion_select"  id="char_motion5">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 6: 
+                        <select class="charLine_select" id="charName_text6">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue6" id="c_dialogue6" maxlength="100">&nbsp;Motion 6: 
+                        <select class="charMotion_select"  id="char_motion6">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 7: 
+                        <select class="charLine_select" id="charName_text7">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue7" id="c_dialogue7" maxlength="100">&nbsp;Motion 7: 
+                        <select class="charMotion_select"  id="char_motion7">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 8: 
+                        <select class="charLine_select" id="charName_text8">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue8" id="c_dialogue8" maxlength="100">&nbsp;Motion 8: 
+                        <select class="charMotion_select"  id="char_motion8">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 9: 
+                        <select class="charLine_select" id="charName_text9">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue9" id="c_dialogue9" maxlength="100">&nbsp;Motion 9: 
+                        <select class="charMotion_select"  id="char_motion9">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                     <p class="inputText" style="display:none;">
+                        Line 10: 
+                        <select class="charLine_select" id="charName_text10">
+                           <option value="" selected disabled hidden>Select Character</option>
+                           <option value="char_a"></option>
+                        </select>
+                        : 
+                        <input class="c_text"  type="text" name="c_dialogue10" id="c_dialogue10" maxlength="100">&nbsp;Motion 10: 
+                        <select class="charMotion_select"  id="char_motion10">
+                           <option value="" selected disabled hidden>Select Motion</option>
+                        </select>
+                     </p>
+                  </div>
                   <p id="modal_error"></p>
-                  <button id="submitText" class="second">Add Dialogue!</button>
+                  <button id="submitText" class="second">Add Dialogue!</button>&nbsp;<button id="importJson" class="second">Import Dialogue</button>
+                  <input id="json-input" type="file"  accept=".json, .txt" onchange="readJson(this)" hidden/> <span id="json_name"></span>
                </div>
             </div>
          </div>
@@ -480,7 +600,7 @@
             <div class="modal-content" 
                style="max-height: 775px;">
                <div style="right:0;" class="close">&times;</div>
-               <p style="text-align:center;padding-top: 15px;">Click an idol below to download their models zip. Idols greyed out do not have a link yet.</p>
+               <p style="text-align:center;padding-top: 15px;">Click an idol below to download their models rar from their folder. As of this time, most JP models are unavailable so download the TW versions.</p>
                <div id="idols" 
                   style="margin: auto;
                   text-align: center;
@@ -539,6 +659,7 @@
                </div>
             </div>
          </div>
+		 <img style="float:right;bottom:0;display:none" src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits">
       </div>
       <script src="lib/FileSaver.min.js" type="text/javascript"></script>
       <script src="lib/dom-to-image.min.js" type="text/javascript"></script>

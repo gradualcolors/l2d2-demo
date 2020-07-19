@@ -31,7 +31,7 @@ const downloadBlob = function(index) {
         a.click();
 		setTimeOut(function(){
         window.URL.revokeObjectURL(a.href);}, 1000);
-		$("#log").append("<li style=\"color:red;\">Render screenshot captured.</li>");
+		$("#log").append("<li style=\"color:green;\">Render screenshot captured.</li>");
     }
 }
 function save(index) { renderer.view.toBlob(downloadBlob(index)); }
@@ -47,12 +47,12 @@ function get(url, callback) {
 
 function getImage() {
 $("button#capture_div").attr("disabled", true);
-$("#log").append("<li style=\"color:red;\">Processing window screenshot...</li>");
+$("#log").append("<li>Processing window screenshot...</li>");
   domtoimage.toBlob(mainDiv)
     .then(function(blob) 
 	{timeStamp = Math.round(+new Date()/1000);
       window.saveAs(blob, 'Screenshot_' + timeStamp + '.png');
-	  $("#log").append("<li style=\"color:red;\">Window screenshot captured.</li>");
+	  $("#log").append("<li style=\"color:green;\">Window screenshot captured.</li>");
 	  $("button#capture_div").attr("disabled", false);
     },'image/png');
 	
@@ -62,7 +62,17 @@ $("#log").append("<li style=\"color:red;\">Processing window screenshot...</li>"
 
 
 $(document).ready(function() {
-    //init(parseInt($("#width").val()), parseInt($("#height").val()));
+	
+var tooltips = document.querySelectorAll('.tooltip span');
+
+window.onmousemove = function (e) {
+    var x = (e.clientX + 20) + 'px',
+        y = (e.clientY + 20) + 'px';
+    for (var i = 0; i < tooltips.length; i++) {
+        tooltips[i].style.top = y;
+        tooltips[i].style.left = x;
+    }
+};	
 	
 	$( ".cd-start" ).click(function() {
 		  $( "#credits_box" ).toggleClass("credits_m_hide");
@@ -71,30 +81,45 @@ $(document).ready(function() {
 	$( ".credit_back" ).click(function() {
 		  $( "#credits_box" ).toggleClass("credits_m_hide");
 		});   
-		
-		$( ".inst" ).click(function() {
+	
+	$( ".icon" ).click(function() {
 		$(".icon").removeClass("activeI").addClass("passiveI");
-		$(".inst" ).addClass("activeI").removeClass("passiveI");
-		  $( "#other_info" ).hide();
-		  $( "#instructions" ).show();
-		  $( "#programmer" ).hide();
+		$( ".blurb" ).hide();
+		if($(this).hasClass( "inst" ))
+		{
+			$(".inst" ).addClass("activeI").removeClass("passiveI");
+			$( "#instructions" ).show();
+		}
+		else if($(this).hasClass( "program" ))
+		{
+			$(".program" ).addClass("activeI").removeClass("passiveI");
+			$( "#programmer" ).show();
+		}
+		else{
+			$(".other" ).addClass("activeI").removeClass("passiveI");
+			$( "#other_info" ).show();
+		}
+		  		 
 		});  
 		
-	$( ".program" ).click(function() {
-		$(".icon").removeClass("activeI").addClass("passiveI");
-		$(".program" ).addClass("activeI").removeClass("passiveI");
-		  $( "#other_info" ).hide();
-		  $( "#instructions" ).hide();
-		  $( "#programmer" ).show();
-		});  
+	$("select.char_select").change(function() {
+    var input = this;
+	var $div = $(input).closest(".charBox");
+	
+	var chara = $(input).val();
 
-	$( ".other" ).click(function() {
-		$(".icon").removeClass("activeI").addClass("passiveI");
-		$(".other" ).addClass("activeI").removeClass("passiveI");
-		  $( "#other_info" ).show();
-		  $( "#instructions" ).hide();
-		  $( "#programmer" ).hide();
-		});   		
+	if (chara == "Keito")
+	{
+		$div.find("span.flag.keichan").show();
+	}
+	else
+	{
+		$div.find("input.keitocomicworld").prop('checked', false);
+		$div.find("span.flag.keichan").hide();
+	}
+});	
+		
+	
 	
 	if (window.innerWidth > 1200)
 	{
@@ -116,12 +141,11 @@ $(document).ready(function() {
 		let sm2 = $("#function2 > #g2 > select.motion");
 		
 		$("button#modela").click( function() {
-        //sl.change(function() {
-		charName1 = $("select#char1").val();
+
+		charName1 = $("select#char1").val();					
 				
 		$("span#active_charA").html(charName1);
 		
-		//$("select#charName_text").children("option[value='char_a']").text(charName1);
 		$("select.charLine_select").children("option[value='char_a']").text(charName1);
 		
 		
@@ -173,8 +197,8 @@ $(document).ready(function() {
 					$("#log").append("<li>Changed Character A to " + charName1 + "</li>");
 			}
 			
-			charJson1 = modelJsonCreate(charName1, modelElem, texElem);
-			//show("/assets/natsume" + "/", "config.model.json", function(model) {	
+			var $flag = $("#charSpace1 > p > span.flag");
+			charJson1 = modelJsonCreate(charName1, modelElem, texElem, $flag);
 			_show(charJson1, function(model) {	
                 sm.empty();
                 for (let c in model.motions.motion) {
@@ -216,10 +240,10 @@ $(document).ready(function() {
 				window.URL.revokeObjectURL(texRef2);				
 				let secondChild = null;
 				secondChild = stage.children[1]; secondChild.destroy();	
-				
-			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2);
 			
-			//show2("/assets/tsumugi" + "/", "config.model.json", function(model2) {                               
+			var $flag2 = $("#charSpace2 > p > span.flag");	
+			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2, $flag2);
+			
 			_show(charJson2, function(model2) {                                  
                 sm2.empty();
                 for (let c2 in model2.motions.motion) {
@@ -235,7 +259,7 @@ $(document).ready(function() {
 			});
 				//$("select#charName_text").children('option[value="char_b"]').text(charName2);
 				$("select.charLine_select").children('option[value="char_b"]').text(charName2);
-				$("select#num_lines").val("-1");
+				$("select#num_lines").val("1");
 				$("#speaker").empty();
 				$("#textbox").empty();
 				$("#toggle_text").hide();
@@ -246,8 +270,8 @@ $(document).ready(function() {
 			
 			//$("select.charLine_select").append($("<option></option>").text("Both of them").val("char_ab"));
 
-			
-			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2);
+			var $flag2 = $("#charSpace2 > p > span.flag");	
+			charJson2 = modelJsonCreate(charName2, modelElem2, texElem2, $flag2);
 			_show(charJson2, function(model2) {  
                 sm2.empty();
                 for (let c2 in model2.motions.motion) {
@@ -284,7 +308,7 @@ $(document).ready(function() {
 				$("#log").append("<li>Removed Character B.</li>");
 				//$("select#charName_text option[value='char_b']").remove();
 				$("select.charLine_select option[value='char_b']").remove();
-				$("select#num_lines").val("-1");
+				$("select#num_lines").val("1");
 				$("#speaker").empty();
 				$("#textbox").empty();
 				$("#toggle_text").hide();
@@ -307,6 +331,7 @@ $(document).ready(function() {
         hidden.fadeOut(150);		
 		$('#show_charBox1').show();
 		$('.cd-start').css("margin-top", "");
+		$('.cd-start').css("margin-left", "");
 		
     });
     
@@ -314,8 +339,9 @@ $(document).ready(function() {
     	var hidden = $('#charSpace1');
 		$('#show_charBox1').hide();
 		hidden.delay(150).fadeIn(150);	
-		$('.cd-start').css("margin-top", "250px");
-		
+		//$('.cd-start').css("margin-top", "265px");
+		$('.cd-start').css("margin-left", "250px");
+		$('.cd-start').css("margin-top", "0px");
     });
 
 	    $('#close_charBox2').click(function(){
@@ -323,6 +349,7 @@ $(document).ready(function() {
         hidden.fadeOut(150);		
 		$('#show_charBox2').show();
 			$('.bg-swap').css("margin-top", "");
+			$('.bg-swap').css("margin-right", "");
 		
     });
     
@@ -330,7 +357,9 @@ $(document).ready(function() {
     	var hidden = $('#charSpace2');
 		$('#show_charBox2').hide();
 		hidden.delay(150).fadeIn(150);		
-	$('.bg-swap').css("margin-top", "280px");
+	//$('.bg-swap').css("margin-top", "290px");
+	$('.bg-swap').css("margin-top", "0px");
+	$('.bg-swap').css("margin-right", "250px");
     });
 
 /* CREATE DIV BOX */
@@ -376,6 +405,8 @@ for(var i = 0; i < charDataLength; i++) {
 	
 });
 
+
+
 function readURL(input) {
 		let file = input.files[0];
 		window.URL.revokeObjectURL(currentBlobBG);
@@ -383,11 +414,14 @@ function readURL(input) {
 			currentBlobBG = window.URL.createObjectURL(file);
 			
 		$('#main').attr('style', 'background-image:url(' + currentBlobBG + ')');
-		$("#log").append("<li style=\"color:red;\">Changed background to " + file.name +"</li>");
+		$("#log").append("<li style=\"color:green;\">Changed background to " + file.name +"</li>");
 		}
 		else
 		{window.URL.revokeObjectURL(currentBlobBG);
 		$('#main').attr('style', 'background-image:url("assets/image/bg_20_2.png")');
-			$("#log").append("<li style=\"color:red;\">Reverted to default background.</li>");		
+			$("#log").append("<li style=\"color:green;\">Reverted to default background.</li>");		
 	}
 }
+
+
+
