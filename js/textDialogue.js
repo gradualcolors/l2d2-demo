@@ -455,10 +455,19 @@ function typeWriter(str) {
 
     var convBox = document.getElementById("textbox");
     var speed = parseInt($("#text_speed").val());
+	var spd;
+	if((speed + 1 + str.length * 20) < 5000)
+	{
+		spd = 5000;
+	}
+	else
+	{
+		spd = speed + 1 + str.length * 20;
+	}
 
     setTimeout(function() {
         $(".arrows").css("pointer-events", "auto");
-    }, speed + 1 + str.length * 20);
+    }, spd);
 
     for (let i = 0; i <= str.length; i++) {
         setTimeout(function() {
