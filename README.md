@@ -11,11 +11,30 @@ First, download the models and extract the folders. Click the character icon on 
 
 Click **Add a Character** and your character will be loaded! The second character button will be enabled after the first one.
 
-### How to Add Dialogue:
+## How to Add Dialogue:
 
-Click **Add Dialogue** on the bottom. The character dropdown will onlye have what characters you loaded currently. After selecting their name, the motions dropdown will load.
+Click **Add Dialogue** on the bottom. The character dropdown will onlye have what characters you loaded currently. After selecting their name, the motions dropdown will load. You can also import a JSON file to fill the textboxes. You can create one by copying this Google spreadsheet [here](https://docs.google.com/spreadsheets/d/1FGvia5xyn4OObxyJz6B4W51gwk4Tsj3g4rAIrx7BhcE/edit?usp=sharing "JSON Script Template") and export to JSON. Make sure to copy the JSON code into notepad and save it as a .txt or .json file. 
 
-You can also import a JSON file to fill the textboxes. You can create one based on this template [here](https://docs.google.com/spreadsheets/d/1FGvia5xyn4OObxyJz6B4W51gwk4Tsj3g4rAIrx7BhcE/edit?usp=sharing "JSON Script Template"). **Export Dialogue** can export your script as a JSON file for future use.
+**Export Dialogue** can export your script as a JSON file for future use. Be sure the JSON script file matches the exact format. If for some reason you are unable to use the spreadsheet, you can copy the format below. Be sure to add a comma after each brace except the end. Motions List can be found [here](https://github.com/gradualcolors/l2d2-demo/blob/master/Motions-List.md).
+
+```javascript
+[{
+	"linenumber": 1,
+	"activespeaker": "Natsume",
+	"charposition": "char_a",
+	"dialogue": "Hokke-kun~",
+	"motion": "naderu_1",
+	"motionnum": "95"
+},
+{
+	"linenumber": 2,
+	"activespeaker": "Hokuto",
+	"charposition": "char_b",
+	"dialogue": "Sakasaki.",
+	"motion": "amazed_1_2",
+	"motionnum": "4"
+}]
+```
 
 ## [Change Log](#change-log)
 1. 07/19/20 - Added Export and Import Script Functions
