@@ -59,6 +59,9 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 4. Will add more as testing becomes public
 
 ## Frequently Asked Questions
+> What's the difference between JP and CN/TW models?
+- Exclusives aside, CN/TW models have a 1024 x 1024 texture file, meaning they're lower quality than JP which is 2048 x 2048. However, CN/TW models are easier to extract so that's why they're available while I'm collecting the JP files.
+
 > Will you add collab characters?
 - Yes, after I collect data on them.
 
