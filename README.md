@@ -59,11 +59,19 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 4. Will add more as testing becomes public
 
 ## [Frequently Asked Questions](#frequently-asked-questions)
+
+> Why do we have to upload models? Why can't we directly load them like other Live2D viewers?
+- Unfortunately, it's too costly and too much for me to host the files on a CDN like other Live2D viewers. There are over 2,000 model files in Ensemble Stars! alone, each with a texture, making it over 4000 files. TW files compressed all together are 1 GB+, while JP files are likely 2-4GB because they're higher in quality. I considered taking donations to host the files, but this is a pet project of mine and I do not want it to be finanically bound. That's why the files are zipped and hosted on Google Drive for easy access.
+**This is also the reason why only two characters can converse at a time and you cannot switch characters mid-dialogue.**
+
 > What's the difference between JP and CN/TW models?
 - Exclusives aside, CN/TW models have a 1024 x 1024 texture file, meaning they're lower quality than JP which is 2048 x 2048. However, CN/TW models are easier to extract so that's why they're available while I'm collecting the JP files.
 
 > Why are there some outfits missing?
 - TW only has models up to Meteor Impact. I'm still collecting the JP files and will have a tracking sheet up soon. If you're looking for a specific outfit, please contact me and I will add it to the list of what I need to find.
+
+> How do I add Mademoiselle?
+- For any Shu model that includes her, you can copy his texture file and erase just Shu from it. Then you upload the copy. [Example Image](https://raw.githubusercontent.com/gradualcolors/l2d2-demo/master/assets/mado_tex.png)
 
 > Will you add collab characters?
 - Yes, after I collect data on them.
@@ -72,7 +80,7 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 - No plans to, unfortunately.
 
 > What about voices?
-- Debatable but there's way too many sound files for me to extract and unlike models, harder to implement into an uploader.
+- Currently no plans. There's way too many sound files for me to extract and unlike models, harder to implement into an uploader.
 
 > Will there be a Live2D viewer/Dialogue Simulator for Ensemble Stars!!?
 - Yes! It is currently being planned out while I figure out how to convert the motions since they're in a new format.
