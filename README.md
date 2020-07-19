@@ -11,7 +11,7 @@ First, download the models and extract the folders. Click the character icon on 
 
 Click **Add a Character** and your character will be loaded! The second character button will be enabled after the first one.
 
-## How to Add Dialogue:
+### How to Add Dialogue:
 
 Click **Add Dialogue** on the bottom. The character dropdown will onlye have what characters you loaded currently. After selecting their name, the motions dropdown will load. You can also import a JSON file to fill the textboxes. You can create one by copying this Google spreadsheet [here](https://docs.google.com/spreadsheets/d/1FGvia5xyn4OObxyJz6B4W51gwk4Tsj3g4rAIrx7BhcE/edit?usp=sharing "JSON Script Template") and export to JSON. Make sure to copy the JSON code into notepad and save it as a .txt or .json file. 
 
