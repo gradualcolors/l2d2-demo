@@ -9,7 +9,7 @@ Google Chrome, Safari, Internet Explorer
 
 First, download the models and extract the folders. Click the character icon on the left first. Choose a character name and select the **model.moc** (or **model.moc.txt**) file into the **Model** uploader. Then select the **.png** texture file into the **Texture** uploader. 
 
-**Do NOT use a different textures for different models.** Every moc file has its own texture file and the model will not display correctly if you mix and match. (Meaning if you were changing outfits, **you need to change the model file AND texture file!**)
+**Do NOT use different textures for different models.** Every moc file has its own texture file and the model will not display correctly if you mix and match. (Meaning if you were changing outfits, **you need to change the model file AND texture file!**)
 
 Click **Add a Character** and your character will be loaded! The second character button will be enabled after the first one.
 
