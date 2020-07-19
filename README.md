@@ -29,6 +29,6 @@ You can also import a JSON file to fill the textboxes. You can create one based 
 
 ## [To Do List](#to-do-list)
 1. Add pause button to auto play
-2. Add flags for graduation/remininsce heights
-3. Collect Live2D models
+2. Add flag choices for graduation/remininsce height data
+3. Collect all the Live2D models from JP enstars
 4. Will add more as testing becomes public
