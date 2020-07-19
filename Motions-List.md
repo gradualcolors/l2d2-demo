@@ -136,6 +136,7 @@
 133. yes_2
 134. yes_3
 135. \<charname\>_amai (Exclusive to all characters before Leo's addition and excludes teachers. Example: subaru_amai)
+136. effect (Comic World Keito Exclusive)
 
 \
 135. doll_1 (Shu Exclusive)
