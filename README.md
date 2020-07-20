@@ -77,6 +77,9 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 > How do I add Mademoiselle?
 - For any Shu model that includes her, you can copy his texture file and erase just Shu from it. Then you upload the copy. [Example Image](https://raw.githubusercontent.com/gradualcolors/l2d2-demo/master/assets/mado_tex.png)
 
+> Why are some of the motions weird?
+- It's the kitty and naderu motions that act weirdly. They are supposed to be selected after certain motions but more testing is needed to find out which ones.
+
 > Will you add collab characters?
 - Yes, after I collect data on them.
 
