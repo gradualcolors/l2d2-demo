@@ -62,7 +62,10 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 1. Add pause button to auto play
 2. Add flag choices for graduation/remininsce height data
 3. Collect all the Live2D models from JP enstars
-4. Will add more as testing becomes public
+4. Load default character outfits from local
+5. Add collaboration characters
+6. Custom Character support (yes, your OCs heehhee)
+7. Will add more as testing becomes public
 
 ## [Frequently Asked Questions](#frequently-asked-questions)
 
