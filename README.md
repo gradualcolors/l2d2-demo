@@ -3,6 +3,9 @@
 ### Compatible browsers: 
 Google Chrome, Safari, Internet Explorer
 
+### Special Thanks:
+To many people who helped tested this and put up with my ramblings.
+
 ## [Usage](#usage)
 
 ### How to Add Models:
