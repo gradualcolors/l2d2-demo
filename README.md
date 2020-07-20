@@ -65,7 +65,8 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 4. Load default character outfits from local
 5. Add collaboration characters
 6. Custom Character support (yes, your OCs heehhee)
-7. Will add more as testing becomes public
+7. Add no motion option for dialogue.
+8. Will add more as testing becomes public
 
 ## [Frequently Asked Questions](#frequently-asked-questions)
 
