@@ -1,7 +1,7 @@
 # Ensemble Stars! Live 2D Viewer & Dialogue Simulator
 
 ### Compatible browsers: 
-Google Chrome, Safari, Internet Explorer
+Google Chrome, Safari, Opera, Internet Explorer
 
 ### Special Thanks:
 To many people who helped tested this and put up with my ramblings.
