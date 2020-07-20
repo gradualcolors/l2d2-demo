@@ -388,10 +388,19 @@ input:checked+.check_slider:before {
 }
 
 #cred_text{
-	max-height:250px;
+	max-height:225px;
 	overflow-y:auto;
 	-webkit-overflow-scrolling:touch;
 	font-size:12px;
+}
+
+@media only screen and (max-width: 1200px) {	
+#cred_text{
+	max-height:125px;
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	font-size:12px;
+}
 }
 
 @media only screen and (max-width: 817px) {	
