@@ -44,8 +44,8 @@ Click **Add Dialogue** on the bottom. The character dropdown will only have what
 Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some assets from Ensemble Stars Basic.
 
 ## [Change Log](#change-log)
-1. 07/19/20 - Added Export and Import Script Functions
-2.
+1. 07/20/20 - Release of Version 1.0
+2. 07/19/20 - Added Export and Import Script Functions
 3.
 
 ## [Known Bugs](#known-bugs)
