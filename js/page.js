@@ -169,6 +169,7 @@ window.onmousemove = function (e) {
 					var texRef = stage.children[0].modelDefine.textures;
 					window.URL.revokeObjectURL(mocRef);
 					window.URL.revokeObjectURL(texRef);
+					$("#show_charBox1 > .float_bubble").css("background-image", "url('assets/icons/"+charName1+".png')");
 					$("#log").append("<li>Changed Character A to " + charName1 + "</li>");
 				}
 				else
