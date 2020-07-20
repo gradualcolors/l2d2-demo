@@ -321,7 +321,7 @@ input:checked+.check_slider:before {
 	background: white;
 	width: 50%;
 	height: 70%;
-	margin: 75px auto;
+	margin: 50px auto;
 	border-radius: 15px;
 	border: 3px solid #074886;
 	padding: 20px;
@@ -360,8 +360,8 @@ input:checked+.check_slider:before {
 }
 
 .icon {
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	margin: auto;
 	background-repeat: no-repeat;
 	border-radius: 50%;
@@ -371,8 +371,8 @@ input:checked+.check_slider:before {
 }
 
 .icon:hover {
-	height: 115px;
-	width: 115px;
+	height: 85px;
+	width: 85px;
 }
 
 .rai {
@@ -388,9 +388,20 @@ input:checked+.check_slider:before {
 }
 
 #cred_text{
-	max-height:225px;
+	max-height:200px;
 	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	font-size:12px;
 }
+
+@media only screen and (max-width: 817px) {	
+#cred_text{
+	max-height:100px;
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	font-size:12px;
+}
+ }
 
 #cred_text::-webkit-scrollbar {
 	width: 8px;
