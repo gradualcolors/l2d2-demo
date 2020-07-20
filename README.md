@@ -74,6 +74,9 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 > Why are there some outfits missing?
 - TW only has models up to Meteor Impact. I'm still collecting the JP files and will have a tracking sheet up soon. If you're looking for a specific outfit, please contact me and I will add it to the list of what I need to find.
 
+> Why are some of the models blurry?
+- I tried to adjust the Live2D model based on Enstars configuration data. However, Enstars is a mobile unity game while this live2d viewer is for browser so the scaling may be a bit off. Also keep in mind, the live2d texture for the TW packs are lower quality than JP.
+
 > How do I add Mademoiselle?
 - For any Shu model that includes her, you can copy his texture file and erase just Shu from it. Then you upload the copy. [Example Image](https://raw.githubusercontent.com/gradualcolors/l2d2-demo/master/assets/mado_tex.png)
 
