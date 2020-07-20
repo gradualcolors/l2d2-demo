@@ -3,6 +3,9 @@
 ### Compatible browsers: 
 Google Chrome, Safari, Internet Explorer
 
+### Special Thanks:
+To many people who helped tested this and put up with my ramblings.
+
 ## [Usage](#usage)
 
 ### How to Add Models:
@@ -49,8 +52,9 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 
 1. Doesn't work in FireFox
 2. Screenshot Capture does not work in iOS Safari
-3. Will find more as testing becomes public
-4. Comic World.
+3. Comic World.
+4. Overflow div issues with iOS devices.
+5. Will find more as testing becomes public
 
 ## [To Do List](#to-do-list)
 1. Add pause button to auto play
