@@ -54,7 +54,8 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 2. Screenshot Capture does not work in iOS Safari
 3. Comic World.
 4. Overflow div issues with iOS devices.
-5. Will find more as testing becomes public
+5. Default Live2D eye blinking reverts some motions/expressions after finishing.
+6. Will find more as testing becomes public
 
 ## [To Do List](#to-do-list)
 1. Add pause button to auto play
