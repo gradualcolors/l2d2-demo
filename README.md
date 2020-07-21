@@ -9,7 +9,7 @@ To many people who helped tested this and put up with my ramblings.
 ## [Usage](#usage)
 
 ### How to Download Models:
-Click the **Download Models** on the bottom of the simulator.
+Click the **Download Models** button on the bottom of the simulator.
 
 ### How to Add Models:
 
