@@ -69,7 +69,8 @@ Live2D Models are Happy Elements / Ensemble Stars' property. This also uses some
 5. Add collaboration characters
 6. Custom Character support (yes, your OCs heehhee)
 7. Add no motion option for dialogue.
-8. Will add more as testing becomes public
+8. Increase dialogue lines to especially support Eichi Tenshouin's eight-hour monologues
+9. Will add more as testing becomes public
 
 ## [Frequently Asked Questions](#frequently-asked-questions)
 
