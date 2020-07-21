@@ -1,12 +1,15 @@
 # Ensemble Stars! Live 2D Viewer & Dialogue Simulator
 
 ### Compatible browsers: 
-Google Chrome, Safari, Opera, Internet Explorer
+Google Chrome, Safari, Opera, Internet Explorer. ** \* Best viewed in desktop mode. \* **
 
 ### Special Thanks:
 To many people who helped tested this and put up with my ramblings.
 
 ## [Usage](#usage)
+
+### How to Download Models:
+Click the **Download Models** on the bottom of the simulator.
 
 ### How to Add Models:
 
